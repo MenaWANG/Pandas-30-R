@@ -11,4 +11,4 @@ Hi, I am Mena, a data scientist who likes to learn something new everyday. :)
 
 Having been an R user for more than 8 years, I am currently learning Python. I hope to be fluent in both languages and can then choose whichever works better for each specific task. 
 
-It is an exciting time for data science as data is everywhere. There are plenty of opportunities to leverage one's data skills to help individuals and society in many big and small ways. If you are interested in data science as well, let's learn and grow together. :) You can find me on [Twitter](https://twitter.com/mena_wang), [LinkedIn](https://www.linkedin.com/in/mena-ning-wang/), and [GitHub](https://github.com/MenaWANG).
+It is an exciting time for data science as data is everywhere. There are plenty of opportunities to leverage one's data skills to help individuals and society in many big and small ways. If you are interested in data science as well, let's learn and grow together. You can find me on [Twitter](https://twitter.com/mena_wang), [LinkedIn](https://www.linkedin.com/in/mena-ning-wang/), and [GitHub](https://github.com/MenaWANG).
