@@ -12,7 +12,7 @@
 <meta name="author" content="Mena WANG" />
 
 
-<title>Method #1. Reading a CSV</title>
+<title>Method #2. Storing a DataFrame to a CSV</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -358,7 +358,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #1. Reading a CSV</h1>
+<h1 class="title toc-ignore">Method #2. Storing a DataFrame to a CSV</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essneital Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
 <h4 class="date">October, 2022</h4>
@@ -515,7 +515,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method1-read-a-csv.Rmd</code>) and HTML (<code>docs/method1-read-a-csv.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method2-store-a-dataframe.Rmd</code>) and HTML (<code>docs/method2-store-a-dataframe.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -544,7 +544,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/40ac71013b78d705c5db5fae0d5a5d05a24b947d/analysis/method1-read-a-csv.Rmd" target="_blank">40ac710</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/40ac71013b78d705c5db5fae0d5a5d05a24b947d/analysis/method2-store-a-dataframe.Rmd" target="_blank">40ac710</a>
 </td>
 <td>
 Mena WANG
@@ -554,74 +554,6 @@ Mena WANG
 </td>
 <td>
 add method 2
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/229f4058e7d22cd41be80fcc6de8dc5aa265dbd9/docs/method1-read-a-csv.html" target="_blank">229f405</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/c6a78358e761b44eeef6c55dcc8904a33ce7fced/docs/method1-read-a-csv.html" target="_blank">c6a7835</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/05866b4b4f4fc6d135ea6436849692b7029ed31f/docs/method1-read-a-csv.html" target="_blank">05866b4</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/eeb516966c19a1cc98b64e697e98fa2f46c24456/analysis/method1-read-a-csv.Rmd" target="_blank">eeb5169</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-start the project with method 1
 </td>
 </tr>
 </tbody>
@@ -651,28 +583,49 @@ start the project with method 1
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
-library(reticulate)</code></pre>
+library(reticulate)
+
+# cars is a built-in dataset in R
+df = cars
+head(df)</code></pre>
+<pre><code>  speed dist
+1     4    2
+2     4   10
+3     7    4
+4     7   22
+5     8   16
+6     9   10</code></pre>
 </div>
-<div id="method-1.-reading-a-csv" class="section level1">
-<h1>Method #1. Reading A CSV</h1>
+<div id="method-2.-storing-a-dataframe-to-a-csv" class="section level1">
+<h1>Method #2. Storing a DataFrame to a CSV</h1>
 <div id="python" class="section level2">
 <h2>Python</h2>
 <pre class="python"><code>import pandas as pd
 
-df = pd.read_csv(&#39;data/iris.csv&#39;)
+# access the R main module via the &#39;r&#39; object
+df = r.df
 
-# verify whether the object df is a dataframe
-type(df)</code></pre>
+# Storing a DataFrame to a CSV, do not include the index
+df.to_csv(&#39;data/cars.csv&#39;, index=False)
+
+# verify the dataframe is indeed saved there (review Method #1)
+cars = pd.read_csv(&#39;data/cars.csv&#39;)
+type(cars)</code></pre>
 <pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
 <pre class="r"><code>library(tidyverse)
 
-df &lt;- read_csv(&#39;data/iris.csv&#39;)
+# access the python main module via the &#39;py&#39; object
+df &lt;- py$cars
 
-# verify whether the object df is a dataframe
-class(df)</code></pre>
+# Storing a DataFrame to a CSV
+write_csv(df, &#39;data/cars2.csv&#39;)
+
+# verify the dataframe is indeed saved there (review Method #1)
+cars = read_csv(&#39;data/cars2.csv&#39;)
+class(cars)</code></pre>
 <pre><code>[1] &quot;spec_tbl_df&quot; &quot;tbl_df&quot;      &quot;tbl&quot;         &quot;data.frame&quot; </code></pre>
 <br>
 <p>
