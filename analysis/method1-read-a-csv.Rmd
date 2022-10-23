@@ -1,0 +1,76 @@
+---
+title: "Method #1. Reading a CSV"
+subtitle: "Python to R Translation of 30 Essneital Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "`r format(Sys.Date(), '%B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+In this repo, I try to provide a Python to R translation of the **30 essential Pandas methods** as introduced by Avi Chawla in his article [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+As an R user who is learning to become bilingual, I found such side-by-side comparisons very helpful for my learning. Hope you find it helpful as well. Comments and discussions will be highly appreciated. 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #1. Reading A CSV
+
+## Python
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv('data/iris.csv')
+
+# verify whether the object df is a dataframe
+type(df)
+
+```
+
+## R
+
+```{r}
+
+library(tidyverse)
+
+df <- read_csv('data/iris.csv')
+
+# verify whether the object df is a dataframe
+class(df)
+
+```
+
+
