@@ -8,9 +8,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-In this repo, I try to provide a Python to R translation of the **30 essential Pandas methods** as introduced by Avi Chawla in his article [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+In this repo, I try to provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in his article [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
 
-As an R user who is learning to become bilingual, I found such side-by-side comparisons very helpful for my learning. Hope you find it helpful as well. Comments and discussions will be highly appreciated. 
+As an R user who is learning to become bilingual, I found such side-by-side translations/comparisons very helpful for my learning. Hope you find them helpful as well. Comments and discussions will be highly appreciated. :)
 
 ### Please click each method below for details
 
