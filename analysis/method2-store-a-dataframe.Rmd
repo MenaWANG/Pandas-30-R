@@ -1,0 +1,88 @@
+---
+title: "Method #2. Storing a DataFrame to a CSV"
+subtitle: "Python to R Translation of 30 Essneital Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "`r format(Sys.Date(), '%B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in his article [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+# cars is a built-in dataset in R
+df = cars
+head(df)
+
+```
+
+# Method #2. Storing a DataFrame to a CSV
+
+## Python
+
+```{python}
+import pandas as pd
+
+# access the R main module via the 'r' object
+df = r.df
+
+# Storing a DataFrame to a CSV, do not include the index
+df.to_csv('data/cars.csv', index=False)
+
+# verify the dataframe is indeed saved there (review Method #1)
+cars = pd.read_csv('data/cars.csv')
+type(cars)
+
+```
+
+## R
+
+```{r}
+
+library(tidyverse)
+
+# access the python main module via the 'py' object
+df <- py$cars
+
+# Storing a DataFrame to a CSV
+write_csv(df, 'data/cars2.csv')
+
+# verify the dataframe is indeed saved there (review Method #1)
+cars = read_csv('data/cars2.csv')
+class(cars)
+
+```
+
+
