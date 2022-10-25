@@ -18,3 +18,5 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 [**Method #1. Reading a CSV**](method1-read-a-csv.html)
 
 [**Method #2. Storing a dataframe into a csv**](method2-store-a-dataframe.html)
+
+[**Method #3. Creating a dataframe from a list**](method3-create-a-dataframe-from-a-list.html)
