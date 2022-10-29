@@ -1,0 +1,76 @@
+---
+title: "Method #5. The Shape of the DataFrame"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "`r format(Sys.Date(), '%B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #5. The Shape of the DataFrame
+
+## Python
+
+`shape` returns the dimensionality (number_of_rows, number_of_columns) of a dataframe
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv('data/iris.csv')
+
+df.shape
+
+```
+
+
+## R
+
+Similary, `dim()` in base R returns the dimensionality of a dataframe
+
+```{r}
+library(readr) # a package in tidyverse that allows us to use read_csv
+
+df <- read_csv('data/iris.csv')
+
+dim(df)
+
+```
+
+
