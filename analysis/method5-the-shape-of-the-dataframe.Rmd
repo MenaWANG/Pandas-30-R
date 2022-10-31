@@ -2,7 +2,7 @@
 title: "Method #5. The Shape of the DataFrame"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "`r format(Sys.Date(), '%B, %Y')`"
+date: "2022-10-30"
 output: 
   html_document:
     toc: true

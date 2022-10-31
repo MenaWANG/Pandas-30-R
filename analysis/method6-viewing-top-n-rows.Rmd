@@ -1,8 +1,8 @@
 ---
-title: "Method #4. Creating a DataFrame from a Dictionary"
+title: "Method #6. Viewing Top N Rows"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "2022-10-28"
+date: "2022-11-01"
 output: 
   html_document:
     toc: true
@@ -44,35 +44,56 @@ library(reticulate)
 
 ```
 
-# Method #4. Creating a DataFrame from a Dictionary
+# Method #6. Viewing Top N Rows
 
 ## Python
+
+Use `head()` to show the top N rows. 
 
 ```{python}
 import pandas as pd
 
-data = {'col1': [1,2],
-        'col2': [3,4],
-        'col3': ['A','B']}
+df = pd.read_csv('data/iris.csv')
 
-df = pd.DataFrame(data)
-
-print(df)
+# print the top 3 rows in the dataframe
+print(df.head(3))
 
 ```
 
+
+We can also sort the dataframe first then show the top N. For more on sorting a dataframe, please refer to method 13.
+
+```{python}
+# to sort the dataframe first then check out the top N
+df.sort_values('Sepal.Length')\
+  .head(5)
+
+```
+
+
 ## R
+
+To do these tasks in R is pretty straightforward. 
 
 ```{r}
 
-# There is no dict in base R, the closest is probably list + vector
-data = list(col1 = c(1,2), # col1 is a vector
-            col2 = c(3,4),
-            col3 = c('A','B'))
+df <- py$df # get the dataframe from python
 
-df = data.frame(data)
+# print the top 3 rows in the dataframe
+print(df |>  head(3))
 
-print(df)
+```
+
+To sort first, we can use the `arrange()` function in the dplyr package.
+
+```{r}
+
+library(dplyr) 
+
+# to sort the dataframe first then check out the top N
+df |> 
+  arrange(Sepal.Length) |> 
+  head(5)
 
 ```
 

@@ -24,3 +24,5 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 [**Method #4. Creating a dataframe from a dictionary**](method4-create-a-dataframe-from-a-dictionary.html)
 
 [**Method #5. The Shape of the Dataframe**](method5-the-shape-of-the-dataframe.html)
+
+[**Method #6. Viewing Top N Rows**](method6-viewing-top-n-rows.html)

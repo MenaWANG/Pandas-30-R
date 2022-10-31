@@ -2,7 +2,7 @@
 title: "Method #2. Storing a DataFrame to a CSV"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "`r format(Sys.Date(), '%B, %Y')`"
+date: "2022-10-23"
 output: 
   html_document:
     toc: true
