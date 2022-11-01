@@ -44,7 +44,7 @@ library(reticulate)
 
 ```
 
-# Method #8. Modifying the Datatype of a column
+# Method #8. Modifying the Datatype of a Column
 
 ## Python
 

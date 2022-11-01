@@ -30,3 +30,5 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 [**Method #7. Print the Datatype of columns**](method7-print-the-datatype-of-columns.html)
 
 [**Method #8. Modifying the Datatype of a Column**](method8-modify-the-datatype-of-a-column.html)
+
+[**Method #9. Printing Descriptive Info about the Dataframe (Method1)**](method9-print-descriptive-info-about-the-dataframe1.html)

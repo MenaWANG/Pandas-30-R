@@ -1,0 +1,89 @@
+---
+title: "Method #9. Printing Descriptive Info about the DataFrame (Method 1)"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "`r format(Sys.Date(), '%B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+Load R's build-in dataframe `airquality`, which contains some missing and save it in the data subfolder under the project folder. Here we used `write.csv()` in base R rather than `write_csv()` from the `readr` package in tidyverse. However, the latter is twice as fast as the former so consider use `write_csv()` for larger datasets. 
+
+```{r}
+df = airquality
+df |> head() # we can see that the dataset contains some missing values
+
+#write the dataframe
+write.csv(df, 'data/airquality.csv')
+```
+
+Read the csv file into the Python environment.
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv('data/airquality.csv')
+df.head(5)
+```
+
+
+# Method #9. Printing Descriptive Info about the DataFrame (Method 1)
+
+## Python
+
+`info()` method can be used to print the missing-value stats and the datatypes. Recall that we can also get datatypes info using `.dtypes`.
+
+```{python}
+df.info()
+```
+
+
+## R
+
+`summary()` in base R returns the number of missings as well as some summary statistics. Note that it only flags missing info for columns with any missings. To get dataype info, recall we can use the `glimpse()` or `summary()` function.  There is also a package `naniar` in R that specialize in identifying, visualizing and handling missing values, [I provided some examples here in case you are interested](https://rpubs.com/MenaWANG/EDA_MissingDetection). 
+
+
+```{r}
+
+df |>  summary()
+
+```
+
+

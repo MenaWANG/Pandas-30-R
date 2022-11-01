@@ -44,7 +44,7 @@ library(reticulate)
 
 ```
 
-# Method #7. Printing the Datatype of columns
+# Method #7. Printing the Datatype of Columns
 
 ## Python
 
