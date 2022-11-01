@@ -8,7 +8,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-In this repo, I will provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+In this repo, I will provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). The project starts on 23 Oct, 2022 and I will add one method at least every 2-3 days.
 
 As an R user who is learning to become bilingual, I found such side-by-side translations/comparisons very helpful for my learning. Hope you find them helpful as well. Comments and discussions will be highly appreciated. :)
 
@@ -27,4 +27,6 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #6. Viewing Top N Rows**](method6-viewing-top-n-rows.html)
 
-[**Method #7. Print the datatype of columns**](method7-print-the-datatype-of-columns.html)
+[**Method #7. Print the Datatype of columns**](method7-print-the-datatype-of-columns.html)
+
+[**Method #8. Modifying the Datatype of a Column**](method8-modify-the-datatype-of-a-column.html)

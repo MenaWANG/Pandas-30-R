@@ -1,5 +1,5 @@
 ---
-title: "Method #7. Printing the Datatype of columns"
+title: "Method #7. Printing the Datatype of Dolumns"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
 date: "2022-11-01"
