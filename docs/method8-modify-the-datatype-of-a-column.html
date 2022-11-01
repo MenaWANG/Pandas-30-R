@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Mena WANG" />
 
+<meta name="date" content="2022-11-01" />
 
-<title>License</title>
+<title>Method #8. Modifying the Datatype of a Column</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +31,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -231,6 +236,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -238,6 +306,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -281,7 +359,10 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">License</h1>
+<h1 class="title toc-ignore">Method #8. Modifying the Datatype of a Column</h1>
+<h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
+<h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
+<h4 class="date">2022-11-01</h4>
 
 </div>
 
@@ -309,7 +390,7 @@ $(document).ready(function () {
 <strong>Last updated:</strong> 2022-11-01
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Pandas-30-R/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -331,6 +412,66 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
 <div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20221023code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20221023)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20221023code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20221023)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
@@ -371,7 +512,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML (<code>docs/license.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method8-modify-the-datatype-of-a-column.Rmd</code>) and HTML (<code>docs/method8-modify-the-datatype-of-a-column.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -397,10 +538,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
+Rmd
 </td>
 <td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e8c4cecee58b21d999c2c56034c84c1edbba18e8/docs/license.html" target="_blank">e8c4cec</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/8fabed3bbf00628d46e276a4c6aa428ba61c597d/analysis/method8-modify-the-datatype-of-a-column.Rmd" target="_blank">8fabed3</a>
 </td>
 <td>
 Mena WANG
@@ -409,194 +550,7 @@ Mena WANG
 2022-11-01
 </td>
 <td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/3e4868b8d00ec40a1150aedaca388ef708173e71/docs/license.html" target="_blank">3e4868b</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/db83905374f279ff12a45c325942f5b37c0d03a8/docs/license.html" target="_blank">db83905</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-30
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2be83cf90647e7727ad1b81809bd95d8cb49695b/docs/license.html" target="_blank">2be83cf</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9cbf22c07df5593a97c7cec90ff0eb5d1d36e0bd/docs/license.html" target="_blank">9cbf22c</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2cb19ff2ff71106c1e549ef6da1141dddcc3a1cd/docs/license.html" target="_blank">2cb19ff</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a3d64fd6335a001d2db0e536788b2ad2702f4b6a/docs/license.html" target="_blank">a3d64fd</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/229f4058e7d22cd41be80fcc6de8dc5aa265dbd9/docs/license.html" target="_blank">229f405</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/c6a78358e761b44eeef6c55dcc8904a33ce7fced/docs/license.html" target="_blank">c6a7835</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/0ac8e0094ff59a88148022a82fbcaa5b0f15effc/analysis/license.Rmd" target="_blank">0ac8e00</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Add content to license and about page
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/05866b4b4f4fc6d135ea6436849692b7029ed31f/docs/license.html" target="_blank">05866b4</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/c876a91068d76444b805a594344e51bc74abbf9c/analysis/license.Rmd" target="_blank">c876a91</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-23
-</td>
-<td>
-Start workflowr project.
+add method8
 </td>
 </tr>
 </tbody>
@@ -606,7 +560,120 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>LICENSE: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></p>
+<style type="text/css">
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+</style>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+</div>
+<div id="set-up" class="section level1">
+<h1>Set up</h1>
+<pre class="r"><code># enable python in RMarkdown
+library(reticulate)</code></pre>
+</div>
+<div id="method-8.-modifying-the-datatype-of-a-column" class="section level1">
+<h1>Method #8. Modifying the Datatype of a column</h1>
+<div id="python" class="section level2">
+<h2>Python</h2>
+<pre class="python"><code>import pandas as pd
+
+data = {&#39;id&#39;: [1,2,3,4,5],
+        &#39;name&#39;: [&#39;Jason&#39;, &#39;Jackie&#39;, &#39;Joe&#39;, &#39;Joshua&#39;, &#39;James&#39;]}
+      
+df = pd.DataFrame(data)
+
+df.dtypes</code></pre>
+<pre><code>id       int64
+name    object
+dtype: object</code></pre>
+<p>The id field is of integer type. Use <code>astype()</code> method to change it to string/character type as follows.</p>
+<pre class="python"><code>df2 = df.copy()
+# change the id field to string/character type
+df2[&#39;id&#39;] = df2[&#39;id&#39;].astype(str)
+df2.dtypes</code></pre>
+<pre><code>id      object
+name    object
+dtype: object</code></pre>
+</div>
+<div id="r" class="section level2">
+<h2>R</h2>
+<pre class="r"><code># get the dataframe from python
+df = py$df
+
+library(dplyr)
+
+df |&gt;  glimpse()</code></pre>
+<pre><code>Rows: 5
+Columns: 2
+$ id   &lt;dbl&gt; 1, 2, 3, 4, 5
+$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
+<p>Use the <code>as.character()</code> function to change the id field into string/character type, and use <code>as.numeric()</code> function to change it back to numeric. (id: what did I do? :p)</p>
+<pre class="r"><code># change the id field to string/character type
+df = df |&gt; mutate(id = as.character(id))
+df |&gt;  glimpse()</code></pre>
+<pre><code>Rows: 5
+Columns: 2
+$ id   &lt;chr&gt; &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;
+$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
+<pre class="r"><code># change the id field back to numeric type
+df = df |&gt; mutate(id = as.numeric(id))
+df |&gt; glimpse()</code></pre>
+<pre><code>Rows: 5
+Columns: 2
+$ id   &lt;dbl&gt; 1, 2, 3, 4, 5
+$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.2.1 (2022-06-23 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19043)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_Australia.utf8  LC_CTYPE=English_Australia.utf8   
+[3] LC_MONETARY=English_Australia.utf8 LC_NUMERIC=C                      
+[5] LC_TIME=English_Australia.utf8    
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+[1] dplyr_1.0.10    reticulate_1.26
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.9       pillar_1.8.1     compiler_4.2.1   bslib_0.4.0     
+ [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     workflowr_1.7.0 
+ [9] tools_4.2.1      digest_0.6.29    lattice_0.20-45  jsonlite_1.8.2  
+[13] evaluate_0.17    lifecycle_1.0.3  tibble_3.1.8     png_0.1-7       
+[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     DBI_1.1.3       
+[21] cli_3.4.1        rstudioapi_0.14  yaml_2.3.5       xfun_0.33       
+[25] fastmap_1.1.0    stringr_1.4.1    knitr_1.40       generics_0.1.3  
+[29] fs_1.5.2         vctrs_0.4.2      sass_0.4.2       tidyselect_1.2.0
+[33] grid_4.2.1       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
+[37] fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3   whisker_0.4     
+[41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
+[45] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+</div>
+</div>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -624,6 +691,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -656,6 +725,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
