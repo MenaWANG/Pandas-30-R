@@ -1,0 +1,93 @@
+---
+title: "Method #10. Printing Descriptive Info about the DataFrame (Method 2)"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-03"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).  
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #10. Printing Descriptive Info about the DataFrame (Method 2)
+
+## Python
+
+`describe()` returns standard statistics like mean, standard deviation, maximum etc. of every numeric-valued column
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv('data/iris.csv')
+
+df.describe()
+```
+
+
+## R
+
+As discussed in Method 9, `summary()` in base R returns the number of missings as well as some summary statistics for all numerical and factor columns.  
+
+```{r}
+
+df = py$df
+
+df |>  summary()
+
+```
+
+
+For categorical variables, like `Species` in the iris dataset, `summary()` could give us its frequency counts if we turn it into factor type in R. 
+
+```{r}
+
+library(dplyr) #for mutate
+
+df |> 
+  mutate(Species = as.factor(Species)) |> # see method17 for more on mutate()   
+  summary()
+
+```
+
+In python, we could use `value_counts()` to get frequency counts. See #method27 for more.
+
+```{python}
+df['Species'].value_counts()
+
+```
+

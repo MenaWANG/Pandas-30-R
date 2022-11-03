@@ -17,18 +17,20 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #1. Reading a CSV**](method1-read-a-csv.html)
 
-[**Method #2. Storing a dataframe into a csv**](method2-store-a-dataframe.html)
+[**Method #2. Storing a Dataframe into a CSV**](method2-store-a-dataframe.html)
 
-[**Method #3. Creating a dataframe from a list**](method3-create-a-dataframe-from-a-list.html)
+[**Method #3. Creating a Dataframe from a Llist**](method3-create-a-dataframe-from-a-list.html)
 
-[**Method #4. Creating a dataframe from a dictionary**](method4-create-a-dataframe-from-a-dictionary.html)
+[**Method #4. Creating a Dataframe from a Dictionary**](method4-create-a-dataframe-from-a-dictionary.html)
 
 [**Method #5. The Shape of the Dataframe**](method5-the-shape-of-the-dataframe.html)
 
 [**Method #6. Viewing Top N Rows**](method6-viewing-top-n-rows.html)
 
-[**Method #7. Print the Datatype of columns**](method7-print-the-datatype-of-columns.html)
+[**Method #7. Print the Datatype of Columns**](method7-print-the-datatype-of-columns.html)
 
 [**Method #8. Modifying the Datatype of a Column**](method8-modify-the-datatype-of-a-column.html)
 
 [**Method #9. Printing Descriptive Info about the Dataframe (Method1)**](method9-print-descriptive-info-about-the-dataframe1.html)
+
+[**Method #10. Printing Descritive Info about the Dataframe (Method2)**](method10-print-descriptive-info-about-the-dataframe2.html)
