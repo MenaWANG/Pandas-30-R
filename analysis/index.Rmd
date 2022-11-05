@@ -34,3 +34,5 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 [**Method #9. Printing Descriptive Info about the Dataframe (Method1)**](method9-print-descriptive-info-about-the-dataframe1.html)
 
 [**Method #10. Printing Descritive Info about the Dataframe (Method2)**](method10-print-descriptive-info-about-the-dataframe2.html)
+
+[**Method #11. Filling Missing Values**](method11-filling-missing-values.html) 
