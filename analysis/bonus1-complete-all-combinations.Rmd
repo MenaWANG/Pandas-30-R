@@ -1,0 +1,109 @@
+---
+title: "Bonus #1. complete()"
+subtitle: "R to Python Translation of Cool R Functions"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-08"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+This repo was initially set up only for Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).  
+
+But I will add some R to Python translation of loved R functions as bonus :) 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+
+# Bonus #1. complete()
+
+## Set up
+
+Imagine a scenario, we have some products and we hope to track their sale over months. For each product, we hope to have its sale `this month` compare to the previous month. This should be easy to do using `lag()`, which is available in both R and Python. 
+
+However, our issue here is we don't have values for all the months, for example, product 1 only has sale values for month 1 and 3 (2 and 4 missing), and product 2 only has values for month 2 and 4, with 1 and 3 skipped ...
+
+
+
+```{r}
+library(tidyverse) #arrange in dplyr, complete in tidyr
+
+set.seed(123)
+df <- data.frame(
+  product_id = c(1:4,1:2),
+  month = c(1:4,2,4),
+  sale = runif(6, min=1, max=50) |> round()
+)
+
+df |> 
+  arrange(product_id, month)
+
+```
+
+
+## complete() in R
+
+So before I can apply lag, I must make sure all the missing combinations (e.g., month 2 for product 1) must be added back with the sales value equals 0. This is super easy to do in R with `complete()`. As you can see now, each product now has sales values from month 1 to 4, and months where no sales value recorded now has sale value as 0.
+
+```{r}
+df |> 
+  complete(product_id, month, fill=list(sale=0))
+```
+
+
+## To do this in Python
+
+```{python}
+df = r.df # get the df from R
+
+df
+```
+
+To do this in Python is a bit more complex. Please see steps below. I will revisit this if I find a better way, and please shoot me a message if have a better solution. 
+
+(inspired by the [post here](https://stackoverflow.com/questions/52104737/python-how-to-expand-a-pandas-dataframes-rows-to-include-all-combinations-of))
+
+```{python}
+import pandas as pd
+import itertools
+
+df.set_index(['product_id', 'month'])\
+    .reindex(pd.MultiIndex\
+    .from_tuples(itertools.product(df.product_id, df.month)).unique())\
+    .reset_index()\
+    .rename(columns={'level_0':'product_id', 'level_1':'month'})\
+    .fillna(0)
+```
+

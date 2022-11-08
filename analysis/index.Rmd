@@ -38,3 +38,12 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 [**Method #11. Filling Missing Values**](method11-filling-missing-values.html) 
 
 [**Method #12. Joining DataFrames**](method12-joining-dataframes.html)
+
+
+### Bonus R to Python translations
+
+I will add some R to Python translation of loved R functions below as bonus :) 
+
+[**Bonus #1. complete(): Expand a dataframe**](bonus1-complete-all-combinations.html)
+
+
