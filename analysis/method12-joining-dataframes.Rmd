@@ -48,20 +48,21 @@ library(reticulate)
 
 ## Python
 
-We can use the `pd.merge()` method to join two dataframes. 
+We can use the `pd.merge()` method to join two dataframes. Join on multiple columns can be done easily.
 
 ```{python}
 import pandas as pd
 
 df1 = pd.DataFrame({'col1': [1,3,5],
                     'col2': [2,4,6],
-                    'col3': ['A','A','B']})
+                    'col3': ['A','A','B'],
+                    'col4': ['x','y','y']})
                    
 df2 = pd.DataFrame({'col3': ['A','B','C'],
                     'col4': ['x','y','z']})
                     
                     
-pd.merge(df1, df2, on = 'col3', how = 'right') # the default behavior is an 'inner' join
+pd.merge(df1, df2, on = ['col3','col4'], how = 'right') # the default behavior is an 'inner' join
 
 ```
 
@@ -71,12 +72,17 @@ In [another article by Avi](https://towardsdatascience.com/its-time-to-say-goodb
 
 ```{python}
 # set the columns to be joined on as index first
-df1.set_index('col3', inplace = True) 
-df2.set_index('col3', inplace = True)
+df1.set_index(['col3','col4'], inplace = True) 
+df2.set_index(['col3','col4'], inplace = True)
 
 df = df1.join(df2, how = 'right') # the default behavior is a 'left' join
 print(df)
 
+```
+
+```{python}
+df.reset_index(inplace = True)
+print(df)
 ```
 
 
@@ -88,7 +94,7 @@ df2.reset_index(inplace = True)
 
 ## R
 
-In `tidyverse`, R has separate functions for `inner_join()`, `left_join()`, etc. The columns to be joined on can be specified within the function call. 
+In `tidyverse`, R has separate functions for `inner_join()`, `left_join()`, etc. You specify what column(s) to join on within the function call. If we don't specify, columns with the same names will be matched by default. 
 
 ```{r}
 library(tidyverse)
@@ -96,7 +102,7 @@ library(tidyverse)
 df1 <- py$df1
 df2 <- py$df2
 
-df <- right_join(df1, df2, by = c('col3' = 'col3'))
+df <- right_join(df1, df2, by = c('col3' = 'col3', 'col4' = 'col4'))
 
 #since we are joining on a column that has the same name in both dataframes the by= argument can be dropped
 df <- right_join(df1, df2)

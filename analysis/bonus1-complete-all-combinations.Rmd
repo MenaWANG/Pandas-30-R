@@ -51,9 +51,9 @@ library(reticulate)
 
 ## Set up
 
-Imagine a scenario, we have some products and we hope to track their sale over months. For each product, we hope to have its sale `this month` compare to the previous month. This should be easy to do using `lag()`, which is available in both R and Python. 
+Imagine a scenario, we have some products and we hope to track their sale over months. For each product, we hope to have its sale `this month` compare to the previous months. This should be easy to do using `lag()`, which is available in both R and Python. 
 
-However, our issue here is we don't have values for all the months, for example, product 1 only has sale values for month 1 and 3 (2 and 4 missing), and product 2 only has values for month 2 and 4, with 1 and 3 skipped ...
+However, our issue here is we don't have values for all the months. For example, product 1 only has sale values for month 1 and 3 (2 and 4 missing), and product 2 only has values for month 2 and 4, with 1 and 3 skipped ... (please see the hypothetical dataframe below)
 
 
 
@@ -75,11 +75,12 @@ df |>
 
 ## complete() in R
 
-So before I can apply lag, I must make sure all the missing combinations (e.g., month 2 for product 1) must be added back with the sales value equals 0. This is super easy to do in R with `complete()`. As you can see now, each product now has sales values from month 1 to 4, and months where no sales value recorded now has sale value as 0.
+Before I can apply `lag()`, I must make sure all the missing combinations (e.g., month 2 for product 1) are added to the dataframe with the sales value equals 0. This is super easy to do in R with `complete()`. As you can see now, each product now has sales values from month 1 to 4, and months where no sales value recorded now has sale value as 0.
 
 ```{r}
 df |> 
   complete(product_id, month, fill=list(sale=0))
+
 ```
 
 

@@ -1,0 +1,84 @@
+---
+title: "Method #13. Sorting a DataFrame"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-08"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #13. Sorting a DataFrame
+
+## Python
+
+We can use the `df.sort_values()` method to join two dataframes. 
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 2,  "A"], 
+                   [5, 8,  "B"], 
+                   [3, 10, "B"]], 
+                   columns = ["col1", "col2", "col3"])
+                   
+print(df.sort_values("col1")) # sort in ascending order by column col1
+
+print(df.sort_values("col1", ascending = False)) # sort in descending order by column col1
+
+```
+
+
+## R
+
+In `tidyverse`, you can use `arrange()`
+
+
+```{r}
+library(dplyr)
+
+df <- py$df
+
+df |> arrange(col1) # sort in ascending order by column col1
+
+df |> arrange(desc(col1)) # sort in descending order by column col1
+
+```
+
+
