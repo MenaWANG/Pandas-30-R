@@ -1,0 +1,83 @@
+---
+title: "Method #15. Renaming Column(s)"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-09"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
+
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #15. Renaming Column(s)
+
+## Python
+
+We can use the `rename()`` method in Pandas to rename a column in a dataframe. 
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 2,  "A"], 
+                   [5, 8,  "B"], 
+                   [3, 10, "B"]], 
+                  columns = ["col1", "col2", "col3"])
+
+df.rename(columns = {'col1': 'col1_new_name', 'col2': 'col2_new_name'}, inplace = False) # this doesn't change df unless we set inplace to be True
+
+df
+
+```
+
+## R
+
+In R there is a similar function `rename()`, just note that the sequance is `new_name = old_name`, not `old_name : new_name` as shown above in Python. 
+
+```{r}
+
+library(dplyr)
+
+df <- py$df
+
+df |>  
+  rename(col1_new_name = col1,
+         col2_new_name = col2)
+
+```
+

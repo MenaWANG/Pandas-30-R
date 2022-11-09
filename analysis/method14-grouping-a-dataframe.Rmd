@@ -63,6 +63,7 @@ df.groupby('col3').agg({'col1':sum, 'col2':max}) #
 
 ```
 
+
 ```{python}
 # alternatively, show each method in separate lines
 (df
@@ -70,6 +71,17 @@ df.groupby('col3').agg({'col1':sum, 'col2':max}) #
  .agg({"col1":sum, "col2":max}) # get sum for col1 and max for col2
  )
 ```
+
+Above we specify different aggregates for each column, but the code can be simplified if same aggregates are needed for all columns.
+
+```{python}
+(df
+ .groupby("col3")
+ .agg(['min','max','median']) # get these three aggregates for all
+)
+
+```
+
 
 ## R
 
