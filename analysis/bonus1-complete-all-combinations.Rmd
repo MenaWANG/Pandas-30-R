@@ -102,7 +102,7 @@ import itertools
 
 df.set_index(['product_id', 'month'])\
     .reindex(pd.MultiIndex\
-    .from_tuples(itertools.product(df.product_id, df.month)).unique())\
+    .from_tuples(itertools.product(df.product_id.unique(), df.month.unique())))\
     .reset_index()\
     .rename(columns={'level_0':'product_id', 'level_1':'month'})\
     .fillna(0)

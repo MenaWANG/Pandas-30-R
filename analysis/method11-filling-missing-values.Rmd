@@ -69,6 +69,14 @@ df.fillna(0, inplace = True)
 print(df)
 ```
 
+Or if you only wnat to replace missing values in one particular column, simply select it first
+
+```{python}
+df2 = df.copy()
+df2['col2'].fillna(0, inplace = True) 
+print(df2)
+
+```
 
 ## R
 
