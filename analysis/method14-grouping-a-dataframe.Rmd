@@ -1,0 +1,138 @@
+---
+title: "Method #14. Grouping a DataFrame"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-09"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #14. Grouping a DataFrame
+
+## Python
+
+We can use the `groupby` method in Pandas to group a dataframe and then perform aggregations with `agg()`. We could put both methods in one line, or wrap the chain of methods in brackets and show them in separate lines. The latter can enhance readability when we have multiple methods chained together. 
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 2,  "A"], 
+                   [5, 8,  "B"], 
+                   [3, 10, "B"]], 
+                  columns = ["col1", "col2", "col3"])
+
+# put both methods in one line 
+df.groupby('col3').agg({'col1':sum, 'col2':max}) # 
+
+```
+
+```{python}
+# alternatively, show each method in separate lines
+(df
+ .groupby("col3")
+ .agg({"col1":sum, "col2":max}) # get sum for col1 and max for col2
+ )
+```
+
+## R
+
+In `tidyverse`, similarly we use `group_by()` to do the grouping, then use `summarize()` for the aggregation.
+
+
+```{r}
+library(dplyr)
+
+df <- py$df
+
+df |> 
+  group_by(col3) |> 
+  summarize(col1_sum = sum(col1),
+            col2_max = max(col2))
+
+```
+
+
+# Bonus: More complex aggregation
+
+## R
+
+What if we want to do a slightly more complex aggregation which is not available as a default function/method? Let's say we want to add a column to represent percentage within each group. For example, below we have the sale of three types of fruits in two months. We would like to add a column `pct_month` to represent the sale of each fruit within each month. 
+
+```{r}
+
+df <- data.frame(
+  month = c(rep('Jan',3), rep('Feb',3)),
+  fruit = c('Apple', 'Kiwi','banana', 'Apple', 'Kiwi','banana'),
+  sale = c(20,30, 30,30,20,15)
+)
+
+df
+
+```
+
+
+Notice that here we need one value for *each row*, rather than one value for *each group*. Therefore, instead of using `summarize()` as we did above, this time `mutate()` function is our friend. We can also easily add a `round()` function to round the percentage.
+
+```{r}
+
+df |>  
+  group_by(month) |>  
+  mutate(pct_month = sale/sum(sale) |> round(3) * 100)
+
+```
+
+## Python
+
+Now let's see how to do this in Python. We can create a function first, then call it with the `transform()` method.
+
+```{python}
+df = r.df 
+
+def pct_total(s):
+  return s/sum(s)
+
+df['pct_month'] = (df
+                    .groupby('month')['sale']
+                    .transform(pct_total).round(3) * 100
+                    )
+df
+
+```
+

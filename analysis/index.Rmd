@@ -41,6 +41,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #13. Sorting a Dataframe**](method13-sorting-a-dataframe.html)
 
+[**Method #14. Grouping a Dataframe**](method14-grouping-a-dataframe.html)
+
 
 ### Bonus R to Python translations
 
