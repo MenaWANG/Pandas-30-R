@@ -45,6 +45,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #15. Renaming Columns**](method15-renaming-columns.html)
 
+[**Method #16-17. Adding New Columns**](method16-17-adding-new-columns.html)
+
 
 ### Bonus R to Python translations
 

@@ -1,0 +1,144 @@
+---
+title: "Method #16-17. Adding New Column(s)"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-10"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Method #16-17. Adding New Column(s)
+
+## Python
+
+To add a column based on simple calculation of existing columns, we could either do the calculation directly (first chunk below) or use the `assign()` method. 
+
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame({'col1': [1,2],
+                   'col2': [3,4]})
+```
+
+```{python}
+# direct calculation
+df2 = df.copy()
+df2['col3'] = df['col1'] + df['col2'] 
+df2
+```
+
+
+```{python}
+# use assign() method
+df2 = df.assign(col3 = df['col1'] + df['col2'] )
+df2
+```
+
+## R
+
+In R, `mutate()` function handels these tasks with ease
+
+```{r}
+
+library(dplyr)
+
+df <- py$df #load the df object created in Python above
+
+df2 <- df |>  
+  mutate(col3 = col1 + col2)
+df2
+```
+
+
+# Bonus: More complex situations
+
+Now let's try some slightly more complex calculations and/or create more than one columns in one go as well. 
+
+## Create multiple columns in one go
+
+### Python
+
+```{python}
+(df
+  .assign(col3 = lambda x: x.col1*2 + x.col2)
+  .assign(col4 = lambda x: (x.col1/x.col2 * 100).round(3)))
+
+```
+
+### R
+
+To accomplish a similar task in R, we will continue to use `mutate()`
+
+```{r}
+df |>  
+  mutate(col3 = col1*2 + col2,
+         col4 = round(col1/col2 * 100, 3))
+```
+
+## Mean across columns
+
+### Python
+
+```{python}
+df['row_mean'] = df.iloc[:,0:].mean(axis=1) # all columns
+print(df)
+```
+
+```{python}
+df['row_mean'] = df.iloc[:,0:2].mean(axis=1) # specify columns by range
+print(df)
+```
+
+```{python}
+df['row_mean'] = df.iloc[:,[0,1]].mean(axis=1) # specify columns by position
+print(df)
+```
+
+### R
+
+```{r}
+df |> mutate(row_mean = df |> rowMeans()) # all columns
+df |> mutate(row_mean = df |> select(1:2) |> rowMeans()) # specify columns by range
+df |> mutate(row_mean = df |> select(1,2) |> rowMeans()) # specify columns by position
+
+```
+
+
