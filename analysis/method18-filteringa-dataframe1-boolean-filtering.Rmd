@@ -1,0 +1,156 @@
+---
+title: "Method #18. Filtering a DataFrame1: Boolean Filtering"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-11"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+## Create a dataframe in Python
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame({'col1': [1,5,3],
+                   'col2': [8,4,10],
+                   'col3': ['A','B','B']})
+df
+```
+
+## Load the dataframe into R
+
+```{r}
+df <- py$df #load the df object created in Python above
+
+df
+```
+
+
+# Method #18. Filtering a DataFrame1: Boolean Filtering
+
+## Filter with a value
+
+A row can be selected when the condition specified is evaluated to be True for it. For example 
+
+### Python
+
+```{python}
+df[df['col2']>5]
+
+```
+
+
+```{python}
+# or to improve readability, we could do it in two steps
+col2_larger_than_5 = df['col2'] > 5
+df[col2_larger_than_5]
+
+```
+
+### R
+
+```{r}
+
+library(dplyr)
+
+df |> 
+  filter(col2 > 5)
+```
+
+## Filter with a list
+
+A row can be selected when its value belongs to a list specified. For example
+
+### Python
+
+```{python}
+filter_list = ["B","C"]
+
+df[df['col3'].isin(filter_list)]
+
+```
+
+Alternatively, this can be done with `query()` in Python. `@` in the query indicating that we are using a variable in the environment.
+
+```{python}
+df.query('col3 in @filter_list')
+
+```
+
+### R
+
+```{r}
+filter_list = c('B','C')
+
+df |>  
+  filter(col3 %in% filter_list)
+  
+```
+
+## Multiple conditions
+
+Now let's try filter the dataframe with both conditions
+
+### Python
+
+```{python}
+df[(df['col2']>5) & (df['col3'].isin(filter_list))]
+
+```
+
+For me, the syntax is probably more readable with `query()`
+
+```{python}
+df.query('(col2 > 5) and (col3 in @filter_list)')
+
+```
+
+### R
+
+The syntax for dplyr is pretty similar to that with `query()` above.
+
+```{r}
+df |> 
+  filter(col2 > 5 &
+         col3 %in% filter_list)
+
+```
+
