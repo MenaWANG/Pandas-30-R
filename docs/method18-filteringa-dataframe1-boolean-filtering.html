@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-11-01" />
+<meta name="date" content="2022-11-11" />
 
-<title>Method #8. Modifying the Datatype of a Column</title>
+<title>Method #18. Filtering a DataFrame1: Boolean Filtering</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +359,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #8. Modifying the Datatype of a Column</h1>
+<h1 class="title toc-ignore">Method #18. Filtering a DataFrame1: Boolean Filtering</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-11-01</h4>
+<h4 class="date">2022-11-11</h4>
 
 </div>
 
@@ -512,7 +512,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method8-modify-the-datatype-of-a-column.Rmd</code>) and HTML (<code>docs/method8-modify-the-datatype-of-a-column.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method18-filteringa-dataframe1-boolean-filtering.Rmd</code>) and HTML (<code>docs/method18-filteringa-dataframe1-boolean-filtering.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -538,223 +538,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7ce73a5878f89ea1f5f0fac0f814fe256f5f0a8c/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">7ce73a5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/97a4ecd8c3151e525245b9ac6df1b07ac2c51271/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">97a4ecd</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/8b96a30cdb369e80091bf47a2bb3e0c1444be252/analysis/method8-modify-the-datatype-of-a-column.Rmd" target="_blank">8b96a30</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/06382ee853a0f4e8508353f9c17e5a8a20472366/analysis/method18-filteringa-dataframe1-boolean-filtering.Rmd" target="_blank">06382ee</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-01
+2022-11-11
 </td>
 <td>
-add method9
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/99c04b87abbbb34161fac89a7a63a1bc6c1e3920/docs/method8-modify-the-datatype-of-a-column.html" target="_blank">99c04b8</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/8fabed3bbf00628d46e276a4c6aa428ba61c597d/analysis/method8-modify-the-datatype-of-a-column.Rmd" target="_blank">8fabed3</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-add method8
+add method18
 </td>
 </tr>
 </tbody>
@@ -779,64 +575,114 @@ add method8
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-</div>
-<div id="method-8.-modifying-the-datatype-of-a-column" class="section level1">
-<h1>Method #8. Modifying the Datatype of a Column</h1>
-<div id="python" class="section level2">
-<h2>Python</h2>
+<div id="create-a-dataframe-in-python" class="section level2">
+<h2>Create a dataframe in Python</h2>
 <pre class="python"><code>import pandas as pd
 
-data = {&#39;id&#39;: [1,2,3,4,5],
-        &#39;name&#39;: [&#39;Jason&#39;, &#39;Jackie&#39;, &#39;Joe&#39;, &#39;Joshua&#39;, &#39;James&#39;]}
-      
-df = pd.DataFrame(data)
-
-df.dtypes</code></pre>
-<pre><code>id       int64
-name    object
-dtype: object</code></pre>
-<p>The id field is of integer type. Use <code>astype()</code> method to change it to string/character type as follows.</p>
-<pre class="python"><code>df2 = df.copy()
-# change the id field to string/character type
-df2[&#39;id&#39;] = df2[&#39;id&#39;].astype(str)
-df2.dtypes</code></pre>
-<pre><code>id      object
-name    object
-dtype: object</code></pre>
+df = pd.DataFrame({&#39;col1&#39;: [1,5,3],
+                   &#39;col2&#39;: [8,4,10],
+                   &#39;col3&#39;: [&#39;A&#39;,&#39;B&#39;,&#39;B&#39;]})
+df</code></pre>
+<pre><code>   col1  col2 col3
+0     1     8    A
+1     5     4    B
+2     3    10    B</code></pre>
 </div>
-<div id="r" class="section level2">
-<h2>R</h2>
-<pre class="r"><code># get the dataframe from python
-df = py$df
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<pre class="r"><code>df &lt;- py$df #load the df object created in Python above
 
-library(dplyr)
+df</code></pre>
+<pre><code>  col1 col2 col3
+1    1    8    A
+2    5    4    B
+3    3   10    B</code></pre>
+</div>
+</div>
+<div id="method-18.-filtering-a-dataframe1-boolean-filtering" class="section level1">
+<h1>Method #18. Filtering a DataFrame1: Boolean Filtering</h1>
+<div id="filter-with-a-value" class="section level2">
+<h2>Filter with a value</h2>
+<p>A row can be selected when the condition specified is evaluated to be True for it. For example</p>
+<div id="python" class="section level3">
+<h3>Python</h3>
+<pre class="python"><code>df[df[&#39;col2&#39;]&gt;5]</code></pre>
+<pre><code>   col1  col2 col3
+0     1     8    A
+2     3    10    B</code></pre>
+<pre class="python"><code># or to improve readability, we could do it in two steps
+col2_larger_than_5 = df[&#39;col2&#39;] &gt; 5
+df[col2_larger_than_5]</code></pre>
+<pre><code>   col1  col2 col3
+0     1     8    A
+2     3    10    B</code></pre>
+</div>
+<div id="r" class="section level3">
+<h3>R</h3>
+<pre class="r"><code>library(dplyr)
 
-df |&gt;  glimpse()</code></pre>
-<pre><code>Rows: 5
-Columns: 2
-$ id   &lt;dbl&gt; 1, 2, 3, 4, 5
-$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
-<p>Use the <code>as.character()</code> function to change the id field into string/character type, and use <code>as.numeric()</code> function to change it back to numeric. (id: what did I do? :p)</p>
-<pre class="r"><code># change the id field to string/character type
-df = df |&gt; mutate(id = as.character(id))
-df |&gt;  glimpse()</code></pre>
-<pre><code>Rows: 5
-Columns: 2
-$ id   &lt;chr&gt; &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;
-$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
-<pre class="r"><code># change the id field back to numeric type
-df = df |&gt; mutate(id = as.numeric(id))
-df |&gt; glimpse()</code></pre>
-<pre><code>Rows: 5
-Columns: 2
-$ id   &lt;dbl&gt; 1, 2, 3, 4, 5
-$ name &lt;chr&gt; &quot;Jason&quot;, &quot;Jackie&quot;, &quot;Joe&quot;, &quot;Joshua&quot;, &quot;James&quot;</code></pre>
+df |&gt; 
+  filter(col2 &gt; 5)</code></pre>
+<pre><code>  col1 col2 col3
+1    1    8    A
+2    3   10    B</code></pre>
+</div>
+</div>
+<div id="filter-with-a-list" class="section level2">
+<h2>Filter with a list</h2>
+<p>A row can be selected when its value belongs to a list specified. For example</p>
+<div id="python-1" class="section level3">
+<h3>Python</h3>
+<pre class="python"><code>filter_list = [&quot;B&quot;,&quot;C&quot;]
+
+df[df[&#39;col3&#39;].isin(filter_list)]</code></pre>
+<pre><code>   col1  col2 col3
+1     5     4    B
+2     3    10    B</code></pre>
+<p>Alternatively, this can be done with <code>query()</code> in Python. <code>@</code> in the query indicating that we are using a variable in the environment.</p>
+<pre class="python"><code>df.query(&#39;col3 in @filter_list&#39;)</code></pre>
+<pre><code>   col1  col2 col3
+1     5     4    B
+2     3    10    B</code></pre>
+</div>
+<div id="r-1" class="section level3">
+<h3>R</h3>
+<pre class="r"><code>filter_list = c(&#39;B&#39;,&#39;C&#39;)
+
+df |&gt;  
+  filter(col3 %in% filter_list)</code></pre>
+<pre><code>  col1 col2 col3
+1    5    4    B
+2    3   10    B</code></pre>
+</div>
+</div>
+<div id="multiple-conditions" class="section level2">
+<h2>Multiple conditions</h2>
+<p>Now let’s try filter the dataframe with both conditions</p>
+<div id="python-2" class="section level3">
+<h3>Python</h3>
+<pre class="python"><code>df[(df[&#39;col2&#39;]&gt;5) &amp; (df[&#39;col3&#39;].isin(filter_list))]</code></pre>
+<pre><code>   col1  col2 col3
+2     3    10    B</code></pre>
+<p>For me, the syntax is probably more readable with <code>query()</code></p>
+<pre class="python"><code>df.query(&#39;(col2 &gt; 5) and (col3 in @filter_list)&#39;)</code></pre>
+<pre><code>   col1  col2 col3
+2     3    10    B</code></pre>
+</div>
+<div id="r-2" class="section level3">
+<h3>R</h3>
+<p>The syntax for dplyr is pretty similar to that with <code>query()</code> above.</p>
+<pre class="r"><code>df |&gt; 
+  filter(col2 &gt; 5 &amp;
+         col3 %in% filter_list)</code></pre>
+<pre><code>  col1 col2 col3
+1    3   10    B</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -875,6 +721,7 @@ loaded via a namespace (and not attached):
 [37] fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3   whisker_0.4     
 [41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
 [45] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+</div>
 </div>
 </div>
 </div>
