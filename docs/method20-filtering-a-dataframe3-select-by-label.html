@@ -11,9 +11,8 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-11-05" />
 
-<title>Method #11. Filling Missing Values</title>
+<title>Method #20 Filtering a DataFrame3: Selecting by Label (.loc)</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +358,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #11. Filling Missing Values</h1>
+<h1 class="title toc-ignore">Method #20 Filtering a DataFrame3: Selecting by Label (.loc)</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-11-05</h4>
+<h4 class="date">November, 2022</h4>
 
 </div>
 
@@ -512,7 +511,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method11-filling-missing-values.Rmd</code>) and HTML (<code>docs/method11-filling-missing-values.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method20-filtering-a-dataframe3-select-by-label.Rmd</code>) and HTML (<code>docs/method20-filtering-a-dataframe3-select-by-label.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -538,206 +537,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/efd27b1421099e993b8705900dd9cb7e36d38c01/docs/method11-filling-missing-values.html" target="_blank">efd27b1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/76150fe3ed0b9d7488e032b84888a3bc1e2525df/docs/method11-filling-missing-values.html" target="_blank">76150fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method11-filling-missing-values.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method11-filling-missing-values.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method11-filling-missing-values.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/1664d6dad7656d62578684c900f93b51302a1243/analysis/method11-filling-missing-values.Rmd" target="_blank">1664d6d</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/0504fcc976aa0d821efffc002742b4ae4cceb4d8/analysis/method20-filtering-a-dataframe3-select-by-label.Rmd" target="_blank">0504fcc</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-09
+2022-11-13
 </td>
 <td>
-add method14
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method11-filling-missing-values.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method11-filling-missing-values.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method11-filling-missing-values.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method11-filling-missing-values.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method11-filling-missing-values.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/6a0ac9f359b44fb6feaebd00979d1ed1dc79fe09/analysis/method11-filling-missing-values.Rmd" target="_blank">6a0ac9f</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-add method11
+add method20
 </td>
 </tr>
 </tbody>
@@ -762,65 +574,69 @@ add method11
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
+<div id="create-the-dataframe-in-python" class="section level2">
+<h2>Create the dataframe in Python</h2>
+<pre class="python"><code>import pandas as pd
+
+df = pd.DataFrame([[6, 5,  10], 
+                   [5, 8,  6], 
+                   [3, 10, 4]], 
+                  columns = [&quot;Maths&quot;, &quot;Science&quot;, &quot;English&quot;],
+                  index = [&quot;John&quot;, &quot;Mark&quot;, &quot;Peter&quot;])
+
+print(df)</code></pre>
+<pre><code>       Maths  Science  English
+John       6        5       10
+Mark       5        8        6
+Peter      3       10        4</code></pre>
 </div>
-<div id="method-11.-filling-nan-values" class="section level1">
-<h1>Method #11. Filling NaN values</h1>
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<p>We notice that the index has been passed on to the dataframe in R.</p>
+<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+
+print(df)</code></pre>
+<pre><code>      Maths Science English
+John      6       5      10
+Mark      5       8       6
+Peter     3      10       4</code></pre>
+</div>
+</div>
+<div id="method-20.-filtering-a-dataframe3-selecting-by-label" class="section level1">
+<h1>Method #20. Filtering a DataFrame3: Selecting by Label</h1>
 <div id="python" class="section level2">
 <h2>Python</h2>
-<p>We can use the <code>df.fillna()</code> method to replace missing values with a specific value. Let’s start by creating a dataframe with missing values.</p>
-<pre class="python"><code>import pandas as pd
-import numpy as np
-
-df = pd.DataFrame({&#39;col1&#39;: [1,2],
-                   &#39;col2&#39;: [3,np.nan],
-                   &#39;col3&#39;: [&#39;A&#39;,np.nan]})
-print(df)</code></pre>
-<pre><code>   col1  col2 col3
-0     1   3.0    A
-1     2   NaN  NaN</code></pre>
-<p>To replace the missing value with <code>0</code>, just do <code>.fillna(0)</code>.</p>
-<pre class="python"><code># replace all NA values with 0, inplace = True means df itself will be modefied
-df.fillna(0, inplace = True)
-print(df)</code></pre>
-<pre><code>   col1  col2 col3
-0     1   3.0    A
-1     2   0.0    0</code></pre>
-<p>Or if you only wnat to replace missing values in one particular column, simply select it first</p>
-<pre class="python"><code>df2 = df.copy()
-df2[&#39;col2&#39;].fillna(0, inplace = True) 
-print(df2)</code></pre>
-<pre><code>   col1  col2 col3
-0     1   3.0    A
-1     2   0.0    0</code></pre>
+<p>with <code>.loc()</code>, we can select by labels as follows</p>
+<pre class="python"><code>df.loc[&#39;John&#39;] # select one specific row</code></pre>
+<pre><code>Maths       6
+Science     5
+English    10
+Name: John, dtype: int64</code></pre>
+<pre class="python"><code>df.loc[&#39;John&#39;,&#39;Maths&#39;] # select one specific row and column</code></pre>
+<pre><code>6</code></pre>
+<pre class="python"><code>df.loc[[&#39;John&#39;,&#39;Mark&#39;],[&#39;Maths&#39;,&#39;Science&#39;]] # select a list of rows and columns</code></pre>
+<pre><code>      Maths  Science
+John      6        5
+Mark      5        8</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
-<p>We can use either <code>replace()</code> in base R to replace all missings in a dataframe with a specific value, or <code>replace_na</code> in tidyr to offer tailored replacement for each specific column.</p>
-<pre class="r"><code>df = data.frame(col1 = c(1,2),
-                col2 = c(3, NA),
-                col3 = c(&#39;A&#39;,NA))
-
-print(df)</code></pre>
-<pre><code>  col1 col2 col3
-1    1    3    A
-2    2   NA &lt;NA&gt;</code></pre>
-<pre class="r"><code># use replace() in base R to replace all missings to 0
-replace(df, is.na(df), 0)</code></pre>
-<pre><code>  col1 col2 col3
-1    1    3    A
-2    2    0    0</code></pre>
-<pre class="r"><code>library(tidyr)
-# or use replace_na() in tidyverse to offer tailored replacement for each column. 
-df |&gt;  replace_na(list(col2=0,col3=&quot;Unknown&quot;))</code></pre>
-<pre><code>  col1 col2    col3
-1    1    3       A
-2    2    0 Unknown</code></pre>
+<p>To do this in base R is fairly simple as shown below</p>
+<pre class="r"><code>df[&#39;John&#39;,] # select one specific row</code></pre>
+<pre><code>     Maths Science English
+John     6       5      10</code></pre>
+<pre class="r"><code>df[&#39;John&#39;,&#39;Maths&#39;] # select one specific row and column</code></pre>
+<pre><code>[1] 6</code></pre>
+<pre class="r"><code>df[c(&#39;John&#39;,&#39;Mark&#39;),c(&#39;Maths&#39;,&#39;Science&#39;)]  # select a list of rows and columns</code></pre>
+<pre><code>     Maths Science
+John     6       5
+Mark     5       8</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -844,22 +660,20 @@ attached base packages:
 [1] stats     graphics  grDevices datasets  utils     methods   base     
 
 other attached packages:
-[1] tidyr_1.2.1     reticulate_1.26
+[1] reticulate_1.26
 
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.9       pillar_1.8.1     compiler_4.2.1   bslib_0.4.0     
  [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     workflowr_1.7.0 
  [9] tools_4.2.1      digest_0.6.29    lattice_0.20-45  jsonlite_1.8.2  
 [13] evaluate_0.17    lifecycle_1.0.3  tibble_3.1.8     png_0.1-7       
-[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     DBI_1.1.3       
-[21] cli_3.4.1        rstudioapi_0.14  yaml_2.3.5       xfun_0.33       
-[25] fastmap_1.1.0    dplyr_1.0.10     stringr_1.4.1    knitr_1.40      
-[29] generics_0.1.3   fs_1.5.2         vctrs_0.4.2      sass_0.4.2      
-[33] tidyselect_1.2.0 grid_4.2.1       rprojroot_2.0.3  glue_1.6.2      
-[37] R6_2.5.1         fansi_1.0.3      rmarkdown_2.17   purrr_0.3.5     
-[41] magrittr_2.0.3   whisker_0.4      ellipsis_0.3.2   promises_1.2.0.1
-[45] htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0      httpuv_1.6.6    
-[49] utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     cli_3.4.1       
+[21] rstudioapi_0.14  yaml_2.3.5       xfun_0.33        fastmap_1.1.0   
+[25] stringr_1.4.1    knitr_1.40       fs_1.5.2         vctrs_0.4.2     
+[29] sass_0.4.2       grid_4.2.1       rprojroot_2.0.3  glue_1.6.2      
+[33] R6_2.5.1         fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3  
+[37] whisker_0.4      promises_1.2.0.1 htmltools_0.5.3  renv_0.16.0     
+[41] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
 </div>
 </div>
 </div>
