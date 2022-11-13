@@ -51,6 +51,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #19. Filtering a Dataframe2: Select Columns**](method19-filtering-a-dataframe2-getting-columns.html)
 
+[**Method #20. Filtering a Dataframe3: Select by label**](method20-filtering-a-dataframe3-select-by-label.html)
+
 
 ### Bonus R to Python translations
 
