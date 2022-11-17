@@ -53,7 +53,7 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #20. Filtering a Dataframe3: Select by label**](method20-filtering-a-dataframe3-select-by-label.html)
 
-[**Method #21. Filterning a Dataframe4: Select by position**](method21-filtering-a-dataframe4-select-by-position.html)
+[**Method #21. Filtering a Dataframe4: Select by position**](method21-filtering-a-dataframe4-select-by-position.html)
 
 
 ### Bonus R to Python translations
