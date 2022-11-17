@@ -11,9 +11,8 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-11-01" />
 
-<title>Method #9. Printing Descriptive Info about the DataFrame (Method 1)</title>
+<title>Method #21 Filtering a DataFrame4: Selecting by Position</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +358,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #9. Printing Descriptive Info about the DataFrame (Method 1)</h1>
+<h1 class="title toc-ignore">Method #21 Filtering a DataFrame4: Selecting by Position</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-11-01</h4>
+<h4 class="date">November, 2022</h4>
 
 </div>
 
@@ -512,7 +511,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method9-print-descriptive-info-about-the-dataframe1.Rmd</code>) and HTML (<code>docs/method9-print-descriptive-info-about-the-dataframe1.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method21-filtering-a-dataframe4-select-by-position.Rmd</code>) and HTML (<code>docs/method21-filtering-a-dataframe4-select-by-position.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -538,257 +537,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/ca764517d9f3e5c3602b4fa2a3ca8d6b2e089fba/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">ca76451</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/efd27b1421099e993b8705900dd9cb7e36d38c01/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">efd27b1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/76150fe3ed0b9d7488e032b84888a3bc1e2525df/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">76150fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/6a0ac9f359b44fb6feaebd00979d1ed1dc79fe09/analysis/method9-print-descriptive-info-about-the-dataframe1.Rmd" target="_blank">6a0ac9f</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/1589837411605da7c911b3e268e23725dd0202bd/analysis/method21-filtering-a-dataframe4-select-by-position.Rmd" target="_blank">1589837</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-05
+2022-11-17
 </td>
 <td>
-add method11
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7ce73a5878f89ea1f5f0fac0f814fe256f5f0a8c/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">7ce73a5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/97a4ecd8c3151e525245b9ac6df1b07ac2c51271/docs/method9-print-descriptive-info-about-the-dataframe1.html" target="_blank">97a4ecd</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/8b96a30cdb369e80091bf47a2bb3e0c1444be252/analysis/method9-print-descriptive-info-about-the-dataframe1.Rmd" target="_blank">8b96a30</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-add method9
+add method21
 </td>
 </tr>
 </tbody>
@@ -813,75 +574,90 @@ add method9
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-<p>Load R’s build-in dataframe <code>airquality</code>, which contains some missing and save it in the data subfolder under the project folder. Here we used <code>write.csv()</code> in base R rather than <code>write_csv()</code> from the <code>readr</code> package in tidyverse. However, the latter is twice as fast as the former so consider use <code>write_csv()</code> for larger datasets.</p>
-<pre class="r"><code>df = airquality
-df |&gt; head() # we can see that the dataset contains some missing values</code></pre>
-<pre><code>  Ozone Solar.R Wind Temp Month Day
-1    41     190  7.4   67     5   1
-2    36     118  8.0   72     5   2
-3    12     149 12.6   74     5   3
-4    18     313 11.5   62     5   4
-5    NA      NA 14.3   56     5   5
-6    28      NA 14.9   66     5   6</code></pre>
-<pre class="r"><code>#write the dataframe
-write.csv(df, &#39;data/airquality.csv&#39;)</code></pre>
-<p>Read the csv file into the Python environment.</p>
+<div id="create-the-dataframe-in-python" class="section level2">
+<h2>Create the dataframe in Python</h2>
 <pre class="python"><code>import pandas as pd
 
-df = pd.read_csv(&#39;data/airquality.csv&#39;)
-df.head(5)</code></pre>
-<pre><code>   Unnamed: 0  Ozone  Solar.R  Wind  Temp  Month  Day
-0           1   41.0    190.0   7.4    67      5    1
-1           2   36.0    118.0   8.0    72      5    2
-2           3   12.0    149.0  12.6    74      5    3
-3           4   18.0    313.0  11.5    62      5    4
-4           5    NaN      NaN  14.3    56      5    5</code></pre>
+df = pd.DataFrame([[6, 5,  10], 
+                   [5, 8,  6], 
+                   [3, 10, 4], 
+                   [4, 7,  9]],
+                  columns = [&quot;Maths&quot;, &quot;Science&quot;, &quot;English&quot;])
+
+print(df)</code></pre>
+<pre><code>   Maths  Science  English
+0      6        5       10
+1      5        8        6
+2      3       10        4
+3      4        7        9</code></pre>
 </div>
-<div id="method-9.-printing-descriptive-info-about-the-dataframe-method-1" class="section level1">
-<h1>Method #9. Printing Descriptive Info about the DataFrame (Method 1)</h1>
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+
+print(df)</code></pre>
+<pre><code>  Maths Science English
+1     6       5      10
+2     5       8       6
+3     3      10       4
+4     4       7       9</code></pre>
+</div>
+</div>
+<div id="method-21.-filtering-a-dataframe4-selecting-by-position" class="section level1">
+<h1>Method #21. Filtering a DataFrame4: Selecting by Position</h1>
 <div id="python" class="section level2">
 <h2>Python</h2>
-<p><code>info()</code> method can be used to print the missing-value stats and the datatypes. Recall that we can also get datatypes info using <code>.dtypes</code>.</p>
-<pre class="python"><code>df.info()</code></pre>
-<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 153 entries, 0 to 152
-Data columns (total 7 columns):
-Unnamed: 0    153 non-null int64
-Ozone         116 non-null float64
-Solar.R       146 non-null float64
-Wind          153 non-null float64
-Temp          153 non-null int64
-Month         153 non-null int64
-Day           153 non-null int64
-dtypes: float64(3), int64(4)
-memory usage: 8.5 KB</code></pre>
+<p>with <code>.iloc[]</code>, we can select a row by position</p>
+<pre class="python"><code>df.iloc[0] # select the first row</code></pre>
+<pre><code>Maths       6
+Science     5
+English    10
+Name: 0, dtype: int64</code></pre>
+<pre class="python"><code>df.iloc[0:2] # select the first two rows</code></pre>
+<pre><code>   Maths  Science  English
+0      6        5       10
+1      5        8        6</code></pre>
+<pre class="python"><code>df.iloc[-1] # select the last row</code></pre>
+<pre><code>Maths      4
+Science    7
+English    9
+Name: 3, dtype: int64</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
-<p><code>summary()</code> in base R returns the number of missings as well as some summary statistics. Note that it only flags missing info for columns with any missings. To get dataype info, recall we can use the <code>glimpse()</code> or <code>summary()</code> function. There is also a package <code>naniar</code> in R that specialize in identifying, visualizing and handling missing values, <a href="https://rpubs.com/MenaWANG/EDA_MissingDetection">I provided some examples here in case you are interested</a>.</p>
-<pre class="r"><code>df |&gt;  summary()</code></pre>
-<pre><code>     Ozone           Solar.R           Wind             Temp      
- Min.   :  1.00   Min.   :  7.0   Min.   : 1.700   Min.   :56.00  
- 1st Qu.: 18.00   1st Qu.:115.8   1st Qu.: 7.400   1st Qu.:72.00  
- Median : 31.50   Median :205.0   Median : 9.700   Median :79.00  
- Mean   : 42.13   Mean   :185.9   Mean   : 9.958   Mean   :77.88  
- 3rd Qu.: 63.25   3rd Qu.:258.8   3rd Qu.:11.500   3rd Qu.:85.00  
- Max.   :168.00   Max.   :334.0   Max.   :20.700   Max.   :97.00  
- NA&#39;s   :37       NA&#39;s   :7                                       
-     Month            Day      
- Min.   :5.000   Min.   : 1.0  
- 1st Qu.:6.000   1st Qu.: 8.0  
- Median :7.000   Median :16.0  
- Mean   :6.993   Mean   :15.8  
- 3rd Qu.:8.000   3rd Qu.:23.0  
- Max.   :9.000   Max.   :31.0  
-                               </code></pre>
+<p>To do this in R is fairly simple as shown below, also we could <code>slice()</code>, <code>slice_head()</code> and <code>slice_tail()</code> in the <code>dplyr</code> package as fit.</p>
+<pre class="r"><code>library(dplyr)
+
+df |&gt; slice(1) # select the first row</code></pre>
+<pre><code>  Maths Science English
+1     6       5      10</code></pre>
+<pre class="r"><code>df |&gt; slice(1:2) # select the first two rows</code></pre>
+<pre><code>  Maths Science English
+1     6       5      10
+2     5       8       6</code></pre>
+<pre class="r"><code>df |&gt; slice_tail(n=1) # select the last row</code></pre>
+<pre><code>  Maths Science English
+1     4       7       9</code></pre>
+<pre class="r"><code>df |&gt; slice_tail(prop = 0.5) # select the bottom half</code></pre>
+<pre><code>  Maths Science English
+1     3      10       4
+2     4       7       9</code></pre>
+<pre class="r"><code>df |&gt; slice_head(prop = 0.25) # select the top 1/4</code></pre>
+<pre><code>  Maths Science English
+1     6       5      10</code></pre>
+<p>To get top or bottom perc% of rows in Python, I didn’t find a build-in method yet. But it could be done easily with some simple calculation</p>
+<pre class="python"><code>half_rows = int(round(0.5*len(df),0))# calculate 50% of rows
+
+df.iloc[0:half_rows] # get the top half</code></pre>
+<pre><code>   Maths  Science  English
+0      6        5       10
+1      5        8        6</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -905,20 +681,21 @@ attached base packages:
 [1] stats     graphics  grDevices datasets  utils     methods   base     
 
 other attached packages:
-[1] reticulate_1.26
+[1] dplyr_1.0.10    reticulate_1.26
 
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.9       pillar_1.8.1     compiler_4.2.1   bslib_0.4.0     
  [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     workflowr_1.7.0 
  [9] tools_4.2.1      digest_0.6.29    lattice_0.20-45  jsonlite_1.8.2  
 [13] evaluate_0.17    lifecycle_1.0.3  tibble_3.1.8     png_0.1-7       
-[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     cli_3.4.1       
-[21] rstudioapi_0.14  yaml_2.3.5       xfun_0.33        fastmap_1.1.0   
-[25] stringr_1.4.1    knitr_1.40       fs_1.5.2         vctrs_0.4.2     
-[29] sass_0.4.2       grid_4.2.1       rprojroot_2.0.3  glue_1.6.2      
-[33] R6_2.5.1         fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3  
-[37] whisker_0.4      promises_1.2.0.1 htmltools_0.5.3  renv_0.16.0     
-[41] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     DBI_1.1.3       
+[21] cli_3.4.1        rstudioapi_0.14  yaml_2.3.5       xfun_0.33       
+[25] fastmap_1.1.0    stringr_1.4.1    knitr_1.40       generics_0.1.3  
+[29] fs_1.5.2         vctrs_0.4.2      sass_0.4.2       tidyselect_1.2.0
+[33] grid_4.2.1       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
+[37] fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3   whisker_0.4     
+[41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
+[45] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
 </div>
 </div>
 </div>
