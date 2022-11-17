@@ -1,0 +1,113 @@
+---
+title: "Method #22-23 Finding Unique Values in a DataFrame"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-17"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+```
+
+## Create the dataframe in Python
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[6, 5,  10], 
+                   [5, 8,  6], 
+                   [5, 10, 6], 
+                   [4, 7,  10]],
+                  columns = ["Maths", "Science", "English"])
+
+print(df)
+
+```
+
+## Load the dataframe into R
+
+
+```{r}
+df <- py$df #access df as saved in Python(py) above
+
+print(df)
+```
+
+
+# Method #22-23. Finding Unique Values in a DataFrame
+
+## Python
+
+use `unique()` to find unique values, and `nunique()` for the number of unique values
+
+```{python}
+df['Maths'].unique() # get unique values in the 'Maths' column
+
+df['English'].unique() # get unique values in the 'English' column
+
+df['Maths'].nunique() # get the number of unique values in the 'Maths' column
+
+df['English'].nunique() # get the number of unique values in the 'English' column
+
+```
+
+## R
+
+To get unique values of a column, we select the column then apply the `unique()` function. This can also be used to find unique value combinations across multiple variables. To count the number of unique values or value combinations, just apply `length()` function to count its length.     
+
+For python, `unique()` can't be used to get unique value combinations across multiple variables. If this is what you seek to do, please refer to method 26 in [Avi's article](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) which we will get to translate soon.
+
+```{r}
+library(dplyr)
+
+# unique values in one single column
+df |> 
+  select(Maths) |> 
+  unique()
+
+# unique combination of values across multiple columns
+df |> 
+  select(Maths, English) |> 
+  unique()
+
+# count the number of unique values or value combination
+df |> 
+  select(Maths, English) |> 
+  unique() |> 
+  length()
+
+```

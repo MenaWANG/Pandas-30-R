@@ -47,13 +47,15 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #16-17. Adding New Columns**](method16-17-adding-new-columns.html)
 
-[**Method #18. Filtering a Dataframe1: Boolean Filtering**](method18-filteringa-dataframe1-boolean-filtering.html)
+[**Method #18. Filtering a Dataframe1: Boolean filtering**](method18-filteringa-dataframe1-boolean-filtering.html)
 
-[**Method #19. Filtering a Dataframe2: Select Columns**](method19-filtering-a-dataframe2-getting-columns.html)
+[**Method #19. Filtering a Dataframe2: Select columns**](method19-filtering-a-dataframe2-getting-columns.html)
 
 [**Method #20. Filtering a Dataframe3: Select by label**](method20-filtering-a-dataframe3-select-by-label.html)
 
 [**Method #21. Filtering a Dataframe4: Select by position**](method21-filtering-a-dataframe4-select-by-position.html)
+
+[**Method #22-23. Finding Unique Values in a Dataframe**](method22-23-finding-unique-values-in-a-dataframe.html)
 
 
 ### Bonus R to Python translations
