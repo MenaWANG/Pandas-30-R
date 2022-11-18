@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-11-03" />
+<meta name="date" content="2022-11-18" />
 
-<title>Method #10. Printing Descriptive Info about the DataFrame (Method 2)</title>
+<title>Method #24 Apply A Function to A Dataframe</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +359,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #10. Printing Descriptive Info about the DataFrame (Method 2)</h1>
+<h1 class="title toc-ignore">Method #24 Apply A Function to A Dataframe</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-11-03</h4>
+<h4 class="date">2022-11-18</h4>
 
 </div>
 
@@ -512,7 +512,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method10-print-descriptive-info-about-the-dataframe2.Rmd</code>) and HTML (<code>docs/method10-print-descriptive-info-about-the-dataframe2.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method24-apply-a-function-to-a-dataframe.Rmd</code>) and HTML (<code>docs/method24-apply-a-function-to-a-dataframe.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -538,257 +538,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/d77b1143760f12fb2388d7246c5a4f7f70713a69/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">d77b114</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/55def40a89fc669024a53e8847b34edb7ecb90d2/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">55def40</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/ca764517d9f3e5c3602b4fa2a3ca8d6b2e089fba/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">ca76451</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/efd27b1421099e993b8705900dd9cb7e36d38c01/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">efd27b1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/76150fe3ed0b9d7488e032b84888a3bc1e2525df/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">76150fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7ce73a5878f89ea1f5f0fac0f814fe256f5f0a8c/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">7ce73a5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/0cd6f777d2910b5014bc92206e75f274e0a43a6a/analysis/method10-print-descriptive-info-about-the-dataframe2.Rmd" target="_blank">0cd6f77</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/e187d0fd6c1410e206daaa5d13dd189fc829cdbb/analysis/method24-apply-a-function-to-a-dataframe.Rmd" target="_blank">e187d0f</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-03
+2022-11-18
 </td>
 <td>
-add method10
+add method24
 </td>
 </tr>
 </tbody>
@@ -813,79 +575,112 @@ add method10
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of 30 essential Pandas methods introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-</div>
-<div id="method-10.-printing-descriptive-info-about-the-dataframe-method-2" class="section level1">
-<h1>Method #10. Printing Descriptive Info about the DataFrame (Method 2)</h1>
-<div id="python" class="section level2">
-<h2>Python</h2>
-<p><code>describe()</code> returns standard statistics like mean, standard deviation, maximum etc. of every numeric-valued column</p>
+<div id="create-the-dataframe-in-python" class="section level2">
+<h2>Create the dataframe in Python</h2>
 <pre class="python"><code>import pandas as pd
 
-df = pd.read_csv(&#39;data/iris.csv&#39;)
+df = pd.DataFrame([[1, 2], 
+                   [5, 8], 
+                   [3, 9]], 
+                  columns = [&quot;col1&quot;, &quot;col2&quot;])
 
-df.describe()</code></pre>
-<pre><code>       Sepal.Length  Sepal.Width  Petal.Length  Petal.Width
-count    150.000000   150.000000    150.000000   150.000000
-mean       5.843333     3.057333      3.758000     1.199333
-std        0.828066     0.435866      1.765298     0.762238
-min        4.300000     2.000000      1.000000     0.100000
-25%        5.100000     2.800000      1.600000     0.300000
-50%        5.800000     3.000000      4.350000     1.300000
-75%        6.400000     3.300000      5.100000     1.800000
-max        7.900000     4.400000      6.900000     2.500000</code></pre>
+print(df)</code></pre>
+<pre><code>   col1  col2
+0     1     2
+1     5     8
+2     3     9</code></pre>
+</div>
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+
+df &lt;- data.frame(
+  col1 = c(1,5,3),
+  col2 = c(2,8,9)
+)
+
+print(df)</code></pre>
+<pre><code>  col1 col2
+1    1    2
+2    5    8
+3    3    9</code></pre>
+</div>
+</div>
+<div id="method-24.-apply-a-function-to-a-dataframe" class="section level1">
+<h1>Method #24. Apply A Function to A Dataframe</h1>
+<div id="python" class="section level2">
+<h2>Python</h2>
+<p>In Python, we can use <code>apply()</code> to apply a function to a dataframe. Let’s define a simple function first.</p>
+<pre class="python"><code># create a function to be applied
+def add_cols(row):
+  return row.col1 + row.col2</code></pre>
+<p>Let’s apply the function to all the columns in a datafarme</p>
+<pre class="python"><code>df[&#39;col3&#39;] = df.apply(add_cols, axis = 1)
+df</code></pre>
+<pre><code>   col1  col2  col3
+0     1     2     3
+1     5     8    13
+2     3     9    12</code></pre>
+<p>Or we could only apply a function to one particular columns in a dataframe.</p>
+<pre class="python"><code>def square_col(num):
+  return num**2
+
+df[&#39;col3&#39;]=df.col2.apply(square_col)
+df</code></pre>
+<pre><code>   col1  col2  col3
+0     1     2     4
+1     5     8    64
+2     3     9    81</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
-<p>As discussed in Method 9, <code>summary()</code> in base R returns the number of missings as well as some summary statistics for all numerical and factor columns.</p>
-<pre class="r"><code>df = py$df
+<p>In R, we could use <code>lapply()</code> in dplyr package to apply a custom function to all values in a dataframe, note that the results are in multiple lists rather than one dataframe.</p>
+<pre class="r"><code>library(dplyr)
 
-df |&gt;  summary()</code></pre>
-<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-   Species         
- Length:150        
- Class :character  
- Mode  :character  
-                   
-                   
-                   </code></pre>
-<p>For categorical variables, like <code>Species</code> in the iris dataset, <code>summary()</code> could give us its frequency counts if we turn it into factor type in R.</p>
-<pre class="r"><code>library(dplyr) #for mutate
+square_col = function(num){
+  return (num^2)
+}
 
-df |&gt; 
-  mutate(Species = as.factor(Species)) |&gt; # see method17 for more on mutate()   
-  summary()</code></pre>
-<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-       Species  
- setosa    :50  
- versicolor:50  
- virginica :50  
-                
-                
-                </code></pre>
-<p>In python, we could use <code>value_counts()</code> to get frequency counts. See #method27 for more.</p>
-<pre class="python"><code>df[&#39;Species&#39;].value_counts()</code></pre>
-<pre><code>virginica     50
-setosa        50
-versicolor    50
-Name: Species, dtype: int64</code></pre>
+df2 = df |&gt; lapply(FUN=square_col)
+df2 |&gt; str() #lapply returns result in lists</code></pre>
+<pre><code>List of 2
+ $ col1: num [1:3] 1 25 9
+ $ col2: num [1:3] 4 64 81</code></pre>
+<pre class="r"><code>df2 |&gt; data.frame() |&gt; str() # transform the lists into a dataframe</code></pre>
+<pre><code>&#39;data.frame&#39;:   3 obs. of  2 variables:
+ $ col1: num  1 25 9
+ $ col2: num  4 64 81</code></pre>
+<p>We can use the <code>map_df()</code> function in <code>purrr()</code> package to do the similar task but generate a dataframe (tibble) directly. What is a tibble? You might be wondering. well, think of it basically as a dataframe, just even nicer. Read more about it <a href="http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/">here</a> if interested.</p>
+<pre class="r"><code>library(purrr)
+
+df |&gt; map_df(square_col) </code></pre>
+<pre><code># A tibble: 3 × 2
+   col1  col2
+  &lt;dbl&gt; &lt;dbl&gt;
+1     1     4
+2    25    64
+3     9    81</code></pre>
+<p>To apply a function to one column to create a new column without changing the existing column itself, the suitable mapping method depends on the type of output. When the output is a numeric column, use <code>map_dbl()</code>, whereas when the output is a character column, use <code>map_chr()</code>. Below please see an example for <code>map_dbl()</code>, and more illustrations are available <a href="https://www.geeksforgeeks.org/apply-function-to-every-value-in-r-dataframe/#:~:text=In%20R%20Programming%20Language%20to,use%20paste()%20with%20lapply.">here</a>. For other ways to create new columns in Pandas and R, please refer to method 17.</p>
+<pre class="r"><code>df[&#39;col3&#39;] = df[[&#39;col2&#39;]] |&gt; map_dbl(square_col)
+df</code></pre>
+<pre><code>  col1 col2 col3
+1    1    2    4
+2    5    8   64
+3    3    9   81</code></pre>
+<p>In contrast, if we want to apply a function to change a subset of columns in a dataframe, we could simply apply <code>select()</code> function before mapping the function to the dataframe.</p>
+<pre class="r"><code>df |&gt; select(col2) |&gt; map_df(square_col)</code></pre>
+<pre><code># A tibble: 3 × 1
+   col2
+  &lt;dbl&gt;
+1     4
+2    64
+3    81</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -909,7 +704,7 @@ attached base packages:
 [1] stats     graphics  grDevices datasets  utils     methods   base     
 
 other attached packages:
-[1] dplyr_1.0.10    reticulate_1.26
+[1] purrr_0.3.5     dplyr_1.0.10    reticulate_1.26
 
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.9       pillar_1.8.1     compiler_4.2.1   bslib_0.4.0     
@@ -918,12 +713,13 @@ loaded via a namespace (and not attached):
 [13] evaluate_0.17    lifecycle_1.0.3  tibble_3.1.8     png_0.1-7       
 [17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     DBI_1.1.3       
 [21] cli_3.4.1        rstudioapi_0.14  yaml_2.3.5       xfun_0.33       
-[25] fastmap_1.1.0    stringr_1.4.1    knitr_1.40       generics_0.1.3  
-[29] fs_1.5.2         vctrs_0.4.2      sass_0.4.2       tidyselect_1.2.0
-[33] grid_4.2.1       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
-[37] fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3   whisker_0.4     
-[41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
-[45] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+[25] fastmap_1.1.0    withr_2.5.0      stringr_1.4.1    knitr_1.40      
+[29] generics_0.1.3   fs_1.5.2         vctrs_0.4.2      sass_0.4.2      
+[33] tidyselect_1.2.0 grid_4.2.1       rprojroot_2.0.3  glue_1.6.2      
+[37] R6_2.5.1         fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3  
+[41] whisker_0.4      promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1
+[45] renv_0.16.0      httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8   
+[49] cachem_1.0.6    </code></pre>
 </div>
 </div>
 </div>
