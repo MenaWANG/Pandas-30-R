@@ -57,6 +57,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #22-23. Finding Unique Values in a Dataframe**](method22-23-finding-unique-values-in-a-dataframe.html)
 
+[**Method #24. Apply a Function to a Dataframe**](method24-apply-a-function-to-a-dataframe.html)
+
 
 ### Bonus R to Python translations
 

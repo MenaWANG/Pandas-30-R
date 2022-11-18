@@ -1,0 +1,154 @@
+---
+title: "Method #24 Apply A Function to A Dataframe"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-18"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+```
+
+## Create the dataframe in Python
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 2], 
+                   [5, 8], 
+                   [3, 9]], 
+                  columns = ["col1", "col2"])
+
+print(df)
+
+```
+
+## Load the dataframe into R
+
+
+```{r}
+df <- py$df #access df as saved in Python(py) above
+
+df <- data.frame(
+  col1 = c(1,5,3),
+  col2 = c(2,8,9)
+)
+
+print(df)
+```
+
+
+# Method #24. Apply A Function to A Dataframe
+
+## Python
+
+In Python, we can use `apply()` to apply a function to a dataframe. Let's define a simple function first.
+
+```{python}
+# create a function to be applied
+def add_cols(row):
+  return row.col1 + row.col2
+
+```
+
+Let's apply the function to all the columns in a datafarme
+
+```{python}
+df['col3'] = df.apply(add_cols, axis = 1)
+df
+```
+
+Or we could only apply a function to one particular columns in a dataframe.
+
+```{python}
+def square_col(num):
+  return num**2
+
+df['col3']=df.col2.apply(square_col)
+df
+```
+
+
+## R
+
+In R, we could use `lapply()` in dplyr package to apply a custom function to all values in a dataframe, note that the results are in multiple lists rather than one dataframe. 
+
+```{r}
+
+library(dplyr)
+
+square_col = function(num){
+  return (num^2)
+}
+
+df2 = df |> lapply(FUN=square_col)
+df2 |> str() #lapply returns result in lists
+df2 |> data.frame() |> str() # transform the lists into a dataframe
+
+```
+
+
+We can use the `map_df()` function in `purrr()` package to do the similar task but generate a dataframe (tibble) directly. What is a tibble? You might be wondering. well, think of it basically as a dataframe, just even nicer. Read more about it [here](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/) if interested.  
+
+```{r}
+library(purrr)
+
+df |> map_df(square_col) 
+
+```
+
+To apply a function to one column to create a new column without changing the existing column itself, the suitable mapping method depends on the type of output. When the output is a numeric column, use `map_dbl()`, whereas when the output is a character column, use `map_chr()`. Below please see an example for `map_dbl()`, and more illustrations are available [here](https://www.geeksforgeeks.org/apply-function-to-every-value-in-r-dataframe/#:~:text=In%20R%20Programming%20Language%20to,use%20paste()%20with%20lapply.). For other ways to create new columns in Pandas and R, please refer to method 17.
+
+
+```{r}
+
+df['col3'] = df[['col2']] |> map_dbl(square_col)
+df
+
+```
+
+In contrast, if we want to apply a function to change a subset of columns in a dataframe, we could simply apply `select()` function before mapping the function to the dataframe.
+
+```{r}
+
+df |> select(col2) |> map_df(square_col)
+```
+
+
+
+
+
