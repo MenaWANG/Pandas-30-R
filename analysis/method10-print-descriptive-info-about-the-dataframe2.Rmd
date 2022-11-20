@@ -58,6 +58,11 @@ df = pd.read_csv('data/iris.csv')
 df.describe()
 ```
 
+`describe()` can also offer some info on categorical columns: the number of unique values, the most frequent value and its frequency, if we add `include = all` argument
+```{python}
+df.describe(include = 'all')
+```
+
 
 ## R
 
@@ -90,4 +95,6 @@ In python, we could use `value_counts()` to get frequency counts. See #method27 
 df['Species'].value_counts()
 
 ```
+
+
 

@@ -369,7 +369,7 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -378,7 +378,7 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -387,10 +387,10 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-11-18
+<strong>Last updated:</strong> 2022-11-20
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Pandas-30-R/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -406,12 +406,12 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
 </div>
 </div>
 </div>
@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtreee187d0fd6c1410e206daaa5d13dd189fc829cdbbtargetblanke187d0fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/e187d0fd6c1410e206daaa5d13dd189fc829cdbb" target="_blank">e187d0f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree043f5faab63446746b1c577ea84a70b68ad86ea4targetblank043f5faa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/043f5faab63446746b1c577ea84a70b68ad86ea4" target="_blank">043f5fa</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtreee187d0fd6c1410e206daaa5d13dd189fc829cdbbtargetblanke187d0fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree043f5faab63446746b1c577ea84a70b68ad86ea4targetblank043f5faa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/e187d0fd6c1410e206daaa5d13dd189fc829cdbb" target="_blank">e187d0f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/043f5faab63446746b1c577ea84a70b68ad86ea4" target="_blank">043f5fa</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -498,6 +498,9 @@ Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    dev/
     Ignored:    renv/
+
+Unstaged changes:
+    Modified:   analysis/method10-print-descriptive-info-about-the-dataframe2.Rmd
 
 </code></pre>
 <p>
@@ -536,6 +539,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/043f5faab63446746b1c577ea84a70b68ad86ea4/docs/method10-print-descriptive-info-about-the-dataframe2.html" target="_blank">043f5fa</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-11-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -839,6 +859,20 @@ min        4.300000     2.000000      1.000000     0.100000
 50%        5.800000     3.000000      4.350000     1.300000
 75%        6.400000     3.300000      5.100000     1.800000
 max        7.900000     4.400000      6.900000     2.500000</code></pre>
+<p><code>describe()</code> can also offer some info on categorical columns: the number of unique values, the most frequent value and its frequency, if we add <code>include = all</code> argument</p>
+<pre class="python"><code>df.describe(include = &#39;all&#39;)</code></pre>
+<pre><code>        Sepal.Length  Sepal.Width  Petal.Length  Petal.Width Species
+count     150.000000   150.000000    150.000000   150.000000     150
+unique           NaN          NaN           NaN          NaN       3
+top              NaN          NaN           NaN          NaN  setosa
+freq             NaN          NaN           NaN          NaN      50
+mean        5.843333     3.057333      3.758000     1.199333     NaN
+std         0.828066     0.435866      1.765298     0.762238     NaN
+min         4.300000     2.000000      1.000000     0.100000     NaN
+25%         5.100000     2.800000      1.600000     0.300000     NaN
+50%         5.800000     3.000000      4.350000     1.300000     NaN
+75%         6.400000     3.300000      5.100000     1.800000     NaN
+max         7.900000     4.400000      6.900000     2.500000     NaN</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
@@ -882,8 +916,8 @@ df |&gt;
                 </code></pre>
 <p>In python, we could use <code>value_counts()</code> to get frequency counts. See #method27 for more.</p>
 <pre class="python"><code>df[&#39;Species&#39;].value_counts()</code></pre>
-<pre><code>virginica     50
-setosa        50
+<pre><code>setosa        50
+virginica     50
 versicolor    50
 Name: Species, dtype: int64</code></pre>
 <br>
@@ -906,7 +940,7 @@ locale:
 [5] LC_TIME=English_Australia.utf8    
 
 attached base packages:
-[1] stats     graphics  grDevices datasets  utils     methods   base     
+[1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
 [1] dplyr_1.0.10    reticulate_1.26
@@ -922,8 +956,8 @@ loaded via a namespace (and not attached):
 [29] fs_1.5.2         vctrs_0.4.2      sass_0.4.2       tidyselect_1.2.0
 [33] grid_4.2.1       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
 [37] fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3   whisker_0.4     
-[41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
-[45] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+[41] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 httpuv_1.6.6    
+[45] utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
 </div>
 </div>
 </div>
