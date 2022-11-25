@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-10-28" />
+<meta name="date" content="2022-11-25" />
 
-<title>Method #4. Creating a DataFrame from a Dictionary</title>
+<title>Method #25-26 Handling Duplicates</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +359,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #4. Creating a DataFrame from a Dictionary</h1>
+<h1 class="title toc-ignore">Method #25-26 Handling Duplicates</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-10-28</h4>
+<h4 class="date">2022-11-25</h4>
 
 </div>
 
@@ -512,7 +512,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method4-create-a-dataframe-from-a-dictionary.Rmd</code>) and HTML (<code>docs/method4-create-a-dataframe-from-a-dictionary.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method25-26-handling-duplicates.Rmd</code>) and HTML (<code>docs/method25-26-handling-duplicates.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -538,393 +538,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/043f5faab63446746b1c577ea84a70b68ad86ea4/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">043f5fa</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/d77b1143760f12fb2388d7246c5a4f7f70713a69/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">d77b114</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/55def40a89fc669024a53e8847b34edb7ecb90d2/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">55def40</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/ca764517d9f3e5c3602b4fa2a3ca8d6b2e089fba/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">ca76451</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/efd27b1421099e993b8705900dd9cb7e36d38c01/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">efd27b1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/76150fe3ed0b9d7488e032b84888a3bc1e2525df/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">76150fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7ce73a5878f89ea1f5f0fac0f814fe256f5f0a8c/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">7ce73a5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/97a4ecd8c3151e525245b9ac6df1b07ac2c51271/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">97a4ecd</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/99c04b87abbbb34161fac89a7a63a1bc6c1e3920/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">99c04b8</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e8c4cecee58b21d999c2c56034c84c1edbba18e8/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">e8c4cec</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/3e4868b8d00ec40a1150aedaca388ef708173e71/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">3e4868b</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/641dd5b4bef635d99ffda989b395f5a7f8053ff5/analysis/method4-create-a-dataframe-from-a-dictionary.Rmd" target="_blank">641dd5b</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/c90624b3f05014d388c026ddc12860482409ccf2/analysis/method25-26-handling-duplicates.Rmd" target="_blank">c90624b</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-01
+2022-11-25
 </td>
 <td>
-add method6
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/db83905374f279ff12a45c325942f5b37c0d03a8/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">db83905</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-30
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2be83cf90647e7727ad1b81809bd95d8cb49695b/docs/method4-create-a-dataframe-from-a-dictionary.html" target="_blank">2be83cf</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/c0aa815e2addc820b4ccc36eda72c0595d27d8ee/analysis/method4-create-a-dataframe-from-a-dictionary.Rmd" target="_blank">c0aa815</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-add method4
+add method25-26
 </td>
 </tr>
 </tbody>
@@ -949,43 +575,82 @@ add method4
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-</div>
-<div id="method-4.-creating-a-dataframe-from-a-dictionary" class="section level1">
-<h1>Method #4. Creating a DataFrame from a Dictionary</h1>
-<div id="python" class="section level2">
-<h2>Python</h2>
+<div id="create-the-dataframe-in-python" class="section level2">
+<h2>Create the dataframe in Python</h2>
+<p>In the simple dataframe below, the 1st and 3rd row are the same.</p>
 <pre class="python"><code>import pandas as pd
 
-data = {&#39;col1&#39;: [1,2],
-        &#39;col2&#39;: [3,4],
-        &#39;col3&#39;: [&#39;A&#39;,&#39;B&#39;]}
-
-df = pd.DataFrame(data)
+df = pd.DataFrame([[1, &#39;A&#39;], 
+                   [2, &#39;B&#39;], 
+                   [1, &#39;A&#39;]], 
+                  columns = [&quot;col1&quot;, &quot;col2&quot;])
 
 print(df)</code></pre>
-<pre><code>   col1  col2 col3
-0     1     3    A
-1     2     4    B</code></pre>
+<pre><code>   col1 col2
+0     1    A
+1     2    B
+2     1    A</code></pre>
+</div>
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+
+print(df)</code></pre>
+<pre><code>  col1 col2
+1    1    A
+2    2    B
+3    1    A</code></pre>
+</div>
+</div>
+<div id="method-25-26.-handling-duplicates" class="section level1">
+<h1>Method #25-26. Handling Duplicates</h1>
+<div id="python" class="section level2">
+<h2>Python</h2>
+<p>In Python, we can use <code>duplicated()</code> to identify duplicated rows.</p>
+<pre class="python"><code>df.duplicated() #the default setting only marks the second appearance of the duplicated rows</code></pre>
+<pre><code>0    False
+1    False
+2     True
+dtype: bool</code></pre>
+<pre class="python"><code>df.duplicated(keep=False) #add `keep = False` to identify all appearances of the duplicated rows</code></pre>
+<pre><code>0     True
+1    False
+2     True
+dtype: bool</code></pre>
+<p>The above result can be used to identify duplicated rows in a dataframe. Check out how the results below are slightly different.</p>
+<pre class="python"><code>df[df.duplicated(keep=False)]</code></pre>
+<pre><code>   col1 col2
+0     1    A
+2     1    A</code></pre>
+<pre class="python"><code>df[df.duplicated()]</code></pre>
+<pre><code>   col1 col2
+2     1    A</code></pre>
+<p>To drop duplicated rows in Python, we can use the <code>drop_duplicates()</code> method as follows.</p>
+<pre class="python"><code>df.drop_duplicates()</code></pre>
+<pre><code>   col1 col2
+0     1    A
+1     2    B</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
-<pre class="r"><code># There is no dict in base R, the closest is probably list + vector
-data = list(col1 = c(1,2), # col1 is a vector
-            col2 = c(3,4),
-            col3 = c(&#39;A&#39;,&#39;B&#39;))
-
-df = data.frame(data)
-
-print(df)</code></pre>
-<pre><code>  col1 col2 col3
-1    1    3    A
-2    2    4    B</code></pre>
+<p>In base R, we also have a <code>duplciated()</code> function, notice that only one of the row <code>[1, 'A']</code> was marked as duplicated.</p>
+<pre class="r"><code>df |&gt; duplicated()</code></pre>
+<pre><code>[1] FALSE FALSE  TRUE</code></pre>
+<pre class="r"><code># use the result to identify duplicated rows
+df[duplicated(df),]</code></pre>
+<pre><code>  col1 col2
+3    1    A</code></pre>
+<p>To drop duplicated rows in R, we can use the <code>unique()</code> method in base R.</p>
+<pre class="r"><code>df |&gt; unique()</code></pre>
+<pre><code>  col1 col2
+1    1    A
+2    2    B</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
