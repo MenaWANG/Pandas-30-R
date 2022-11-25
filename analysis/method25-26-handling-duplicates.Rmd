@@ -1,0 +1,118 @@
+---
+title: "Method #25-26 Handling Duplicates"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-11-25"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+```
+
+## Create the dataframe in Python
+
+In the simple dataframe below, the 1st and 3rd row are the same.
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 'A'], 
+                   [2, 'B'], 
+                   [1, 'A']], 
+                  columns = ["col1", "col2"])
+
+print(df)
+
+```
+
+## Load the dataframe into R
+
+```{r}
+df <- py$df #access df as saved in Python(py) above
+
+print(df)
+```
+
+
+# Method #25-26. Handling Duplicates
+
+## Python
+
+In Python, we can use `duplicated()` to identify duplicated rows. 
+
+```{python}
+df.duplicated() #the default setting only marks the second appearance of the duplicated rows
+df.duplicated(keep=False) #add `keep = False` to identify all appearances of the duplicated rows
+```
+
+The above result can be used to identify duplicated rows in a dataframe. Check out how the results below are slightly different. 
+
+```{python}
+df[df.duplicated(keep=False)]
+```
+
+```{python}
+df[df.duplicated()]
+```
+
+To drop duplicated rows in Python, we can use the `drop_duplicates()` method as follows. 
+
+```{python}
+df.drop_duplicates()
+```
+
+## R
+
+In base R, we also have a `duplciated()` function, notice that only one of the row `[1, 'A']` was marked as duplicated.  
+
+```{r}
+df |> duplicated()
+
+# use the result to identify duplicated rows
+df[duplicated(df),]
+
+```
+
+To drop duplicated rows in R, we can use the `unique()` method in base R.
+
+```{r}
+df |> unique()
+
+```
+
+
