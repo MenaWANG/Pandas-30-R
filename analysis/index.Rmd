@@ -61,6 +61,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #25-26. Handling Duplicates**](method25-26-handling-duplicates.html)
 
+[**Method #27. Finding the Distribution of Values**](method27-finding-the-distribution-of-values.html)
+
 
 ### Bonus R to Python translations
 

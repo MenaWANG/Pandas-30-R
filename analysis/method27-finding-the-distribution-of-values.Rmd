@@ -1,0 +1,139 @@
+---
+title: "Method #27 Finding the Distribution of Values"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "`r format(Sys.Date(), '%B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+```
+
+## Create the dataframe in Python
+
+```{python}
+import pandas as pd
+
+df = pd.DataFrame([[1, 'A'], 
+                   [2, 'B'], 
+                   [1, 'A']], 
+                  columns = ["col1", "col2"])
+
+print(df)
+
+```
+
+## Load the dataframe into R
+
+```{r}
+df <- py$df #access df as saved in Python(py) above
+
+print(df)
+```
+
+
+# Method #27 Finding the Distribution of Values
+
+## Python
+
+In Python, we can use `value_counts()` to find frequency of each unique values, and use `sort` to keep the most frequently appeared value at the top.
+
+```{python}
+df["col2"].value_counts(sort = True)
+
+```
+
+We can get a percentage instead of value counts by adding the `normalize = True` argument.
+
+```{python}
+df["col2"].value_counts(sort = True, normalize = True)\
+          .round(3) * 100 # round it up if you like
+```
+
+## R
+
+In R, this is easy to do with `count()`
+
+```{r}
+library(dplyr)
+
+df |> count(col2, sort = TRUE)
+
+```
+
+To add percentage takes a bit more code, but you can have a nice table with both the counts and percentage in it together.
+
+```{r}
+df |> 
+  group_by(col2) |> 
+  summarize(n = n()) |> # get counts
+  mutate(pct = n / sum(n) * 100) |> # get percentage
+  arrange(n |> desc()) # sort descending
+
+```
+
+We could also use `tabyl()` in the `janitor` package to do it in one line. 
+
+```{r}
+library(janitor)
+
+df |> tabyl(col2)
+
+```
+
+`tabyl` has much advanced functionalities that would allow us to create customized frequency tables. Please see below two simple examples and much more available [here](https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html) 
+
+```{r table.width=10}
+
+humans <- starwars |> filter(species == "Human")
+
+# one-way table
+humans |> 
+  tabyl(eye_color) |> 
+  adorn_totals() |> 
+  adorn_pct_formatting(digits = 1)  # format the percentage
+
+# two-way table
+humans |> 
+  tabyl(gender, eye_color) |> 
+  adorn_totals('row') |> # add  total for rows, we could have it for columns or both
+  adorn_percentages("all") |> # pct among all for each cell
+  adorn_pct_formatting(digits = 1)  |> 
+  adorn_ns() # add counts 
+
+```
+
