@@ -129,8 +129,8 @@ humans |>
 
 # two-way table
 humans |> 
-  tabyl(gender, eye_color) |> 
-  adorn_totals('row') |> # add  total for rows, we could have it for columns or both
+  tabyl(eye_color,gender) |> 
+  adorn_totals(c('row','col')) |> # add  total for both rows and columns
   adorn_percentages("all") |> # pct among all for each cell
   adorn_pct_formatting(digits = 1)  |> 
   adorn_ns() # add counts 
