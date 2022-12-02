@@ -1,8 +1,8 @@
 ---
-title: "Method #20 Filtering a DataFrame3: Selecting by Label (.loc)"
+title: "Method #29 Finding Cross-Tabulation"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "`r format(Sys.Date(), '%B, %Y')`"
+date: "2022-12-02"
 output: 
   html_document:
     toc: true
@@ -41,6 +41,7 @@ Provide a Python to R translation of **30 essential Pandas methods** introduced 
 ```{r}
 # enable python in RMarkdown
 library(reticulate)
+
 ```
 
 ## Create the dataframe in Python
@@ -48,19 +49,17 @@ library(reticulate)
 ```{python}
 import pandas as pd
 
-df = pd.DataFrame([[6, 5,  10], 
-                   [5, 8,  6], 
-                   [3, 10, 4]], 
-                  columns = ["Maths", "Science", "English"],
-                  index = ["John", "Mark", "Peter"])
+df = pd.DataFrame([["A", "X"], 
+                   ["B", "Y"], 
+                   ["C", "X"],
+                   ["A", "X"]], 
+                  columns = ["col1", "col2"])
 
 print(df)
 
 ```
 
 ## Load the dataframe into R
-
-We notice that the index has been passed on to the dataframe in R.
 
 ```{r}
 df <- py$df #access df as saved in Python(py) above
@@ -69,32 +68,24 @@ print(df)
 ```
 
 
-# Method #20. Filtering a DataFrame3: Selecting by Label
+# Method #29 Fiding Cross-Tabulation
 
 ## Python
 
-with `.loc[]`, we can select by labels as follows
+In Python, `crosstab()` can return the frequency of each combination of values across two columns.
 
 ```{python}
-df.loc['John'] # select one specific row
+pd.crosstab(df.col1, df.col2)
 
-df.loc['John','Maths'] # select one specific row and column
-
-df.loc[['John','Mark'],['Maths','Science']] # select a list of rows and columns
 ```
 
 ## R
 
-To do this in base R is fairly simple as shown below
+In R, `table()` method can do the similar task.
 
 ```{r}
+table(df$col1, df$col2)
 
-df['John',] # select one specific row
-
-df['John','Maths'] # select one specific row and column
-
-df[c('John','Mark'),c('Maths','Science')]  # select a list of rows and columns
-  
 ```
 
-
+But with `tabyl()` function in the `janitor` package, we can have much more advanced functionalities and customized rosstable, more in our previous discussion on method [#27](method27-finding-the-distribution-of-values.html)

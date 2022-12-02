@@ -2,7 +2,7 @@
 title: "Method #27 Finding the Distribution of Values"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "`r format(Sys.Date(), '%B, %Y')`"
+date: "2022-11-29"
 output: 
   html_document:
     toc: true
@@ -41,6 +41,7 @@ Provide a Python to R translation of **30 essential Pandas methods** introduced 
 ```{r}
 # enable python in RMarkdown
 library(reticulate)
+
 ```
 
 ## Create the dataframe in Python
@@ -115,6 +116,11 @@ df |> tabyl(col2)
 
 ```
 
+
+# Bonus: Advanced frequency tables
+
+## R
+
 `tabyl` has much advanced functionalities that would allow us to create customized frequency tables. Please see below two simple examples and much more available [here](https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html) 
 
 ```{r table.width=10}
@@ -136,4 +142,27 @@ humans |>
   adorn_ns() # add counts 
 
 ```
+
+
+## Python
+
+In Python, we could use `sidetable` to create customized frequency tables. Follows please see some simple examples, and more is available [here](https://pbpython.com/sidetable.html).
+
+
+```{python}
+import sidetable 
+
+humans = r.humans # take the dataset from R
+
+humans.stb.freq(['eye_color']) # one category
+
+```
+
+When it comes to two categories. I prefer `tabyl` output above to the `sidetable` version below. For me personally, it is easier to interpret when the values of the two categories are represented in the columns and rows respectively. In Python, we can use the `crosstab` function to do this, please refer to method [#29](method29-finding-cross-tabulation.html) in this series later. 
+
+```{python}
+humans.stb.freq(['gender','eye_color']) # two categories
+```
+
+
 

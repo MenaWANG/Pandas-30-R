@@ -1,8 +1,8 @@
 ---
-title: "Method #20 Filtering a DataFrame3: Selecting by Label (.loc)"
+title: "Method #28 Resetting the Index of a DataFrame"
 subtitle: "Python to R Translation of 30 Essential Pandas Methods"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
-date: "`r format(Sys.Date(), '%B, %Y')`"
+date: "2022-12-02"
 output: 
   html_document:
     toc: true
@@ -41,9 +41,12 @@ Provide a Python to R translation of **30 essential Pandas methods** introduced 
 ```{r}
 # enable python in RMarkdown
 library(reticulate)
+
 ```
 
 ## Create the dataframe in Python
+
+Notice the index is set to be 2,3,1
 
 ```{python}
 import pandas as pd
@@ -51,50 +54,72 @@ import pandas as pd
 df = pd.DataFrame([[6, 5,  10], 
                    [5, 8,  6], 
                    [3, 10, 4]], 
-                  columns = ["Maths", "Science", "English"],
-                  index = ["John", "Mark", "Peter"])
+                  columns = ["col1", "col2", "col3"],
+                  index = [2, 3, 1])
 
-print(df)
+df.head()
 
 ```
 
 ## Load the dataframe into R
 
-We notice that the index has been passed on to the dataframe in R.
+Notice that the same index has been passed on to R
 
 ```{r}
 df <- py$df #access df as saved in Python(py) above
 
-print(df)
+df |> head()
+
 ```
 
 
-# Method #20. Filtering a DataFrame3: Selecting by Label
+# Method #28 Resetting the Index of a DataFrame
 
 ## Python
 
-with `.loc[]`, we can select by labels as follows
+In Python, we can use the `reset_index()` method to reset the index. But before that, let's quickly review how we can choose values by index or by position (method [#20](method20-filtering-a-dataframe3-select-by-label.html) and [#21](method21-filtering-a-dataframe4-select-by-position.html)).
+
 
 ```{python}
-df.loc['John'] # select one specific row
+df.loc[2] # we can use loc to get values with index
+df.iloc[2] # we can use iloc to get values by position
 
-df.loc['John','Maths'] # select one specific row and column
+df.reset_index(drop = True) #drop the old index
+df
+```
 
-df.loc[['John','Mark'],['Maths','Science']] # select a list of rows and columns
+A bit more play with `loc[]` and `iloc[]` based on the newly set index
+
+```{python}
+df.loc[1:2] # loc to get values with index
+df.iloc[[1,2],] # iloc to get values by position
 ```
 
 ## R
 
-To do this in base R is fairly simple as shown below
+In R, we can get values by positions using `slice()`
+
+```{r}
+library(dplyr)
+
+df |> slice(1:2) # choose the 1st and 2nd row
+
+```
+
+To choose rows by name, we need to tell R the row name using a list like this.
 
 ```{r}
 
-df['John',] # select one specific row
+df[c('1','2'),]
 
-df['John','Maths'] # select one specific row and column
-
-df[c('John','Mark'),c('Maths','Science')]  # select a list of rows and columns
-  
 ```
 
+To reset the row names in R
+
+```{r}
+
+rownames(df) = 1:nrow(df)
+df
+
+```
 

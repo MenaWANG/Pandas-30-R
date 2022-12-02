@@ -63,6 +63,10 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #27. Finding the Distribution of Values**](method27-finding-the-distribution-of-values.html)
 
+[**Method #28. Resetting the index of a dataframe**](method28-resetting-the-index-of-a-dataframe.html)
+
+[**Method #29. Finding Cross-Tabulation**](method29-finding-cross-tabulation.html)
+
 
 ### Bonus R to Python translations
 
