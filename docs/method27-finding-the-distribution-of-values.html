@@ -11,6 +11,7 @@
 
 <meta name="author" content="Mena WANG" />
 
+<meta name="date" content="2022-11-29" />
 
 <title>Method #27 Finding the Distribution of Values</title>
 
@@ -361,7 +362,7 @@ div.tocify {
 <h1 class="title toc-ignore">Method #27 Finding the Distribution of Values</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">November, 2022</h4>
+<h4 class="date">2022-11-29</h4>
 
 </div>
 
@@ -386,7 +387,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-11-29
+<strong>Last updated:</strong> 2022-12-02
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -477,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree364f0c3c520251b903370534a4193a991c3ab469targetblank364f0c3a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/364f0c3c520251b903370534a4193a991c3ab469" target="_blank">364f0c3</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree5e3738a6157de49bf6a45e12b0a73e2709cebe95targetblank5e3738aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/5e3738a6157de49bf6a45e12b0a73e2709cebe95" target="_blank">5e3738a</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree364f0c3c520251b903370534a4193a991c3ab469targetblank364f0c3a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree5e3738a6157de49bf6a45e12b0a73e2709cebe95targetblank5e3738aa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/364f0c3c520251b903370534a4193a991c3ab469" target="_blank">364f0c3</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/5e3738a6157de49bf6a45e12b0a73e2709cebe95" target="_blank">5e3738a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -535,6 +536,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/5e3738a6157de49bf6a45e12b0a73e2709cebe95/analysis/method27-finding-the-distribution-of-values.Rmd" target="_blank">5e3738a</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-12-02
+</td>
+<td>
+add method28-29
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a20b54f9e85df3f382a7d265791439896053ffe9/docs/method27-finding-the-distribution-of-values.html" target="_blank">a20b54f</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-11-29
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -683,6 +718,12 @@ df |&gt; tabyl(col2)</code></pre>
 <pre><code> col2 n   percent
     A 2 0.6666667
     B 1 0.3333333</code></pre>
+</div>
+</div>
+<div id="bonus-advanced-frequency-tables" class="section level1">
+<h1>Bonus: Advanced frequency tables</h1>
+<div id="r-1" class="section level2">
+<h2>R</h2>
 <p><code>tabyl</code> has much advanced functionalities that would allow us to create customized frequency tables. Please see below two simple examples and much more available <a href="https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html">here</a></p>
 <pre class="r"><code>humans &lt;- starwars |&gt; filter(species == &quot;Human&quot;)
 
@@ -714,6 +755,34 @@ humans |&gt;
      hazel  2.9% (1)  2.9%  (1)   5.7%  (2)
     yellow  0.0% (0)  5.7%  (2)   5.7%  (2)
      Total 25.7% (9) 74.3% (26) 100.0% (35)</code></pre>
+</div>
+<div id="python-1" class="section level2">
+<h2>Python</h2>
+<p>In Python, we could use <code>sidetable</code> to create customized frequency tables. Follows please see some simple examples, and more is available <a href="https://pbpython.com/sidetable.html">here</a>.</p>
+<pre class="python"><code>import sidetable 
+
+humans = r.humans # take the dataset from R
+
+humans.stb.freq([&#39;eye_color&#39;]) # one category</code></pre>
+<pre><code>   eye_color  count    percent  cumulative_count  cumulative_percent
+0      brown     17  48.571429                17           48.571429
+1       blue     12  34.285714                29           82.857143
+2     yellow      2   5.714286                31           88.571429
+3      hazel      2   5.714286                33           94.285714
+4       dark      1   2.857143                34           97.142857
+5  blue-gray      1   2.857143                35          100.000000</code></pre>
+<p>When it comes to two categories. I prefer <code>tabyl</code> output above to the <code>sidetable</code> version below. For me personally, it is easier to interpret when the values of the two categories are represented in the columns and rows respectively. In Python, we can use the <code>crosstab</code> function to do this, please refer to method <a href="method29-finding-cross-tabulation.html">#29</a> in this series later.</p>
+<pre class="python"><code>humans.stb.freq([&#39;gender&#39;,&#39;eye_color&#39;]) # two categories</code></pre>
+<pre><code>      gender  eye_color  count    percent  cumulative_count  cumulative_percent
+0  masculine      brown     12  34.285714                12           34.285714
+1  masculine       blue      9  25.714286                21           60.000000
+2   feminine      brown      5  14.285714                26           74.285714
+3   feminine       blue      3   8.571429                29           82.857143
+4  masculine     yellow      2   5.714286                31           88.571429
+5  masculine      hazel      1   2.857143                32           91.428571
+6  masculine       dark      1   2.857143                33           94.285714
+7  masculine  blue-gray      1   2.857143                34           97.142857
+8   feminine      hazel      1   2.857143                35          100.000000</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
