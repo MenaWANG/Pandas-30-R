@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-10-25" />
+<meta name="date" content="2022-12-09" />
 
-<title>Method #3. Creating a DataFrame from a List</title>
+<title>Method #30 Pivoting DataFrames</title>
 
 <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +359,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #3. Creating a DataFrame from a List</h1>
+<h1 class="title toc-ignore">Method #30 Pivoting DataFrames</h1>
 <h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-10-25</h4>
+<h4 class="date">2022-12-09</h4>
 
 </div>
 
@@ -515,7 +515,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method3-create-a-dataframe-from-a-list.Rmd</code>) and HTML (<code>docs/method3-create-a-dataframe-from-a-list.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method30-pivoting-dataframe.Rmd</code>) and HTML (<code>docs/method30-pivoting-dataframe.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -541,495 +541,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/b06fbb15c8fe6a732ca5ab186d1da1b16e5f1467/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">b06fbb1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-12-02
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a20b54f9e85df3f382a7d265791439896053ffe9/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">a20b54f</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-29
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/5d4a24a4dddca07268c2403ba638a1c44aabbc83/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">5d4a24a</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-29
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/114c4b5f7fa5f7b251b56d758c08d1d28bb17269/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">114c4b5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/043f5faab63446746b1c577ea84a70b68ad86ea4/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">043f5fa</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/d77b1143760f12fb2388d7246c5a4f7f70713a69/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">d77b114</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/55def40a89fc669024a53e8847b34edb7ecb90d2/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">55def40</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/ca764517d9f3e5c3602b4fa2a3ca8d6b2e089fba/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">ca76451</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/efd27b1421099e993b8705900dd9cb7e36d38c01/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">efd27b1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/76150fe3ed0b9d7488e032b84888a3bc1e2525df/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">76150fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0b7b9149b473b6c632c997e7613d4b9db90fb748/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">0b7b914</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e12fbbe137c5e5585ae58c5a4604bfec87634141/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">e12fbbe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2d185676dd5c2f1e3cbf09957b1c5c185ef8d3d7/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">2d18567</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/a354ca24f32762c6ed37c1004e121291fef9d2a2/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">a354ca2</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-09
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/dad691d358e999c8c65d0d4ec9238e07265e63ee/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">dad691d</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/bce67666d5cd105e4ff0014c33789857af851c55/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">bce6766</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9fd2b3153eff1afbf6c1db71aae019cc9856653b/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">9fd2b31</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0632ced2a59af6d349e67a688896563a386572a8/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">0632ced</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7ce73a5878f89ea1f5f0fac0f814fe256f5f0a8c/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">7ce73a5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/97a4ecd8c3151e525245b9ac6df1b07ac2c51271/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">97a4ecd</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/99c04b87abbbb34161fac89a7a63a1bc6c1e3920/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">99c04b8</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e8c4cecee58b21d999c2c56034c84c1edbba18e8/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">e8c4cec</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/3e4868b8d00ec40a1150aedaca388ef708173e71/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">3e4868b</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-11-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/641dd5b4bef635d99ffda989b395f5a7f8053ff5/analysis/method3-create-a-dataframe-from-a-list.Rmd" target="_blank">641dd5b</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/e9f562517015a1a63d666eb6194d48d53f7bb5fa/analysis/method30-pivoting-dataframe.Rmd" target="_blank">e9f5625</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-11-01
+2022-12-10
 </td>
 <td>
-add method6
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/db83905374f279ff12a45c325942f5b37c0d03a8/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">db83905</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-30
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2be83cf90647e7727ad1b81809bd95d8cb49695b/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">2be83cf</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/9cbf22c07df5593a97c7cec90ff0eb5d1d36e0bd/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">9cbf22c</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/546254bad6476c3910baf3f1764b17839c09073c/analysis/method3-create-a-dataframe-from-a-list.Rmd" target="_blank">546254b</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-add method3
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/546254bad6476c3910baf3f1764b17839c09073c/docs/method3-create-a-dataframe-from-a-list.html" target="_blank">546254b</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-10-25
-</td>
-<td>
-add method3
+add method30
 </td>
 </tr>
 </tbody>
@@ -1054,45 +578,140 @@ add method3
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-</div>
-<div id="method-3.-creating-a-dataframe-from-a-list" class="section level1">
-<h1>Method #3. Creating a DataFrame from a List</h1>
-<div id="python" class="section level2">
-<h2>Python</h2>
+<div id="create-the-dataframe-in-python" class="section level2">
+<h2>Create the dataframe in Python</h2>
 <pre class="python"><code>import pandas as pd
 
-data = [[1,2,&#39;A&#39;],
-        [3,4,&#39;B&#39;]]
-
-# columns will be named 0,1,2 etc if no column names are specified
-df = pd.DataFrame(data,
-                  columns = [&#39;column1&#39;, &#39;column2&#39;, &#39;column3&#39;])
+df = pd.read_csv(&quot;./data/df_method30.csv&quot;)
 
 print(df)</code></pre>
-<pre><code>   column1  column2 column3
-0        1        2       A
-1        3        4       B</code></pre>
+<pre><code>    Name  Subject  Marks
+0   John    Maths      6
+1   Mark    Maths      5
+2  Peter    Maths      3
+3   John  Science      5
+4   Mark  Science      8
+5  Peter  Science     10
+6   John  English     10
+7   Mark  English      6
+8  Peter  English      4</code></pre>
+</div>
+<div id="load-the-dataframe-into-r" class="section level2">
+<h2>Load the dataframe into R</h2>
+<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+
+print(df)</code></pre>
+<pre><code>   Name Subject Marks
+1  John   Maths     6
+2  Mark   Maths     5
+3 Peter   Maths     3
+4  John Science     5
+5  Mark Science     8
+6 Peter Science    10
+7  John English    10
+8  Mark English     6
+9 Peter English     4</code></pre>
+</div>
+</div>
+<div id="method-30-pivoting-dataframes" class="section level1">
+<h1>Method #30 Pivoting DataFrames</h1>
+<div id="python" class="section level2">
+<h2>Python</h2>
+<p>In Python, <code>pivot_table()</code> can convert the column entries to column headers.</p>
+<pre class="python"><code>df_wider = pd.pivot_table(df, 
+               index = [&quot;Name&quot;],
+               columns=[&quot;Subject&quot;], 
+               values=&#39;Marks&#39;,
+               fill_value=0)
+print(df_wider)              </code></pre>
+<pre><code>Subject  English  Maths  Science
+Name                            
+John          10      6        5
+Mark           6      5        8
+Peter          4      3       10</code></pre>
 </div>
 <div id="r" class="section level2">
 <h2>R</h2>
-<pre class="r"><code>data = list(list(1,2,&#39;A&#39;), 
-            list(3,4,&#39;B&#39;))
+<p>In R, this can be done with the <code>pivot_wider()</code> function.</p>
+<pre class="r"><code>library(tidyr)
 
-# columns will be named x1, x2, x3 etc if no column names are specified
-df = data.frame(matrix(unlist(data), 
-                       nrow=2))
+df_wider = df |&gt; 
+  pivot_wider(id_cols=Name, 
+              names_from=Subject, 
+              values_from = Marks, 
+              values_fill = 0)
 
-
-print(df)</code></pre>
-<pre><code>  X1 X2 X3
-1  1  A  4
-2  2  3  B</code></pre>
+print(df_wider)</code></pre>
+<pre><code># A tibble: 3 × 4
+  Name  Maths Science English
+  &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 John      6       5      10
+2 Mark      5       8       6
+3 Peter     3      10       4</code></pre>
+</div>
+</div>
+<div id="bonus-unpivoting" class="section level1">
+<h1>Bonus: Unpivoting</h1>
+<div id="r-1" class="section level2">
+<h2>R</h2>
+<p>Above we used the <code>pivot_wider()</code> function to turn a table from long to wide. Naturally, we can reverse the process and turn a table from wide to long. And the function to do this is, you guessed it, <code>pivot_longer()</code> :P</p>
+<pre class="r"><code>df_wider |&gt; 
+  pivot_longer(cols = c(Maths, Science, English),
+               names_to = &quot;Subject&quot;,
+               values_to = &quot;Marks&quot;)</code></pre>
+<pre><code># A tibble: 9 × 3
+  Name  Subject Marks
+  &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
+1 John  Maths       6
+2 John  Science     5
+3 John  English    10
+4 Mark  Maths       5
+5 Mark  Science     8
+6 Mark  English     6
+7 Peter Maths       3
+8 Peter Science    10
+9 Peter English     4</code></pre>
+</div>
+<div id="python-1" class="section level2">
+<h2>Python</h2>
+<p>Similar task can be done by the <code>melt()</code> method in Pandas.</p>
+<pre class="python"><code>df_wider.index # remember that &quot;Name&quot; is set as index above</code></pre>
+<pre><code>Index([&#39;John&#39;, &#39;Mark&#39;, &#39;Peter&#39;], dtype=&#39;object&#39;, name=&#39;Name&#39;)</code></pre>
+<pre class="python"><code>df_wider.melt(ignore_index = False, # use index as the id field
+              value_vars=[&quot;Maths&quot;, &quot;Science&quot;, &quot;English&quot;],
+              value_name = &quot;Marks&quot;)</code></pre>
+<pre><code>       Subject  Marks
+Name                 
+John     Maths      6
+Mark     Maths      5
+Peter    Maths      3
+John   Science      5
+Mark   Science      8
+Peter  Science     10
+John   English     10
+Mark   English      6
+Peter  English      4</code></pre>
+<p>For dataframe where the index is not the id field we want to use, it is simple as well.</p>
+<pre class="python"><code>df_wider.reset_index(level=[&quot;Name&quot;], inplace=True) # reset name to be a column
+df_wider.melt(id_vars = &quot;Name&quot;, # set id field manually
+              value_vars=[&quot;Maths&quot;, &quot;Science&quot;, &quot;English&quot;],
+              value_name = &quot;Marks&quot;)</code></pre>
+<pre><code>    Name  Subject  Marks
+0   John    Maths      6
+1   Mark    Maths      5
+2  Peter    Maths      3
+3   John  Science      5
+4   Mark  Science      8
+5  Peter  Science     10
+6   John  English     10
+7   Mark  English      6
+8  Peter  English      4</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1116,20 +735,22 @@ attached base packages:
 [1] stats     graphics  grDevices datasets  utils     methods   base     
 
 other attached packages:
-[1] reticulate_1.26
+[1] tidyr_1.2.1     reticulate_1.26
 
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.9       pillar_1.8.1     compiler_4.2.1   bslib_0.4.0     
  [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     workflowr_1.7.0 
  [9] tools_4.2.1      digest_0.6.29    lattice_0.20-45  jsonlite_1.8.2  
 [13] evaluate_0.17    lifecycle_1.0.3  tibble_3.1.8     png_0.1-7       
-[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     cli_3.4.1       
-[21] rstudioapi_0.14  yaml_2.3.5       xfun_0.33        fastmap_1.1.0   
-[25] stringr_1.4.1    knitr_1.40       fs_1.5.2         vctrs_0.4.2     
-[29] sass_0.4.2       grid_4.2.1       rprojroot_2.0.3  glue_1.6.2      
-[33] R6_2.5.1         fansi_1.0.3      rmarkdown_2.17   magrittr_2.0.3  
-[37] whisker_0.4      promises_1.2.0.1 htmltools_0.5.3  renv_0.16.0     
-[41] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
+[17] pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.4-1     DBI_1.1.3       
+[21] cli_3.4.1        rstudioapi_0.14  yaml_2.3.5       xfun_0.33       
+[25] fastmap_1.1.0    withr_2.5.0      dplyr_1.0.10     stringr_1.4.1   
+[29] knitr_1.40       generics_0.1.3   fs_1.5.2         vctrs_0.4.2     
+[33] sass_0.4.2       tidyselect_1.2.0 grid_4.2.1       rprojroot_2.0.3 
+[37] glue_1.6.2       R6_2.5.1         fansi_1.0.3      rmarkdown_2.17  
+[41] purrr_0.3.5      magrittr_2.0.3   whisker_0.4      ellipsis_0.3.2  
+[45] promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1 renv_0.16.0     
+[49] httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8    cachem_1.0.6    </code></pre>
 </div>
 </div>
 </div>
