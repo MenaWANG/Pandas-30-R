@@ -1,0 +1,136 @@
+---
+title: "Method #30 Pivoting DataFrames"
+subtitle: "Python to R Translation of 30 Essential Pandas Methods"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2022-12-09"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+Provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/).
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+## Create the dataframe in Python
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("./data/df_method30.csv")
+
+print(df)
+
+```
+
+## Load the dataframe into R
+
+```{r}
+df <- py$df #access df as saved in Python(py) above
+
+print(df)
+```
+
+
+# Method #30 Pivoting DataFrames
+
+## Python
+
+In Python, `pivot_table()` can convert the column entries to column headers.
+
+```{python}
+df_wider = pd.pivot_table(df, 
+               index = ["Name"],
+               columns=["Subject"], 
+               values='Marks',
+               fill_value=0)
+print(df_wider)              
+
+```
+
+## R
+
+In R, this can be done with the `pivot_wider()` function. 
+
+```{r}
+library(tidyr)
+
+df_wider = df |> 
+  pivot_wider(id_cols=Name, 
+              names_from=Subject, 
+              values_from = Marks, 
+              values_fill = 0)
+
+print(df_wider)
+
+```
+
+# Bonus: Unpivoting
+
+## R
+
+Above we used the `pivot_wider()` function to turn a table from long to wide. Naturally, we can reverse the process and turn a table from wide to long. And the function to do this is, you guessed it, `pivot_longer()` :P
+
+```{r}
+
+df_wider |> 
+  pivot_longer(cols = c(Maths, Science, English),
+               names_to = "Subject",
+               values_to = "Marks")
+
+```
+
+## Python
+
+Similar task can be done by the `melt()` method in Pandas.
+
+```{python}
+df_wider.index # remember that "Name" is set as index above
+df_wider.melt(ignore_index = False, # use index as the id field
+              value_vars=["Maths", "Science", "English"],
+              value_name = "Marks")
+
+```
+
+For dataframe where the index is not the id field we want to use, it is simple as well.
+
+```{python}
+df_wider.reset_index(level=["Name"], inplace=True) # reset name to be a column
+df_wider.melt(id_vars = "Name", # set id field manually
+              value_vars=["Maths", "Science", "English"],
+              value_name = "Marks")
+
+```
+

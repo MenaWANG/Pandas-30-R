@@ -67,6 +67,8 @@ As an R user who is learning to become bilingual, I found such side-by-side tran
 
 [**Method #29. Finding Cross-Tabulation**](method29-finding-cross-tabulation.html)
 
+[**Method #30. Pivoting DataFrames**](method30-pivoting-dataframe.html)
+
 
 ### Bonus R to Python translations
 
