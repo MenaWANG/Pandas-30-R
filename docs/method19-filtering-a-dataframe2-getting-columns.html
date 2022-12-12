@@ -387,7 +387,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-12-10
+<strong>Last updated:</strong> 2022-12-13
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtreee9f562517015a1a63d666eb6194d48d53f7bb5fatargetblanke9f5625a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/e9f562517015a1a63d666eb6194d48d53f7bb5fa" target="_blank">e9f5625</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1d27b07996a045716e879864ce795020591fd169targetblank1d27b07a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1d27b07996a045716e879864ce795020591fd169" target="_blank">1d27b07</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtreee9f562517015a1a63d666eb6194d48d53f7bb5fatargetblanke9f5625a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1d27b07996a045716e879864ce795020591fd169targetblank1d27b07a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/e9f562517015a1a63d666eb6194d48d53f7bb5fa" target="_blank">e9f5625</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1d27b07996a045716e879864ce795020591fd169" target="_blank">1d27b07</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -539,6 +539,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/1d27b07996a045716e879864ce795020591fd169/analysis/method19-filtering-a-dataframe2-getting-columns.Rmd" target="_blank">1d27b07</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-12-13
+</td>
+<td>
+update method19 with bonus: get cols by conditions
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2522fc8c7d59128855b277f0d687fd2cd4ae369d/docs/method19-filtering-a-dataframe2-getting-columns.html" target="_blank">2522fc8</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-12-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -792,6 +826,90 @@ df |&gt;  select(col2) # select col2</code></pre>
 1    1    A
 2    5    B
 3    3    B</code></pre>
+</div>
+</div>
+<div id="bonus-select-columns-by-conditions" class="section level1">
+<h1>Bonus: Select Columns by Conditions</h1>
+<p>Sometimes, we would want to select columns with certain characteristics</p>
+<div id="select-columns-by-string-in-names" class="section level2">
+<h2>Select columns by string in names</h2>
+<p>First let’s change the column names.</p>
+<pre class="python"><code>df.columns = [&#39;apple&#39;,&#39;app&#39;,&#39;orange&#39;] # change column names
+df</code></pre>
+<pre><code>   apple  app orange
+0      1    8      A
+1      5    4      B
+2      3   10      B</code></pre>
+<div id="r-1" class="section level3">
+<h3>R</h3>
+<p>To select columns where names contain certain strings, we can simply add <code>contains()</code> function to the <code>select</code> call introduced above.</p>
+<pre class="r"><code>df = py$df #get the dataframe from python
+
+df |&gt; select(contains(&#39;app&#39;))</code></pre>
+<pre><code>  apple app
+1     1   8
+2     5   4
+3     3  10</code></pre>
+</div>
+<div id="python-1" class="section level3">
+<h3>Python</h3>
+<p>To select columns where names contain certain strings, we can use the <code>filter()</code> method.</p>
+<pre class="python"><code>df.filter(like=&#39;app&#39;)</code></pre>
+<pre><code>   apple  app
+0      1    8
+1      5    4
+2      3   10</code></pre>
+<p>Special note for R users. In R, <code>filter()</code> is normally used to filter rows, whereas <code>select()</code> for columns. Here in Pandas, by default, <code>filter()</code> looks at columns of dataframes. But we can also set this to rows by specifying axis = 0</p>
+<pre class="python"><code>df.set_index([&#39;orange&#39;], inplace=True) # set index to be the &#39;orange&#39; row
+print(df.index)</code></pre>
+<pre><code>Index([&#39;A&#39;, &#39;B&#39;, &#39;B&#39;], dtype=&#39;object&#39;, name=&#39;orange&#39;)</code></pre>
+<pre class="python"><code>df.filter(like=&#39;B&#39;, axis=0) # filter df by index</code></pre>
+<pre><code>        apple  app
+orange            
+B           5    4
+B           3   10</code></pre>
+<p>Here index is used for filtering. To filter rows by values of variables, we can use the <code>query()</code> method in Python. See details in method <a href="method18-filteringa-dataframe1-boolean-filtering.html">#18</a></p>
+</div>
+</div>
+<div id="select-columns-by-data-types" class="section level2">
+<h2>Select columns by data types</h2>
+<div id="python-2" class="section level3">
+<h3>Python</h3>
+<p>To select columns by data types, we can use the <code>select_dtypes</code> method in python</p>
+<pre class="python"><code>df.dtypes #check data types</code></pre>
+<pre><code>apple    int64
+app      int64
+dtype: object</code></pre>
+<pre class="python"><code>df.select_dtypes(include = [&#39;int64&#39;])</code></pre>
+<pre><code>        apple  app
+orange            
+A           1    8
+B           5    4
+B           3   10</code></pre>
+<pre class="python"><code>df.select_dtypes(exclude = [&#39;int64&#39;])</code></pre>
+<pre><code>Empty DataFrame
+Columns: []
+Index: [A, B, B]</code></pre>
+</div>
+<div id="r-2" class="section level3">
+<h3>R</h3>
+<p>To do this in R, simply add a <code>where()</code> in the select call introduced above.</p>
+<pre class="r"><code>str(df)#check data types</code></pre>
+<pre><code>&#39;data.frame&#39;:   3 obs. of  3 variables:
+ $ apple : num  1 5 3
+ $ app   : num  8 4 10
+ $ orange: chr  &quot;A&quot; &quot;B&quot; &quot;B&quot;
+ - attr(*, &quot;pandas.index&quot;)=RangeIndex(start=0, stop=3, step=1)</code></pre>
+<pre class="r"><code>df |&gt; select(where(is.numeric))</code></pre>
+<pre><code>  apple app
+1     1   8
+2     5   4
+3     3  10</code></pre>
+<pre class="r"><code>df |&gt; select(-where(is.numeric))</code></pre>
+<pre><code>  orange
+1      A
+2      B
+3      B</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -831,6 +949,7 @@ loaded via a namespace (and not attached):
 [41] whisker_0.4      promises_1.2.0.1 htmltools_0.5.3  assertthat_0.2.1
 [45] renv_0.16.0      httpuv_1.6.6     utf8_1.2.2       stringi_1.7.8   
 [49] cachem_1.0.6    </code></pre>
+</div>
 </div>
 </div>
 </div>
