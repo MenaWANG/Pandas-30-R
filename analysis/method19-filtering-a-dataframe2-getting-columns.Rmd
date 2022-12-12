@@ -93,3 +93,72 @@ df |>  select(col1, col3) # select co1 and col3
 ```
 
 
+# Bonus: Select Columns by Conditions
+
+Sometimes, we would want to select columns with certain characteristics
+
+## Select columns by string in names
+
+First let's change the column names.
+
+```{python}
+df.columns = ['apple','app','orange'] # change column names
+df
+```
+
+### R
+
+To select columns where names contain certain strings, we can simply add `contains()` function to the `select` call introduced above. 
+
+```{r}
+df = py$df #get the dataframe from python
+
+df |> select(contains('app'))
+```
+
+### Python
+
+To select columns where names contain certain strings, we can use the `filter()` method. 
+
+```{python}
+df.filter(like='app')
+```
+
+Special note for R users. In R, `filter()` is normally used to filter rows, whereas `select()` for columns. Here in Pandas, by default, `filter()` looks at columns of dataframes. But we can also set this to rows by specifying axis = 0
+
+```{python}
+df.set_index(['orange'], inplace=True) # set index to be the 'orange' row
+print(df.index)
+
+df.filter(like='B', axis=0) # filter df by index
+```
+
+Here index is used for filtering. To filter rows by values of variables, we can use the `query()` method in Python. See details in method [#18](method18-filteringa-dataframe1-boolean-filtering.html)
+
+
+## Select columns by data types
+
+### Python
+
+To select columns by data types, we can use the `select_dtypes` method in python
+
+```{python}
+df.dtypes #check data types
+df.select_dtypes(include = ['int64'])
+df.select_dtypes(exclude = ['int64'])
+```
+
+
+### R
+
+To do this in R, simply add a `where()` in the select call introduced above.
+
+```{r}
+
+str(df)#check data types
+df |> select(where(is.numeric))
+df |> select(-where(is.numeric))
+```
+
+
+
