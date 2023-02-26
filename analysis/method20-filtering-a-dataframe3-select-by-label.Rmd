@@ -97,4 +97,69 @@ df[c('John','Mark'),c('Maths','Science')]  # select a list of rows and columns
   
 ```
 
+# Bonus: select columns by value
+
+Imagine a dataframe like below, we have scores of multiple students and would like to identify all students who score 80 or above in all three courses.
+
+```{python}
+
+data = {
+  'subject': ['math', 'science', 'english'],
+  'John': [80, 95, 78],
+  'Alex': [90, 67, 84],
+  'Angela': [87, 86, 90],
+  'Bella': [78, 91, 80],
+  'Trice': [87, 75, 91]
+}
+
+df = pd.DataFrame(data)
+
+df.set_index('subject', inplace = True)
+
+df
+
+```
+
+
+## python
+
+In python, `loc` can be used to identify students who score higher than 80 in each course. 
+
+```{python}
+
+math_80 = df.loc[:, df.loc['math']>80].columns
+science_80 = df.loc[:, df.loc['science']>80].columns
+english_80 = df.loc[:, df.loc['english']>80].columns
+print(f'{math_80}\n{science_80}\n{english_80}')
+
+```
+
+We can turn the lists into set then use `set.intersection` to find common elements in it. 
+
+```{python}
+all_rounder = list(set.intersection(*map(set, [math_80, science_80, english_80])))
+all_rounder
+```
+
+
+## R
+
+To do this in r, `select_if` which is a variation/extension of `select` introduced in [method #19](method19-filtering-a-dataframe2-getting-columns.html) can be used to identify students who score above 80 in each course.
+
+```{r}
+library(dplyr)
+df = py$df
+
+math_80 <- df |> select_if(df['math',] > 80) |> colnames()
+science_80 <- df |> select_if(df['science',] > 80) |> colnames()
+english_80 <- df |> select_if(df['english',] > 80) |> colnames()
+
+```
+
+Then use `intersect` to identify common elements.
+
+```{r}
+all_rounder = Reduce(intersect, list(math_80, science_80, english_80))
+all_rounder
+```
 

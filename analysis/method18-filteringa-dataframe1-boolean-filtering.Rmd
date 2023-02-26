@@ -154,3 +154,57 @@ df |>
 
 ```
 
+## filter in R vs Python
+
+One thing that might be a bit confusing for R users learning Python and vice versa is probably the use of `filter()` in these two languages. In R, `filter` is used to keep rows by certain condition, very much like `query` in python, as shown in the examples above. In contrast, `filter` is used to either select rows by indices or columns by names in Python. Below please see its four arguments, `like` is my favorite. 
+
+- item – Takes list of axis labels that you wanted to filter.
+- like – Takes axis string label that you wanted to filter
+- regex – regular expression
+- axis: 0 or 'index', 1 or 'columns’. When not specified it uses columns
+
+### Python
+
+```{python}
+# first, let's create a dataframe with more complex names 
+technologies= {
+    'Courses':["Spark","PySpark","Spark","Java","PySpark","PHP"],
+    'Fee' :[22000,25000,23000,24000,26000,27000],
+    'Duration':['30days','50days','30days','60days','35days','30days']
+          }
+df = pd.DataFrame(technologies)
+print(df)
+
+```
+
+
+```{python}
+df.filter(items = ['Courses', 'Duration'])
+
+```
+
+I think `like` argument is very useful when we have group of columns sharing meaningful names. For example, in a large covid datset, we can use `vaccin` to filter all columns relate to `vaccination` or `vaccine`. 
+
+```{python}
+df.filter(like = 'tion')
+
+```
+
+We could also use filter to select rows by index, for example
+
+```{python}
+df.filter(items=[1,3], axis =0)
+```
+
+We can use query to do this as well, but it is not restricted to indices. 
+
+```{python}
+df.query("index in [1,3]")
+```
+
+```{python}
+df.query("Courses in ['Spark','PySpark']")
+
+```
+
+`filter()` in Python and `select()` in R are also discussed in [**Method #19**](method19-filtering-a-dataframe2-getting-columns.html) on selecting columns.

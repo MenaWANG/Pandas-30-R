@@ -8,72 +8,77 @@ editor_options:
   chunk_output_type: console
 ---
 
-In this repo, I will provide a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). The project starts on 23 Oct, 2022 and I will add one method at least every 2-3 days.
+In this repo, I provided a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
 
-As an R user who is learning to become bilingual, I found such side-by-side translations/comparisons very helpful for my learning. Hope you find them helpful as well. Comments and discussions will be highly appreciated. :)
+
+The discussions of some of the methods went beyond the original, with more related methods illustrated/compared for more advanced or customized tasks (pls see specific methods highlighted in the list below). I will continue to add examples or relevant methods to enrich this site, as it now serves as a reference source for myself. 
+
+Hope you find it helpful too. Comments and suggestions are always appreciated. :)
+
 
 ### Please click each method below for details    
 
 
-[**Method #1. Reading a CSV**](method1-read-a-csv.html)
 
-[**Method #2. Storing a Dataframe into a CSV**](method2-store-a-dataframe.html)
+[1. <span style="color:indianred">*read_csv()*</span>: Reading a CSV](method1-read-a-csv.html)
 
-[**Method #3. Creating a Dataframe from a Llist**](method3-create-a-dataframe-from-a-list.html)
+[2. <span style="color:indianred">*to_csv()*</span>: Storing a Dataframe into a CSV](method2-store-a-dataframe.html)
 
-[**Method #4. Creating a Dataframe from a Dictionary**](method4-create-a-dataframe-from-a-dictionary.html)
+[3. <span style="color:indianred">*DataFrame()*</span>: Creating a Dataframe from a Llist](method3-create-a-dataframe-from-a-list.html)
 
-[**Method #5. The Shape of the Dataframe**](method5-the-shape-of-the-dataframe.html)
+[4. <span style="color:indianred">*DataFrame()*</span>: Creating a Dataframe from a Dictionary](method4-create-a-dataframe-from-a-dictionary.html)
 
-[**Method #6. Viewing Top N Rows**](method6-viewing-top-n-rows.html)
+[5. <span style="color:indianred">*shape*</span>: The Shape of the Dataframe](method5-the-shape-of-the-dataframe.html)
 
-[**Method #7. Print the Datatype of Columns**](method7-print-the-datatype-of-columns.html)
+[6. <span style="color:indianred">*head()*</span>: Viewing Top N Rows](method6-viewing-top-n-rows.html)
 
-[**Method #8. Modifying the Datatype of a Column**](method8-modify-the-datatype-of-a-column.html)
+[7. <span style="color:indianred">*dtypes*</span>: Print the Datatype of Columns](method7-print-the-datatype-of-columns.html)
 
-[**Method #9. Printing Descriptive Info about the Dataframe (Method1)**](method9-print-descriptive-info-about-the-dataframe1.html)
+[8. <span style="color:indianred">*astype()*</span>: Modifying the Datatype of a Column](method8-modify-the-datatype-of-a-column.html)
 
-[**Method #10. Printing Descritive Info about the Dataframe (Method2)**](method10-print-descriptive-info-about-the-dataframe2.html)
+[9. <span style="color:indianred">*info()*</span>: Printing Descriptive Info about the Dataframe (Method1)](method9-print-descriptive-info-about-the-dataframe1.html)
 
-[**Method #11. Filling Missing Values**](method11-filling-missing-values.html) 
+[10. <span style="color:indianred">*describe()*</span>: Printing Descritive Info about the Dataframe (Method2)](method10-print-descriptive-info-about-the-dataframe2.html)
 
-[**Method #12. Joining DataFrames (merge & join)**](method12-joining-dataframes.html)
+[11. <span style="color:indianred">*fillna()*</span>: Filling Missing Values](method11-filling-missing-values.html) 
 
-[**Method #13. Sorting a Dataframe**](method13-sorting-a-dataframe.html)
+[12. <span style="color:indianred">*merge & join*</span>: Joining DataFrames](method12-joining-dataframes.html)
 
-[**Method #14. Grouping a Dataframe**](method14-grouping-a-dataframe.html)
+[13. <span style="color:indianred">*sort_values()*</span>: Sorting a Dataframe](method13-sorting-a-dataframe.html)
 
-[**Method #15. Renaming Columns**](method15-renaming-columns.html)
+[14. <span style="color:indianred">*groupby()*</span>: Grouping a Dataframe](method14-grouping-a-dataframe.html)
 
-[**Method #16-17. Adding New Columns**](method16-17-adding-new-columns.html)
+[15. <span style="color:indianred">*rename()*</span>: Renaming Columns](method15-renaming-columns.html)
 
-[**Method #18. Filtering a Dataframe1: Boolean filtering**](method18-filteringa-dataframe1-boolean-filtering.html)
+[16-17. <span style="color:indianred">*assign, lambda, iloc*</span>: Adding New Columns](method16-17-adding-new-columns.html)
 
-[**Method #19. Filtering a Dataframe2: Select columns**](method19-filtering-a-dataframe2-getting-columns.html)
+[18. <span style="color:indianred">*query, filter, isin*</span>: Filtering a Dataframe1: Boolean filtering](method18-filteringa-dataframe1-boolean-filtering.html)
 
-[**Method #20. Filtering a Dataframe3: Select by label**](method20-filtering-a-dataframe3-select-by-label.html)
+[19. <span style="color:indianred">*filter & select_dtypes*</span>: Filtering a Dataframe2: Select columns](method19-filtering-a-dataframe2-getting-columns.html)
 
-[**Method #21. Filtering a Dataframe4: Select by position**](method21-filtering-a-dataframe4-select-by-position.html)
+[20. <span style="color:indianred">*loc, map, set*</span>: Filtering a Dataframe3: Select by label](method20-filtering-a-dataframe3-select-by-label.html)
 
-[**Method #22-23. Finding Unique Values in a Dataframe**](method22-23-finding-unique-values-in-a-dataframe.html)
+[21. <span style="color:indianred">*iloc*</span>: Filtering a Dataframe4: Select by position](method21-filtering-a-dataframe4-select-by-position.html)
 
-[**Method #24. Apply a Function to a Dataframe**](method24-apply-a-function-to-a-dataframe.html)
+[22-23. <span style="color:indianred">*unique & nunique*</span>: Finding Unique Values in a Dataframe](method22-23-finding-unique-values-in-a-dataframe.html)
 
-[**Method #25-26. Handling Duplicates**](method25-26-handling-duplicates.html)
+[24. <span style="color:indianred">*apply*</span>: Apply a Function to a Dataframe](method24-apply-a-function-to-a-dataframe.html)
 
-[**Method #27. Finding the Distribution of Values**](method27-finding-the-distribution-of-values.html)
+[25-26. <span style="color:indianred">*duplicated & drop_duplicates*</span>: Handling Duplicates](method25-26-handling-duplicates.html)
 
-[**Method #28. Resetting the index of a dataframe**](method28-resetting-the-index-of-a-dataframe.html)
+[27. <span style="color:indianred">*value_counts, sidetable & tabyl*</span>: Standard and customized frequency tables](method27-finding-the-distribution-of-values.html)
 
-[**Method #29. Finding Cross-Tabulation**](method29-finding-cross-tabulation.html)
+[28. <span style="color:indianred">*reset_index(drop, inplace)*</span>: Resetting the index of a dataframe](method28-resetting-the-index-of-a-dataframe.html)
 
-[**Method #30. Pivoting DataFrames**](method30-pivoting-dataframe.html)
+[29. <span style="color:indianred">*crosstab()*</span>: Finding Cross-Tabulation](method29-finding-cross-tabulation.html)
+
+[30. <span style="color:indianred">*pivot_table & melt*</span>: Pivoting DataFrames](method30-pivoting-dataframe.html)
 
 
 ### Bonus R to Python translations
 
 I will add some R to Python translation of loved R functions below as bonus :) 
 
-[**Bonus #1. complete(): Expand a dataframe**](bonus1-complete-all-combinations.html)
+[1. <span style="color:indianred">*complete()*</span>: Expand a dataframe](bonus1-complete-all-combinations.html)
 
 
