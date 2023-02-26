@@ -387,7 +387,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-12-13
+<strong>Last updated:</strong> 2023-02-26
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1d27b07996a045716e879864ce795020591fd169targetblank1d27b07a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1d27b07996a045716e879864ce795020591fd169" target="_blank">1d27b07</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree3dd72385ddfdfb75b6c2137a362fc0a243c1b132targetblank3dd7238a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/3dd72385ddfdfb75b6c2137a362fc0a243c1b132" target="_blank">3dd7238</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1d27b07996a045716e879864ce795020591fd169targetblank1d27b07a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree3dd72385ddfdfb75b6c2137a362fc0a243c1b132targetblank3dd7238a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1d27b07996a045716e879864ce795020591fd169" target="_blank">1d27b07</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/3dd72385ddfdfb75b6c2137a362fc0a243c1b132" target="_blank">3dd7238</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -498,9 +498,6 @@ Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    dev/
     Ignored:    renv/
-
-Untracked files:
-    Untracked:  data/df_method30.csv
 
 </code></pre>
 <p>
@@ -539,6 +536,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/3dd72385ddfdfb75b6c2137a362fc0a243c1b132/analysis/method18-filteringa-dataframe1-boolean-filtering.Rmd" target="_blank">3dd7238</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-02-26
+</td>
+<td>
+more example for loc and refresh index page
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e3221e583fba1beb4eeb12d2365eb95bb06e87e8/docs/method18-filteringa-dataframe1-boolean-filtering.html" target="_blank">e3221e5</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2022-12-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -873,6 +904,68 @@ df |&gt;
          col3 %in% filter_list)</code></pre>
 <pre><code>  col1 col2 col3
 1    3   10    B</code></pre>
+</div>
+</div>
+<div id="filter-in-r-vs-python" class="section level2">
+<h2>filter in R vs Python</h2>
+<p>One thing that might be a bit confusing for R users learning Python and vice versa is probably the use of <code>filter()</code> in these two languages. In R, <code>filter</code> is used to keep rows by certain condition, very much like <code>query</code> in python, as shown in the examples above. In contrast, <code>filter</code> is used to either select rows by indices or columns by names in Python. Below please see its four arguments, <code>like</code> is my favorite.</p>
+<ul>
+<li>item – Takes list of axis labels that you wanted to filter.</li>
+<li>like – Takes axis string label that you wanted to filter</li>
+<li>regex – regular expression</li>
+<li>axis: 0 or ‘index’, 1 or ‘columns’. When not specified it uses columns</li>
+</ul>
+<div id="python-3" class="section level3">
+<h3>Python</h3>
+<pre class="python"><code># first, let&#39;s create a dataframe with more complex names 
+technologies= {
+    &#39;Courses&#39;:[&quot;Spark&quot;,&quot;PySpark&quot;,&quot;Spark&quot;,&quot;Java&quot;,&quot;PySpark&quot;,&quot;PHP&quot;],
+    &#39;Fee&#39; :[22000,25000,23000,24000,26000,27000],
+    &#39;Duration&#39;:[&#39;30days&#39;,&#39;50days&#39;,&#39;30days&#39;,&#39;60days&#39;,&#39;35days&#39;,&#39;30days&#39;]
+          }
+df = pd.DataFrame(technologies)
+print(df)</code></pre>
+<pre><code>   Courses    Fee Duration
+0    Spark  22000   30days
+1  PySpark  25000   50days
+2    Spark  23000   30days
+3     Java  24000   60days
+4  PySpark  26000   35days
+5      PHP  27000   30days</code></pre>
+<pre class="python"><code>df.filter(items = [&#39;Courses&#39;, &#39;Duration&#39;])</code></pre>
+<pre><code>   Courses Duration
+0    Spark   30days
+1  PySpark   50days
+2    Spark   30days
+3     Java   60days
+4  PySpark   35days
+5      PHP   30days</code></pre>
+<p>I think <code>like</code> argument is very useful when we have group of columns sharing meaningful names. For example, in a large covid datset, we can use <code>vaccin</code> to filter all columns relate to <code>vaccination</code> or <code>vaccine</code>.</p>
+<pre class="python"><code>df.filter(like = &#39;tion&#39;)</code></pre>
+<pre><code>  Duration
+0   30days
+1   50days
+2   30days
+3   60days
+4   35days
+5   30days</code></pre>
+<p>We could also use filter to select rows by index, for example</p>
+<pre class="python"><code>df.filter(items=[1,3], axis =0)</code></pre>
+<pre><code>   Courses    Fee Duration
+1  PySpark  25000   50days
+3     Java  24000   60days</code></pre>
+<p>We can use query to do this as well, but it is not restricted to indices.</p>
+<pre class="python"><code>df.query(&quot;index in [1,3]&quot;)</code></pre>
+<pre><code>   Courses    Fee Duration
+1  PySpark  25000   50days
+3     Java  24000   60days</code></pre>
+<pre class="python"><code>df.query(&quot;Courses in [&#39;Spark&#39;,&#39;PySpark&#39;]&quot;)</code></pre>
+<pre><code>   Courses    Fee Duration
+0    Spark  22000   30days
+1  PySpark  25000   50days
+2    Spark  23000   30days
+4  PySpark  26000   35days</code></pre>
+<p><code>filter()</code> in Python and <code>select()</code> in R are also discussed in <a href="method19-filtering-a-dataframe2-getting-columns.html"><strong>Method #19</strong></a> on selecting columns.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -883,7 +976,7 @@ df |&gt;
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 4.2.1 (2022-06-23 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 10 x64 (build 19043)
+Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
 
