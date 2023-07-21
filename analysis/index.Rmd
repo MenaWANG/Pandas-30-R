@@ -34,7 +34,7 @@ Hope you find it helpful too. Comments and suggestions are always appreciated. :
 
 [7. <span style="color:indianred">*dtypes*</span>: Print the Datatype of Columns](method7-print-the-datatype-of-columns.html)
 
-[8. <span style="color:indianred">*astype()*</span>: Modifying the Datatype of a Column](method8-modify-the-datatype-of-a-column.html)
+[8. <span style="color:indianred">*astype() & pd.to_numeric()*</span>: Modifying the Datatype of a Column](method8-modify-the-datatype-of-a-column.html)
 
 [9. <span style="color:indianred">*info()*</span>: Printing Descriptive Info about the Dataframe (Method1)](method9-print-descriptive-info-about-the-dataframe1.html)
 
