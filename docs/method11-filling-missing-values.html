@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree13f4ba02a5c20574032e12d2979a9b556c33c0a8targetblank13f4ba0a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/13f4ba02a5c20574032e12d2979a9b556c33c0a8" target="_blank">13f4ba0</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree588cdcba820fd8a4e078683f9003691a19c23ab0targetblank588cdcba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/588cdcba820fd8a4e078683f9003691a19c23ab0" target="_blank">588cdcb</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree13f4ba02a5c20574032e12d2979a9b556c33c0a8targetblank13f4ba0a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree588cdcba820fd8a4e078683f9003691a19c23ab0targetblank588cdcba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/13f4ba02a5c20574032e12d2979a9b556c33c0a8" target="_blank">13f4ba0</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/588cdcba820fd8a4e078683f9003691a19c23ab0" target="_blank">588cdcb</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -536,6 +536,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/588cdcba820fd8a4e078683f9003691a19c23ab0/analysis/method11-filling-missing-values.Rmd" target="_blank">588cdcb</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-07-22
+</td>
+<td>
+add replace method
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7aa3195637b5e61dcf0141f5477ac01c338cb8c7/docs/method11-filling-missing-values.html" target="_blank">7aa3195</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-07-22
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -973,8 +1007,9 @@ print(df)</code></pre>
 1     2   NaN  NaN</code></pre>
 <p>To replace the missing value with <code>0</code>, just do <code>.fillna(0)</code>.</p>
 <pre class="python"><code># replace all NA values with 0, inplace = True means df itself will be modefied
-df.fillna(0, inplace = True)
-print(df)</code></pre>
+df1 = df.copy()
+df1.fillna(0, inplace = True)
+print(df1)</code></pre>
 <pre><code>   col1  col2 col3
 0     1   3.0    A
 1     2   0.0    0</code></pre>
@@ -982,6 +1017,26 @@ print(df)</code></pre>
 <pre class="python"><code>df2 = df.copy()
 df2[&#39;col2&#39;].fillna(0, inplace = True) 
 print(df2)</code></pre>
+<pre><code>   col1  col2 col3
+0     1   3.0    A
+1     2   0.0  NaN</code></pre>
+<p>Another cool thing you could do with <code>fillna()</code> is you can specify different na replacement values for different columns.</p>
+<pre class="python"><code>df3 = df.copy()
+df3.fillna({
+  &#39;col2&#39;: -999,
+  &#39;col3&#39;: &#39;Missing&#39;
+    }, inplace = True)
+print(df3)</code></pre>
+<pre><code>   col1   col2     col3
+0     1    3.0        A
+1     2 -999.0  Missing</code></pre>
+<p>One more thing to note about NA replacement is that missing in the raw data many times come in different messy forms. Like the example above, it could be any special code (e.g., -999, ‘Missing’, ‘Unknown’). Here a more versatile function <code>replace</code> could be our best friend.</p>
+<pre class="python"><code>df4 = df3.copy()
+df4.replace({
+  None: 0,
+  &#39;Missing&#39;: 0,
+  -999: 0
+})</code></pre>
 <pre><code>   col1  col2 col3
 0     1   3.0    A
 1     2   0.0    0</code></pre>
