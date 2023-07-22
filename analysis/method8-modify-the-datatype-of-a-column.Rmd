@@ -100,8 +100,6 @@ data = {
 
 df4 = pd.DataFrame(data)
 
-# Convert specific columns from strings to numeric values
-columns_to_convert = ['col1', 'col2']
 # Using 'coerce': Non-numeric values will be converted to NaN
 df4['col1'] = df4['col1'].apply(pd.to_numeric, errors='coerce')
 

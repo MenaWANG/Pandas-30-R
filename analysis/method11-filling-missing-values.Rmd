@@ -65,8 +65,9 @@ To replace the missing value with `0`, just do `.fillna(0)`.
 
 ```{python}
 # replace all NA values with 0, inplace = True means df itself will be modefied
-df.fillna(0, inplace = True)
-print(df)
+df1 = df.copy()
+df1.fillna(0, inplace = True)
+print(df1)
 ```
 
 Or if you only wnat to replace missing values in one particular column, simply select it first
@@ -77,6 +78,29 @@ df2['col2'].fillna(0, inplace = True)
 print(df2)
 
 ```
+
+Another cool thing you could do with `fillna()` is you can specify different na replacement values for different columns. 
+
+```{python}
+df3 = df.copy()
+df3.fillna({
+  'col2': -999,
+  'col3': 'Missing'
+    }, inplace = True)
+print(df3)
+```
+One more thing to note about NA replacement is that missing in the raw data many times come in different messy forms. Like the example above, it could be any special code (e.g., -999, 'Missing', 'Unknown'). Here a more versatile function `replace` could be our best friend. 
+
+```{python}
+df4 = df3.copy()
+df4.replace({
+  None: 0,
+  'Missing': 0,
+  -999: 0
+})
+
+```
+
 
 ## R
 

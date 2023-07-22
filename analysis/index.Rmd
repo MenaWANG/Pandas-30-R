@@ -40,7 +40,7 @@ Hope you find it helpful too. Comments and suggestions are always appreciated. :
 
 [10. <span style="color:indianred">*describe()*</span>: Printing Descritive Info about the Dataframe (Method2)](method10-print-descriptive-info-about-the-dataframe2.html)
 
-[11. <span style="color:indianred">*fillna()*</span>: Filling Missing Values](method11-filling-missing-values.html) 
+[11. <span style="color:indianred">*fillna() & replace()*</span>: Filling Missing Values](method11-filling-missing-values.html) 
 
 [12. <span style="color:indianred">*merge & join*</span>: Joining DataFrames](method12-joining-dataframes.html)
 
