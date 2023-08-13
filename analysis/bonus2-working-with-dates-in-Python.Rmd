@@ -1,0 +1,108 @@
+---
+title: "Bonus #1. datetime & dateutil"
+subtitle: "Working with dates in Python"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2023-08-13"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+# Introduction
+
+It is many times tricky to work with dates. Here I will collect and share relevant functions that I found useful along the way. 
+
+# Set up
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+
+# datetime vs string
+
+with the `datetime` package, we can easily transform between datetime/date object and its string representations.
+
+```{python}
+import datetime
+
+date_dt = datetime.date(2023, 8, 13)
+print(date_dt)
+print(type(date_dt))
+
+date = date_dt.strftime('%Y-%m-%d')
+print(date)
+print(type(date))
+
+date_dt_ = datetime.datetime.strptime(date, '%Y-%m-%d')
+print(date_dt_)
+print(type(date_dt_))
+
+```
+# Get a list of dates
+
+Say the task here is to get all the first day of each month from 2023-01-01 to 2023-12-01.
+
+## method 1
+
+
+```{python}
+dates = []
+
+for month in range(1,13):
+  date  = datetime.date(2023, month, 1)
+  dates.append(date)
+  
+print(dates)
+
+```
+
+
+## method 2
+
+Alternatively, we could just use monthly incremental offered by the `relativedelta` method in the `dateutil` package. Compare to method 1, there is no hard-coded year so it could expand across years seamlessly.
+
+```{python}
+from dateutil.relativedelta import relativedelta
+
+from_date = datetime.date(2023,1,1)
+to_date = datetime.date(2023,12,1)
+current_date = from_date
+dates = []
+
+while current_date <= to_date:
+  dates.append(current_date)
+  current_date += relativedelta(months = 1)
+
+print(dates)
+
+```
+
+
+

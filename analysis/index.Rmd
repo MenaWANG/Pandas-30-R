@@ -75,10 +75,12 @@ Hope you find it helpful too. Comments and suggestions are always appreciated. :
 [30. <span style="color:indianred">*pivot_table & melt*</span>: Pivoting DataFrames](method30-pivoting-dataframe.html)
 
 
-### Bonus R to Python translations
+### Bonus content 💃
 
-I will add some R to Python translation of loved R functions below as bonus :) 
+The below content is not limited to pandas or tidyverse. Mainly useful stuff I learned along the way. :)
 
 [1. <span style="color:indianred">*complete()*</span>: Expand a dataframe](bonus1-complete-all-combinations.html)
+
+[2. <span style="color:indianred">*datetime & dateutil*</span>: Working with dates in Python](bonus2-working-with-dates-in-Python.html)
 
 
