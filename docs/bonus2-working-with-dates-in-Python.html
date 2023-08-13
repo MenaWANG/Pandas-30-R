@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2022-12-02" />
+<meta name="date" content="2023-08-13" />
 
-<title>Method #29 Finding Cross-Tabulation</title>
+<title>Bonus #1. datetime &amp; dateutil</title>
 
 <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,10 +359,10 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #29 Finding Cross-Tabulation</h1>
-<h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
+<h1 class="title toc-ignore">Bonus #1. datetime &amp; dateutil</h1>
+<h3 class="subtitle">Working with dates in Python</h3>
 <h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2022-12-02</h4>
+<h4 class="date">2023-08-13</h4>
 
 </div>
 
@@ -515,7 +515,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method29-finding-cross-tabulation.Rmd</code>) and HTML (<code>docs/method29-finding-cross-tabulation.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/bonus2-working-with-dates-in-Python.Rmd</code>) and HTML (<code>docs/bonus2-working-with-dates-in-Python.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -541,121 +541,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/db3e0fe686aaf700e2de5d3ce1941bf3a1b6146d/docs/method29-finding-cross-tabulation.html" target="_blank">db3e0fe</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-07-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7aa3195637b5e61dcf0141f5477ac01c338cb8c7/docs/method29-finding-cross-tabulation.html" target="_blank">7aa3195</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-07-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/0db3ba404f3bc3efa97bf7692aa547769c8faca5/docs/method29-finding-cross-tabulation.html" target="_blank">0db3ba4</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-02-26
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e3221e583fba1beb4eeb12d2365eb95bb06e87e8/docs/method29-finding-cross-tabulation.html" target="_blank">e3221e5</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-12-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/2522fc8c7d59128855b277f0d687fd2cd4ae369d/docs/method29-finding-cross-tabulation.html" target="_blank">2522fc8</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-12-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/b06fbb15c8fe6a732ca5ab186d1da1b16e5f1467/docs/method29-finding-cross-tabulation.html" target="_blank">b06fbb1</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2022-12-02
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/5e3738a6157de49bf6a45e12b0a73e2709cebe95/analysis/method29-finding-cross-tabulation.Rmd" target="_blank">5e3738a</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/7acb5aa54b4c303ee9861a9e1c42ba8844be6495/analysis/bonus2-working-with-dates-in-Python.Rmd" target="_blank">7acb5aa</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2022-12-02
+2023-08-13
 </td>
 <td>
-add method28-29
+working with dates
 </td>
 </tr>
 </tbody>
@@ -680,63 +578,64 @@ add method28-29
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>It is many times tricky to work with dates. Here I will collect and share relevant functions that I found useful along the way.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
-<div id="create-the-dataframe-in-python" class="section level2">
-<h2>Create the dataframe in Python</h2>
-<pre class="python"><code>import pandas as pd
+</div>
+<div id="datetime-vs-string" class="section level1">
+<h1>datetime vs string</h1>
+<p>with the <code>datetime</code> package, we can easily transform between datetime/date object and its string representations.</p>
+<pre class="python"><code>import datetime
 
-df = pd.DataFrame([[&quot;A&quot;, &quot;X&quot;], 
-                   [&quot;B&quot;, &quot;Y&quot;], 
-                   [&quot;C&quot;, &quot;X&quot;],
-                   [&quot;A&quot;, &quot;X&quot;]], 
-                  columns = [&quot;col1&quot;, &quot;col2&quot;])
+date_dt = datetime.date(2023, 8, 13)
+print(date_dt)</code></pre>
+<pre><code>2023-08-13</code></pre>
+<pre class="python"><code>print(type(date_dt))</code></pre>
+<pre><code>&lt;class &#39;datetime.date&#39;&gt;</code></pre>
+<pre class="python"><code>date = date_dt.strftime(&#39;%Y-%m-%d&#39;)
+print(date)</code></pre>
+<pre><code>2023-08-13</code></pre>
+<pre class="python"><code>print(type(date))</code></pre>
+<pre><code>&lt;class &#39;str&#39;&gt;</code></pre>
+<pre class="python"><code>date_dt_ = datetime.datetime.strptime(date, &#39;%Y-%m-%d&#39;)
+print(date_dt_)</code></pre>
+<pre><code>2023-08-13 00:00:00</code></pre>
+<pre class="python"><code>print(type(date_dt_))</code></pre>
+<pre><code>&lt;class &#39;datetime.datetime&#39;&gt;</code></pre>
+</div>
+<div id="get-a-list-of-dates" class="section level1">
+<h1>Get a list of dates</h1>
+<p>Say the task here is to get all the first day of each month from 2023-01-01 to 2023-12-01.</p>
+<div id="method-1" class="section level2">
+<h2>method 1</h2>
+<pre class="python"><code>dates = []
 
-print(df)</code></pre>
-<pre><code>  col1 col2
-0    A    X
-1    B    Y
-2    C    X
-3    A    X</code></pre>
+for month in range(1,13):
+  date  = datetime.date(2023, month, 1)
+  dates.append(date)
+  
+print(dates)</code></pre>
+<pre><code>[datetime.date(2023, 1, 1), datetime.date(2023, 2, 1), datetime.date(2023, 3, 1), datetime.date(2023, 4, 1), datetime.date(2023, 5, 1), datetime.date(2023, 6, 1), datetime.date(2023, 7, 1), datetime.date(2023, 8, 1), datetime.date(2023, 9, 1), datetime.date(2023, 10, 1), datetime.date(2023, 11, 1), datetime.date(2023, 12, 1)]</code></pre>
 </div>
-<div id="load-the-dataframe-into-r" class="section level2">
-<h2>Load the dataframe into R</h2>
-<pre class="r"><code>df &lt;- py$df #access df as saved in Python(py) above
+<div id="method-2" class="section level2">
+<h2>method 2</h2>
+<p>Alternatively, we could just use monthly incremental offered by the <code>relativedelta</code> method in the <code>dateutil</code> package. Compare to method 1, there is no hard-coded year so it could expand across years seamlessly.</p>
+<pre class="python"><code>from dateutil.relativedelta import relativedelta
 
-print(df)</code></pre>
-<pre><code>  col1 col2
-1    A    X
-2    B    Y
-3    C    X
-4    A    X</code></pre>
-</div>
-</div>
-<div id="method-29-fiding-cross-tabulation" class="section level1">
-<h1>Method #29 Fiding Cross-Tabulation</h1>
-<div id="python" class="section level2">
-<h2>Python</h2>
-<p>In Python, <code>crosstab()</code> can return the frequency of each combination of values across two columns.</p>
-<pre class="python"><code>pd.crosstab(df.col1, df.col2)</code></pre>
-<pre><code>col2  X  Y
-col1      
-A     2  0
-B     0  1
-C     1  0</code></pre>
-</div>
-<div id="r" class="section level2">
-<h2>R</h2>
-<p>In R, <code>table()</code> method can do the similar task.</p>
-<pre class="r"><code>table(df$col1, df$col2)</code></pre>
-<pre><code>   
-    X Y
-  A 2 0
-  B 0 1
-  C 1 0</code></pre>
-<p>But with <code>tabyl()</code> function in the <code>janitor</code> package, we can have much more advanced functionalities and customized rosstable, more in our previous discussion on method <a href="method27-finding-the-distribution-of-values.html">#27</a></p>
+from_date = datetime.date(2023,1,1)
+to_date = datetime.date(2023,12,1)
+current_date = from_date
+dates = []
+
+while current_date &lt;= to_date:
+  dates.append(current_date)
+  current_date += relativedelta(months = 1)
+
+print(dates)</code></pre>
+<pre><code>[datetime.date(2023, 1, 1), datetime.date(2023, 2, 1), datetime.date(2023, 3, 1), datetime.date(2023, 4, 1), datetime.date(2023, 5, 1), datetime.date(2023, 6, 1), datetime.date(2023, 7, 1), datetime.date(2023, 8, 1), datetime.date(2023, 9, 1), datetime.date(2023, 10, 1), datetime.date(2023, 11, 1), datetime.date(2023, 12, 1)]</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
