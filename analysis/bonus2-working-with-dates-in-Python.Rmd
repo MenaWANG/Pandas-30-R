@@ -1,5 +1,5 @@
 ---
-title: "Bonus #1. datetime & dateutil"
+title: "Bonus #2. datetime & dateutil"
 subtitle: "Working with dates in Python"
 author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
 date: "2023-08-13"
@@ -52,17 +52,19 @@ with the `datetime` package, we can easily transform between datetime/date objec
 ```{python}
 import datetime
 
-date_dt = datetime.date(2023, 8, 13)
-print(date_dt)
-print(type(date_dt))
+date_dt = datetime.datetime(2023, 8, 13, 0, 0, 0)
+print(date_dt, type(date_dt))
 
-date = date_dt.strftime('%Y-%m-%d')
-print(date)
-print(type(date))
+date = datetime.date(2023, 8, 13)
+print(date, type(date))
 
-date_dt_ = datetime.datetime.strptime(date, '%Y-%m-%d')
-print(date_dt_)
-print(type(date_dt_))
+date_str = date.strftime('%Y-%m-%d')
+print(date_str, type(date_str))
+
+date_dt_ = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+print(date_dt_, type(date_dt_))
+date_ = date_dt_.date()
+print(date_, type(date_))
 
 ```
 # Get a list of dates
@@ -91,7 +93,7 @@ Alternatively, we could just use monthly incremental offered by the `relativedel
 ```{python}
 from dateutil.relativedelta import relativedelta
 
-from_date = datetime.date(2023,1,1)
+from_date = datetime.date(2022,1,1)
 to_date = datetime.date(2023,12,1)
 current_date = from_date
 dates = []
@@ -104,5 +106,18 @@ print(dates)
 
 ```
 
+## Bonus
+
+Say for whatever reason we want to pick 1 month from every 3 months, that is, we want the 1st, 4th, 7th, 10th etc months. This can be done very easily with `enumerate`.
+
+```{python}
+selected_dates = []
+
+for i, date in enumerate(dates):
+  if i % 3 == 0:
+    print(date)
+    selected_dates.append(date)
+
+```
 
 
