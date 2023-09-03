@@ -141,4 +141,31 @@ df |> mutate(row_mean = df |> select(1,2) |> rowMeans()) # specify columns by po
 
 ```
 
+## Encoding categorical columns
+
+### Python
+
+The `map` function is pretty helpful in the scenario
+
+```{python}
+df = pd.DataFrame({'gender':['male', 'female', 'male', 'female']})
+# add a column with gender encoding
+df['is_male'] = df['gender'].map({'male': 1, 'female': 0})
+print(df)
+
+```
+
+### R
+
+Of course, tihs task is easy with dplyr
+
+```{r}
+df <- py$df
+df |> 
+  mutate(is_male = ifelse(gender == 'male', 1, 0))
+```
+
+
+
+
 

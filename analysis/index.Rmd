@@ -50,7 +50,7 @@ Hope you find it helpful too. Comments and suggestions are always appreciated. :
 
 [15. <span style="color:indianred">*rename()*</span>: Renaming Columns](method15-renaming-columns.html)
 
-[16-17. <span style="color:indianred">*assign, lambda, iloc*</span>: Adding New Columns](method16-17-adding-new-columns.html)
+[16-17. <span style="color:indianred">*assign, lambda, iloc, map*</span>: Adding New Columns](method16-17-adding-new-columns.html)
 
 [18. <span style="color:indianred">*query, filter, isin*</span>: Filtering a Dataframe1: Boolean filtering](method18-filteringa-dataframe1-boolean-filtering.html)
 
