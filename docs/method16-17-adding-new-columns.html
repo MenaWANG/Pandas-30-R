@@ -387,7 +387,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-08-15
+<strong>Last updated:</strong> 2023-09-03
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -478,16 +478,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree09ca4a231d9de18d2dc559c758b570770b1625c8targetblank09ca4a2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/09ca4a231d9de18d2dc559c758b570770b1625c8" target="_blank">09ca4a2</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree0b23e3c841e23f18aca674462d9b9a1d55bcc656targetblank0b23e3ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/0b23e3c841e23f18aca674462d9b9a1d55bcc656" target="_blank">0b23e3c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree09ca4a231d9de18d2dc559c758b570770b1625c8targetblank09ca4a2a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree0b23e3c841e23f18aca674462d9b9a1d55bcc656targetblank0b23e3ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/09ca4a231d9de18d2dc559c758b570770b1625c8" target="_blank">09ca4a2</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/0b23e3c841e23f18aca674462d9b9a1d55bcc656" target="_blank">0b23e3c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -539,6 +539,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/0b23e3c841e23f18aca674462d9b9a1d55bcc656/analysis/method16-17-adding-new-columns.Rmd" target="_blank">0b23e3c</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-09-03
+</td>
+<td>
+map for creating new columns
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7f8aaeb137797938dbdbd6cb8031ade86b2834ae/docs/method16-17-adding-new-columns.html" target="_blank">7f8aaeb</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-08-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -988,6 +1022,34 @@ print(df)</code></pre>
 <pre><code>  col1 col2 row_mean
 1    1    3        2
 2    2    4        3</code></pre>
+</div>
+</div>
+<div id="encoding-categorical-columns" class="section level2">
+<h2>Encoding categorical columns</h2>
+<div id="python-3" class="section level3">
+<h3>Python</h3>
+<p>The <code>map</code> function is pretty helpful in the scenario</p>
+<pre class="python"><code>df = pd.DataFrame({&#39;gender&#39;:[&#39;male&#39;, &#39;female&#39;, &#39;male&#39;, &#39;female&#39;]})
+# add a column with gender encoding
+df[&#39;is_male&#39;] = df[&#39;gender&#39;].map({&#39;male&#39;: 1, &#39;female&#39;: 0})
+print(df)</code></pre>
+<pre><code>   gender  is_male
+0    male        1
+1  female        0
+2    male        1
+3  female        0</code></pre>
+</div>
+<div id="r-3" class="section level3">
+<h3>R</h3>
+<p>Of course, tihs task is easy with dplyr</p>
+<pre class="r"><code>df &lt;- py$df
+df |&gt; 
+  mutate(is_male = ifelse(gender == &#39;male&#39;, 1, 0))</code></pre>
+<pre><code>  gender is_male
+1   male       1
+2 female       0
+3   male       1
+4 female       0</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
