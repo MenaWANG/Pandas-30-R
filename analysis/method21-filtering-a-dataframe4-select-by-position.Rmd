@@ -112,3 +112,48 @@ df.iloc[0:half_rows] # get the top half
 
 ```
 
+# Combining position with label identifiers?
+
+In this note we talked about `iloc` which relies on position, while in the previous one we talked about `loc` which relies on labels. But sometimes, we might want to combine the two identifiers. Say, we want to identify the value of the 'English' column in the 1st row. 
+
+```{python}
+print('before', df.iloc[0]['English'])
+df.iloc[0]['English'] = 15 # this worked here, but in some python env it doesn't ... interesting!
+print('after', df.iloc[0]['English'])
+
+```
+
+Note that using `.iloc[]` or `.loc[]` alone, there is no issues at all.
+
+### `iloc` alone
+
+```{python}
+print('before', df.iloc[0,2])
+df.iloc[0,2] = 12
+print('after', df.iloc[0,2])
+
+```
+
+### `loc`. alone
+
+Note that in this df, the row index is consistent with its location, but this is not always the case. Indexing is a powerful tool in python, pls see [more here](https://github.com/MenaWANG/ML_toy_examples/blob/main/Others/test%20index.ipynb)
+
+```{python}
+print('before', df.loc[0,'English'])
+df.loc[0,'English'] = 17
+print('after', df.loc[0,'English'])
+
+```
+
+### Assigning values by both location and label
+
+Alright, go back to the question before, how do we assign value to the 'English' column in the 1st row? One easy way is translating the label to position (or vice versa). Pls see below
+
+```{python}
+print('before', df.iloc[0]['English'])
+print('location of the "English" column:', df.columns.get_loc('English'))
+df.iloc[0, df.columns.get_loc('English')] = 100
+print('after', df.iloc[0]['English'])
+
+```
+
