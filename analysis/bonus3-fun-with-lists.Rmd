@@ -1,0 +1,87 @@
+---
+title: "Bonus #3. Fun with lists"
+subtitle: "Working with lists in Python and R"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2023-09-18"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+# Fun with Lists in Python and R
+
+## Compare lists 
+
+Check out `all` and `any` in python and r
+
+### Python
+
+```{python}
+reference_list = ['fruit', 'vegetable', 'meat']
+values_to_check = ['fruit', 'drink']
+
+# Check if all values in values_to_check are in the reference_list
+all_check = all(item in reference_list for item in values_to_check)
+print(all_check)
+# Returns False as 'drink' is not in ['fruit', 'vegetable', 'meat']
+
+# Check if any values in values_to_check are in the reference_list
+any_check = any(item in reference_list for item in values_to_check)
+print(any_check)
+# Returns True as 'fruit' is in ['fruit', 'vegetable', 'meat']
+
+
+```
+### R
+
+```{r}
+
+# Define the reference list
+reference_list <- c('fruit', 'vegetable', 'meat')
+
+# Define the values to check
+values_to_check <- c('fruit', 'drink')
+
+# Check if all values in values_to_check are in the reference_list
+all_check <- all(values_to_check %in% reference_list)
+print(all_check)
+# Returns FALSE as 'drink' is not in c('fruit', 'vegetable', 'meat')
+
+# Check if any values in values_to_check are in the reference_list
+any_check <- any(values_to_check %in% reference_list)
+print(any_check)
+# Returns TRUE as 'fruit' is in c('fruit', 'vegetable', 'meat')
+
+
+```
+

@@ -83,4 +83,6 @@ The below content is not limited to pandas or tidyverse. Mainly useful stuff I l
 
 [2. <span style="color:indianred">*datetime & dateutil*</span>: Working with dates in Python](bonus2-working-with-dates-in-Python.html)
 
+[3. <span style="color:indianred">*all, any*</span>: Fun with lists](bonus3-fun-with-lists.html)
+
 

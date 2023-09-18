@@ -148,3 +148,35 @@ df
 
 ```
 
+So here we passed a custom function into `transform()`. In some scenarios, it is helpful to pass a built-in function in it too. Say I have a dataframe where id is the primary key, and multiple ids can relate to one group_id. Now I would like to add a new column that count the number of unique ids in each group
+
+```{python}
+df = pd.DataFrame({
+  'id': [1, 2, 3, 4, 5, 6],
+  'group_id': [1, 1, 2, 3, 3, 3]
+  })
+
+df2 = df.copy()
+  
+df2['id_count'] = (df2
+                   .groupby('group_id')
+                   .transform('count')
+                   )
+                   
+print(df2)
+
+```
+
+Similar task is easy with R as well. The code is super similar, note one interesting difference between the two though. in Pandas, we pass the aggregation function `count()` as a string into transform(), while with dplyr in R, we directly use functions like `n()` within mutate().
+
+```{r}
+df = py$df
+
+df |>
+  group_by(group_id) |> 
+  mutate(id_count = n())
+
+```
+
+
+
