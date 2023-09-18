@@ -11,9 +11,9 @@
 
 <meta name="author" content="Mena WANG" />
 
-<meta name="date" content="2023-08-13" />
+<meta name="date" content="2023-09-18" />
 
-<title>Bonus #2. datetime &amp; dateutil</title>
+<title>Bonus #3. Fun with lists</title>
 
 <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -359,11 +359,11 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Bonus #2. datetime &amp; dateutil</h1>
-<h3 class="subtitle">Working with dates in Python</h3>
+<h1 class="title toc-ignore">Bonus #3. Fun with lists</h1>
+<h3 class="subtitle">Working with lists in Python and R</h3>
 <h4 class="author"><a
 href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
-<h4 class="date">2023-08-13</h4>
+<h4 class="date">2023-09-18</h4>
 
 </div>
 
@@ -580,12 +580,11 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown
-(<code>analysis/bonus2-working-with-dates-in-Python.Rmd</code>) and HTML
-(<code>docs/bonus2-working-with-dates-in-Python.html</code>) files. If
-you’ve configured a remote Git repository (see
-<code>?wflow_git_remote</code>), click on the hyperlinks in the table
-below to view the files as they were in that past version.
+made to the R Markdown (<code>analysis/bonus3-fun-with-lists.Rmd</code>)
+and HTML (<code>docs/bonus3-fun-with-lists.html</code>) files. If you’ve
+configured a remote Git repository (see <code>?wflow_git_remote</code>),
+click on the hyperlinks in the table below to view the files as they
+were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -611,121 +610,19 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/406fa109dec51fe34fd81ae8a6d74e4f89dd3751/docs/bonus2-working-with-dates-in-Python.html" target="_blank">406fa10</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-09-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/e02524750386b14a3654a79fbce63cebc31938f4/docs/bonus2-working-with-dates-in-Python.html" target="_blank">e025247</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-09-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/7f8aaeb137797938dbdbd6cb8031ade86b2834ae/docs/bonus2-working-with-dates-in-Python.html" target="_blank">7f8aaeb</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-08-15
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/be1850ce176c2ace8137afb309f98369da34df11/docs/bonus2-working-with-dates-in-Python.html" target="_blank">be1850c</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-08-15
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/f6d01a1814c3a8694ca962fc3849960d04bf878e/analysis/bonus2-working-with-dates-in-Python.Rmd" target="_blank">f6d01a1</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/616c4790351da7bdc9bd38d5d9b47ce9912390f3/analysis/bonus3-fun-with-lists.Rmd" target="_blank">616c479</a>
 </td>
 <td>
 Mena WANG
 </td>
 <td>
-2023-08-15
+2023-09-18
 </td>
 <td>
-more on datetime
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/f5a895a8ced424fc3466f3c9ee1cfdc803ba02cf/docs/bonus2-working-with-dates-in-Python.html" target="_blank">f5a895a</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-08-13
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/MenaWANG/Pandas-30-R/blob/7acb5aa54b4c303ee9861a9e1c42ba8844be6495/analysis/bonus2-working-with-dates-in-Python.Rmd" target="_blank">7acb5aa</a>
-</td>
-<td>
-Mena WANG
-</td>
-<td>
-2023-08-13
-</td>
-<td>
-working with dates
+more on groupby, fun with lists
 </td>
 </tr>
 </tbody>
@@ -748,92 +645,49 @@ working with dates
 }
 
 </style>
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>It is many times tricky to work with dates. Here I will collect and
-share relevant functions that I found useful along the way.</p>
-</div>
-<div id="set-up" class="section level1">
-<h1>Set up</h1>
 <pre class="r"><code># enable python in RMarkdown
 library(reticulate)</code></pre>
+<div id="fun-with-lists-in-python-and-r" class="section level1">
+<h1>Fun with Lists in Python and R</h1>
+<div id="compare-lists" class="section level2">
+<h2>Compare lists</h2>
+<p>Check out <code>all</code> and <code>any</code> in python and r</p>
+<div id="python" class="section level3">
+<h3>Python</h3>
+<pre class="python"><code>reference_list = [&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;]
+values_to_check = [&#39;fruit&#39;, &#39;drink&#39;]
+
+# Check if all values in values_to_check are in the reference_list
+all_check = all(item in reference_list for item in values_to_check)
+print(all_check)
+# Returns False as &#39;drink&#39; is not in [&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;]
+
+# Check if any values in values_to_check are in the reference_list</code></pre>
+<pre><code>False</code></pre>
+<pre class="python"><code>any_check = any(item in reference_list for item in values_to_check)
+print(any_check)
+# Returns True as &#39;fruit&#39; is in [&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;]</code></pre>
+<pre><code>True</code></pre>
 </div>
-<div id="datetime-vs-string" class="section level1">
-<h1>datetime vs string</h1>
-<p>with the <code>datetime</code> package, we can easily transform
-between datetime/date object and its string representations.</p>
-<pre class="python"><code>import datetime
+<div id="r" class="section level3">
+<h3>R</h3>
+<pre class="r"><code># Define the reference list
+reference_list &lt;- c(&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;)
 
-date_dt = datetime.datetime(2023, 8, 13, 0, 0, 0)
-print(date_dt, type(date_dt))</code></pre>
-<pre><code>2023-08-13 00:00:00 &lt;class &#39;datetime.datetime&#39;&gt;</code></pre>
-<pre class="python"><code>date = datetime.date(2023, 8, 13)
-print(date, type(date))</code></pre>
-<pre><code>2023-08-13 &lt;class &#39;datetime.date&#39;&gt;</code></pre>
-<pre class="python"><code>date_str = date.strftime(&#39;%Y-%m-%d&#39;)
-print(date_str, type(date_str))</code></pre>
-<pre><code>2023-08-13 &lt;class &#39;str&#39;&gt;</code></pre>
-<pre class="python"><code>date_dt_ = datetime.datetime.strptime(date_str, &#39;%Y-%m-%d&#39;)
-print(date_dt_, type(date_dt_))</code></pre>
-<pre><code>2023-08-13 00:00:00 &lt;class &#39;datetime.datetime&#39;&gt;</code></pre>
-<pre class="python"><code>date_ = date_dt_.date()
-print(date_, type(date_))</code></pre>
-<pre><code>2023-08-13 &lt;class &#39;datetime.date&#39;&gt;</code></pre>
-</div>
-<div id="get-a-list-of-dates" class="section level1">
-<h1>Get a list of dates</h1>
-<p>Say the task here is to get all the first day of each month from
-2023-01-01 to 2023-12-01.</p>
-<div id="method-1" class="section level2">
-<h2>method 1</h2>
-<pre class="python"><code>dates = []
+# Define the values to check
+values_to_check &lt;- c(&#39;fruit&#39;, &#39;drink&#39;)
 
-for month in range(1,13):
-  date  = datetime.date(2023, month, 1)
-  dates.append(date)
-  
-print(dates)</code></pre>
-<pre><code>[datetime.date(2023, 1, 1), datetime.date(2023, 2, 1), datetime.date(2023, 3, 1), datetime.date(2023, 4, 1), datetime.date(2023, 5, 1), datetime.date(2023, 6, 1), datetime.date(2023, 7, 1), datetime.date(2023, 8, 1), datetime.date(2023, 9, 1), datetime.date(2023, 10, 1), datetime.date(2023, 11, 1), datetime.date(2023, 12, 1)]</code></pre>
-</div>
-<div id="method-2" class="section level2">
-<h2>method 2</h2>
-<p>Alternatively, we could just use monthly incremental offered by the
-<code>relativedelta</code> method in the <code>dateutil</code> package.
-Compare to method 1, there is no hard-coded year so it could expand
-across years seamlessly.</p>
-<pre class="python"><code>from dateutil.relativedelta import relativedelta
+# Check if all values in values_to_check are in the reference_list
+all_check &lt;- all(values_to_check %in% reference_list)
+print(all_check)</code></pre>
+<pre><code>[1] FALSE</code></pre>
+<pre class="r"><code># Returns FALSE as &#39;drink&#39; is not in c(&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;)
 
-from_date = datetime.date(2022,1,1)
-to_date = datetime.date(2023,12,1)
-current_date = from_date
-dates = []
-
-while current_date &lt;= to_date:
-  dates.append(current_date)
-  current_date += relativedelta(months = 1)
-
-print(dates)</code></pre>
-<pre><code>[datetime.date(2022, 1, 1), datetime.date(2022, 2, 1), datetime.date(2022, 3, 1), datetime.date(2022, 4, 1), datetime.date(2022, 5, 1), datetime.date(2022, 6, 1), datetime.date(2022, 7, 1), datetime.date(2022, 8, 1), datetime.date(2022, 9, 1), datetime.date(2022, 10, 1), datetime.date(2022, 11, 1), datetime.date(2022, 12, 1), datetime.date(2023, 1, 1), datetime.date(2023, 2, 1), datetime.date(2023, 3, 1), datetime.date(2023, 4, 1), datetime.date(2023, 5, 1), datetime.date(2023, 6, 1), datetime.date(2023, 7, 1), datetime.date(2023, 8, 1), datetime.date(2023, 9, 1), datetime.date(2023, 10, 1), datetime.date(2023, 11, 1), datetime.date(2023, 12, 1)]</code></pre>
-</div>
-<div id="bonus" class="section level2">
-<h2>Bonus</h2>
-<p>Say for whatever reason we want to pick 1 month from every 3 months,
-that is, we want the 1st, 4th, 7th, 10th etc months. This can be done
-very easily with <code>enumerate</code>.</p>
-<pre class="python"><code>selected_dates = []
-
-for i, date in enumerate(dates):
-  if i % 3 == 0:
-    print(date)
-    selected_dates.append(date)</code></pre>
-<pre><code>2022-01-01
-2022-04-01
-2022-07-01
-2022-10-01
-2023-01-01
-2023-04-01
-2023-07-01
-2023-10-01</code></pre>
+# Check if any values in values_to_check are in the reference_list
+any_check &lt;- any(values_to_check %in% reference_list)
+print(any_check)</code></pre>
+<pre><code>[1] TRUE</code></pre>
+<pre class="r"><code># Returns TRUE as &#39;fruit&#39; is in c(&#39;fruit&#39;, &#39;vegetable&#39;, &#39;meat&#39;)</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -873,6 +727,7 @@ loaded via a namespace (and not attached):
 [37] rmarkdown_2.23    magrittr_2.0.3    whisker_0.4.1     promises_1.2.0.1 
 [41] htmltools_0.5.5   renv_1.0.0        httpuv_1.6.11     utf8_1.2.3       
 [45] stringi_1.7.12    cachem_1.0.8     </code></pre>
+</div>
 </div>
 </div>
 </div>

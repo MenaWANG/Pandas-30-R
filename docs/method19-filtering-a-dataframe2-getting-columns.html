@@ -359,9 +359,12 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Method #19 Filtering a DataFrame2: Getting Columns</h1>
-<h3 class="subtitle">Python to R Translation of 30 Essential Pandas Methods</h3>
-<h4 class="author"><a href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
+<h1 class="title toc-ignore">Method #19 Filtering a DataFrame2: Getting
+Columns</h1>
+<h3 class="subtitle">Python to R Translation of 30 Essential Pandas
+Methods</h3>
+<h4 class="author"><a
+href="https://www.linkedin.com/in/mena-ning-wang/">Mena WANG</a></h4>
 <h4 class="date">2022-11-12</h4>
 
 </div>
@@ -369,7 +372,9 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -378,7 +383,9 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -387,17 +394,27 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-09-10
+<strong>Last updated:</strong> 2023-09-18
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>Pandas-30-R/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>Pandas-30-R/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
 </p>
 <p>
-This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/workflowr/workflowr">workflowr</a> (version 1.7.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.0). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -406,91 +423,138 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
 </p>
 </div>
 <div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20221023code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20221023)</code> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20221023code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20221023)</code> </a>
 </p>
 </div>
-<div id="strongSeedstrongcodesetseed20221023code" class="panel-collapse collapse">
+<div id="strongSeedstrongcodesetseed20221023code"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>The command <code>set.seed(20221023)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+<p>The command <code>set.seed(20221023)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
 </p>
 </div>
-<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
 </p>
 </div>
 <div id="strongCachestrongnone" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
 </p>
 </div>
 <div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1f7a2eaae525f4e22ed6584ea8cdd9d0ad10db55targetblank1f7a2eaa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1f7a2eaae525f4e22ed6584ea8cdd9d0ad10db55" target="_blank">1f7a2ea</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree616c4790351da7bdc9bd38d5d9b47ce9912390f3targetblank616c479a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/MenaWANG/Pandas-30-R/tree/616c4790351da7bdc9bd38d5d9b47ce9912390f3" target="_blank">616c479</a>
+</a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree1f7a2eaae525f4e22ed6584ea8cdd9d0ad10db55targetblank1f7a2eaa" class="panel-collapse collapse">
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree616c4790351da7bdc9bd38d5d9b47ce9912390f3targetblank616c479a"
+class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/MenaWANG/Pandas-30-R/tree/1f7a2eaae525f4e22ed6584ea8cdd9d0ad10db55" target="_blank">1f7a2ea</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version
+<a href="https://github.com/MenaWANG/Pandas-30-R/tree/616c4790351da7bdc9bd38d5d9b47ce9912390f3" target="_blank">616c479</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
 </p>
 <p>
-Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
 </p>
 <pre><code>
 Ignored files:
@@ -504,7 +568,9 @@ Unstaged changes:
 
 </code></pre>
 <p>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
 </p>
 </div>
 </div>
@@ -515,7 +581,14 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/method19-filtering-a-dataframe2-getting-columns.Rmd</code>) and HTML (<code>docs/method19-filtering-a-dataframe2-getting-columns.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were
+made to the R Markdown
+(<code>analysis/method19-filtering-a-dataframe2-getting-columns.Rmd</code>)
+and HTML
+(<code>docs/method19-filtering-a-dataframe2-getting-columns.html</code>)
+files. If you’ve configured a remote Git repository (see
+<code>?wflow_git_remote</code>), click on the hyperlinks in the table
+below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -539,6 +612,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/406fa109dec51fe34fd81ae8a6d74e4f89dd3751/docs/method19-filtering-a-dataframe2-getting-columns.html" target="_blank">406fa10</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-09-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -901,7 +991,11 @@ add method19
 </style>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Provide a Python to R translation of <strong>30 essential Pandas methods</strong> introduced by Avi Chawla in <a href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The Only 30 Methods You Should Master To Become A Pandas Pro</a> published on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
+<p>Provide a Python to R translation of <strong>30 essential Pandas
+methods</strong> introduced by Avi Chawla in <a
+href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The
+Only 30 Methods You Should Master To Become A Pandas Pro</a> published
+on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
 </div>
 <div id="set-up" class="section level1">
 <h1>Set up</h1>
@@ -930,7 +1024,8 @@ df</code></pre>
 3    3   10    B</code></pre>
 </div>
 </div>
-<div id="method-19.-filtering-a-dataframe2-getting-columns" class="section level1">
+<div id="method-19.-filtering-a-dataframe2-getting-columns"
+class="section level1">
 <h1>Method #19. Filtering a DataFrame2: Getting Columns</h1>
 <div id="python" class="section level2">
 <h2>Python</h2>
@@ -940,7 +1035,8 @@ df</code></pre>
 1     4
 2    10
 Name: col2, dtype: int64</code></pre>
-<p>Or when you want to select multiple columns together, just specify them as a list.</p>
+<p>Or when you want to select multiple columns together, just specify
+them as a list.</p>
 <pre class="python"><code>df[[&#39;col1&#39;,&#39;col3&#39;]]</code></pre>
 <pre><code>   col1 col3
 0     1    A
@@ -966,7 +1062,8 @@ df |&gt;  select(col2) # select col2</code></pre>
 </div>
 <div id="bonus-select-columns-by-conditions" class="section level1">
 <h1>Bonus: Select Columns by Conditions</h1>
-<p>Sometimes, we would want to select columns with certain characteristics</p>
+<p>Sometimes, we would want to select columns with certain
+characteristics</p>
 <div id="select-columns-by-string-in-names" class="section level2">
 <h2>Select columns by string in names</h2>
 <p>First let’s change the column names.</p>
@@ -978,7 +1075,9 @@ df</code></pre>
 2      3   10      B</code></pre>
 <div id="r-1" class="section level3">
 <h3>R</h3>
-<p>To select columns where names contain certain strings, we can simply add <code>contains()</code> function to the <code>select</code> call introduced above.</p>
+<p>To select columns where names contain certain strings, we can simply
+add <code>contains()</code> function to the <code>select</code> call
+introduced above.</p>
 <pre class="r"><code>df = py$df #get the dataframe from python
 
 df |&gt; select(contains(&#39;app&#39;))</code></pre>
@@ -989,13 +1088,17 @@ df |&gt; select(contains(&#39;app&#39;))</code></pre>
 </div>
 <div id="python-1" class="section level3">
 <h3>Python</h3>
-<p>To select columns where names contain certain strings, we can use the <code>filter()</code> method.</p>
+<p>To select columns where names contain certain strings, we can use the
+<code>filter()</code> method.</p>
 <pre class="python"><code>df.filter(like=&#39;app&#39;)</code></pre>
 <pre><code>   apple  app
 0      1    8
 1      5    4
 2      3   10</code></pre>
-<p>Special note for R users. In R, <code>filter()</code> is normally used to filter rows, whereas <code>select()</code> for columns. Here in Pandas, by default, <code>filter()</code> looks at columns of dataframes. But we can also set this to rows by specifying axis = 0</p>
+<p>Special note for R users. In R, <code>filter()</code> is normally
+used to filter rows, whereas <code>select()</code> for columns. Here in
+Pandas, by default, <code>filter()</code> looks at columns of
+dataframes. But we can also set this to rows by specifying axis = 0</p>
 <pre class="python"><code>df.set_index([&#39;orange&#39;], inplace=True) # set index to be the &#39;orange&#39; row
 print(df.index)</code></pre>
 <pre><code>Index([&#39;A&#39;, &#39;B&#39;, &#39;B&#39;], dtype=&#39;object&#39;, name=&#39;orange&#39;)</code></pre>
@@ -1004,14 +1107,18 @@ print(df.index)</code></pre>
 orange            
 B           5    4
 B           3   10</code></pre>
-<p>Here index is used for filtering. To filter rows by values of variables, we can use the <code>query()</code> method in Python. See details in method <a href="method18-filteringa-dataframe1-boolean-filtering.html">#18</a></p>
+<p>Here index is used for filtering. To filter rows by values of
+variables, we can use the <code>query()</code> method in Python. See
+details in method <a
+href="method18-filteringa-dataframe1-boolean-filtering.html">#18</a></p>
 </div>
 </div>
 <div id="select-columns-by-data-types" class="section level2">
 <h2>Select columns by data types</h2>
 <div id="python-2" class="section level3">
 <h3>Python</h3>
-<p>To select columns by data types, we can use the <code>select_dtypes</code> method in python</p>
+<p>To select columns by data types, we can use the
+<code>select_dtypes</code> method in python</p>
 <pre class="python"><code>df.dtypes #check data types</code></pre>
 <pre><code>apple    int64
 app      int64
@@ -1029,7 +1136,8 @@ Index: [A, B, B]</code></pre>
 </div>
 <div id="r-2" class="section level3">
 <h3>R</h3>
-<p>To do this in R, simply add a <code>where()</code> in the select call introduced above.</p>
+<p>To do this in R, simply add a <code>where()</code> in the select call
+introduced above.</p>
 <pre class="r"><code>str(df)#check data types</code></pre>
 <pre><code>&#39;data.frame&#39;:   3 obs. of  3 variables:
  $ apple : num  1 5 3
@@ -1049,7 +1157,8 @@ Index: [A, B, B]</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
-<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
@@ -1080,10 +1189,10 @@ loaded via a namespace (and not attached):
 [21] rstudioapi_0.15.0 yaml_2.3.7        xfun_0.39         fastmap_1.1.1    
 [25] withr_2.5.0       stringr_1.5.0     knitr_1.43        generics_0.1.3   
 [29] fs_1.6.2          vctrs_0.6.3       sass_0.4.7        tidyselect_1.2.0 
-[33] grid_4.2.1        rprojroot_2.0.3   glue_1.6.2        R6_2.5.1         
-[37] fansi_1.0.4       rmarkdown_2.23    magrittr_2.0.3    whisker_0.4.1    
-[41] promises_1.2.0.1  htmltools_0.5.5   renv_1.0.0        httpuv_1.6.11    
-[45] utf8_1.2.3        stringi_1.7.12    cachem_1.0.8     </code></pre>
+[33] grid_4.2.1        rprojroot_2.0.3   here_1.0.1        glue_1.6.2       
+[37] R6_2.5.1          fansi_1.0.4       rmarkdown_2.23    magrittr_2.0.3   
+[41] whisker_0.4.1     promises_1.2.0.1  htmltools_0.5.5   renv_1.0.0       
+[45] httpuv_1.6.11     utf8_1.2.3        stringi_1.7.12    cachem_1.0.8     </code></pre>
 </div>
 </div>
 </div>
