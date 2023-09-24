@@ -1,0 +1,91 @@
+---
+title: "Bonus #4. Cut and Bin with Pandas"
+subtitle: ""
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2023-09-24"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+```
+
+```{r}
+# enable python in RMarkdown
+library(reticulate)
+
+```
+
+
+## The task
+
+We have a list like below. What we intend to do here is to cut theese values by some pre-defined splits and label the bins accordingly. 
+
+```{python}
+test_ls = list(range(0,100,5))
+print("test_ls", test_ls)
+cutoff_values = [-float("inf")] + [30,50,80] + [float("inf")]
+print("cut off value", cutoff_values)
+```
+
+## A function to create the labels
+
+```{python}
+def create_labels(cutoff_values):
+  """
+  create a list of labels based on a list of cutoff values.
+  """
+  
+  labels = []
+  labels.append(f"({cutoff_values[0]}, {cutoff_values[1]})")
+  for i in range(1, len(cutoff_values) - 1):
+    labels.append(f"[{cutoff_values[i]}, {cutoff_values[i+1]})")
+    
+  return labels
+```
+
+
+
+```{python}
+labels = create_labels(cutoff_values)
+print(labels)
+```
+## Execution
+
+Use the `pd.cut()` function to create the desired result. Please note that number of bins should be one more than the labels. 
+
+
+```{python}
+import pandas as pd
+cuts = pd.cut(test_ls, bins = cutoff_values, labels = labels)
+
+result = pd.DataFrame({
+  'original': test_ls,
+  'cuts': cuts
+})
+print(result)
+
+```
+

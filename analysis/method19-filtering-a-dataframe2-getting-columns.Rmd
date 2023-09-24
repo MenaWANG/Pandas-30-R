@@ -148,6 +148,14 @@ df.select_dtypes(include = ['int64'])
 df.select_dtypes(exclude = ['int64'])
 ```
 
+To use this to identity all numeric fields, we can set a more general criteria like below
+
+```{python}
+import numpy as np
+num_features = df.select_dtypes(include = np.number).columns.tolist()
+print(num_features)
+```
+
 
 ### R
 

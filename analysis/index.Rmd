@@ -85,4 +85,6 @@ The below content is not limited to pandas or tidyverse. Mainly useful stuff I l
 
 [3. <span style="color:indianred">*all, any*</span>: Fun with lists](bonus3-fun-with-lists.html)
 
+[4. <span style="color:indianred">*cut*</span>: Cut and bin with Pandas](bonus4-cut-and-bin.html)
+
 
