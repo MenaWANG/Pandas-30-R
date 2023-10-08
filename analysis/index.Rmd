@@ -8,16 +8,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-In this repo, I provided a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). 
+This site collects useful Python, R and SQL tips as I found them along the way.👣 Hope you find it helpful too.😊   Comments and suggestions are always appreciated. 🌺
 
 
-The discussions of some of the methods went beyond the original, with more related methods illustrated/compared for more advanced or customized tasks (pls see specific methods highlighted in the list below). I will continue to add examples or relevant methods to enrich this site, as it now serves as a reference source for myself. 
+### Python to R Translation of 30 Essential Methods and Beyond     
 
-Hope you find it helpful too. Comments and suggestions are always appreciated. :)
-
-
-### Please click each method below for details    
-
+The repo began as a Python to R translation of **30 essential Pandas methods** introduced by Avi Chawla in [The Only 30 Methods You Should Master To Become A Pandas Pro](https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2) published on [TowardsDataScience](https://towardsdatascience.com/). But the discussions went beyond the original, with more related methods illustrated/compared for more advanced or customized tasks (pls see specific methods highlighted in the list below). 
 
 
 [1. <span style="color:indianred">*read_csv()*</span>: Reading a CSV](method1-read-a-csv.html)
@@ -75,9 +71,9 @@ Hope you find it helpful too. Comments and suggestions are always appreciated. :
 [30. <span style="color:indianred">*pivot_table & melt*</span>: Pivoting DataFrames](method30-pivoting-dataframe.html)
 
 
-### Bonus content 💃
+### Bonus Content 💃
 
-The below content is not limited to pandas or tidyverse. Mainly useful stuff I learned along the way. :)
+The below content is not limited to pandas or tidyverse. Mainly fun and useful R/Python stuff that don't naturally fall into any of the 30 methods groups above. :)
 
 [1. <span style="color:indianred">*complete()*</span>: Expand a dataframe](bonus1-complete-all-combinations.html)
 
@@ -88,3 +84,6 @@ The below content is not limited to pandas or tidyverse. Mainly useful stuff I l
 [4. <span style="color:indianred">*cut*</span>: Cut and bin with Pandas](bonus4-cut-and-bin.html)
 
 
+### SQL Tips 🏖️
+
+[1. <span style="color:indianred">*SPLIT_PART()*</span>: Extract element from a field](SQL1-split-part.html)

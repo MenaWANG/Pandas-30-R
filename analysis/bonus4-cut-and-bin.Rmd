@@ -59,9 +59,9 @@ def create_labels(cutoff_values):
   """
   
   labels = []
-  labels.append(f"({cutoff_values[0]}, {cutoff_values[1]})")
+  labels.append(f"[{cutoff_values[0]}, {cutoff_values[1]}]")
   for i in range(1, len(cutoff_values) - 1):
-    labels.append(f"[{cutoff_values[i]}, {cutoff_values[i+1]})")
+    labels.append(f"({cutoff_values[i]}, {cutoff_values[i+1]}]")
     
   return labels
 ```

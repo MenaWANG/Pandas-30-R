@@ -1,0 +1,98 @@
+---
+title: "SQL #1 SPLIT_PART"
+subtitle: "Collection of SQL Tips"
+author: "[Mena WANG](https://www.linkedin.com/in/mena-ning-wang/)"
+date: "2023-10-07"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: journal
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+```{css, echo=FALSE}
+
+.python{
+  background-color : Azure; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+.r{
+  background-color : LavenderBlush; #color names: https://en.wikipedia.org/wiki/Web_colors
+  font-weight : bold;
+}
+
+
+```
+
+
+# Set up
+
+Use `RSQLite` library allows us to run SQL queries in R environment. We also have the option to create an in-memory database for quick experimentation.
+
+```{r}
+# Load the RSQLite library to use SQL in R
+library(RSQLite)
+
+# Create a SQLite database
+# con <- dbConnect(SQLite(), dbname = "mydatabase.db")
+
+# Create an SQLite in-memory database connection
+con <- dbConnect(SQLite(), dbname = ":memory:")
+
+```
+
+Sometimes we might want to use SQL query to extract specific element of a field. On platforms such as Snowflake, I found `SPLIT_PART` very helpful in such scenarios. For example, in the query below, `SPLIT_PART` is used to extract the domain name from a URL by first splitting the URL using '://' as a delimiter and then further splitting the result using '/' as a delimiter to obtain the domain name. 
+
+But the `SPLIT_PART` function is not supported in RSQLite, so here in the demo I will show both the SPLIT_PART way and the alternative that works in RSQLite.  
+
+```{r}
+
+# Create a dummy table with sample data
+dbWriteTable(con, "url_demo", data.frame(
+  id = 1:4,
+  url = c(
+    'https://www.example.com/page1',
+    'https://www.example.com/page2',
+    'https://www.openai.com/research/',
+    'https://www.github.com/user/repo'
+  )
+))
+
+# Query that would have worked in Snowflake
+query <- "
+SELECT
+    id,
+    url,
+    SPLIT_PART(SPLIT_PART(url, '://', 2), '/', 1) AS domain_name
+FROM
+    url_demo;
+"
+
+# Define the SQL query to extract domain names
+query <- "
+SELECT
+    id,
+    url,
+    SUBSTR(url, INSTR(url, '://') + 3, INSTR(SUBSTR(url, INSTR(url, '://') + 3), '/') - 1) AS domain_name
+FROM
+    url_demo;
+"
+
+# Execute the SQL query
+result <- dbGetQuery(con, query)
+
+# Print the result
+print(result)
+
+```
+
+
