@@ -310,7 +310,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-09-24
+<strong>Last updated:</strong> 2023-10-08
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -357,15 +357,15 @@ results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree766a7ef36110aef17a4ee3601e5c6b9601394b0btargetblank766a7efa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree066a00f893b8dc255ff468ac76f21ed762b677aftargetblank066a00fa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/MenaWANG/Pandas-30-R/tree/766a7ef36110aef17a4ee3601e5c6b9601394b0b" target="_blank">766a7ef</a>
+<a href="https://github.com/MenaWANG/Pandas-30-R/tree/066a00f893b8dc255ff468ac76f21ed762b677af" target="_blank">066a00f</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree766a7ef36110aef17a4ee3601e5c6b9601394b0btargetblank766a7efa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomMenaWANGPandas30Rtree066a00f893b8dc255ff468ac76f21ed762b677aftargetblank066a00fa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -375,7 +375,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/MenaWANG/Pandas-30-R/tree/766a7ef36110aef17a4ee3601e5c6b9601394b0b" target="_blank">766a7ef</a>.
+<a href="https://github.com/MenaWANG/Pandas-30-R/tree/066a00f893b8dc255ff468ac76f21ed762b677af" target="_blank">066a00f</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -394,6 +394,9 @@ Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    dev/
     Ignored:    renv/
+
+Untracked files:
+    Untracked:  mydatabase.db
 
 Unstaged changes:
     Modified:   renv.lock
@@ -441,6 +444,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MenaWANG/Pandas-30-R/blob/066a00f893b8dc255ff468ac76f21ed762b677af/analysis/index.Rmd" target="_blank">066a00f</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-10-08
+</td>
+<td>
+first SQL tip
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MenaWANG/Pandas-30-R/253f970bc046a243ca1bcf7a951e1bf74018c0c9/docs/index.html" target="_blank">253f970</a>
+</td>
+<td>
+Mena WANG
+</td>
+<td>
+2023-09-24
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1842,21 +1879,20 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>In this repo, I provided a Python to R translation of <strong>30
-essential Pandas methods</strong> introduced by Avi Chawla in <a
+<p>This site collects useful Python, R and SQL tips as I found them
+along the way.👣 Hope you find it helpful too.😊 Comments and
+suggestions are always appreciated. 🌺</p>
+<div id="python-to-r-translation-of-30-essential-methods-and-beyond"
+class="section level3">
+<h3>Python to R Translation of 30 Essential Methods and Beyond</h3>
+<p>The repo began as a Python to R translation of <strong>30 essential
+Pandas methods</strong> introduced by Avi Chawla in <a
 href="https://towardsdatascience.com/the-only-30-methods-you-should-master-to-become-a-pandas-pro-749795084bb2">The
 Only 30 Methods You Should Master To Become A Pandas Pro</a> published
-on <a href="https://towardsdatascience.com/">TowardsDataScience</a>.</p>
-<p>The discussions of some of the methods went beyond the original, with
-more related methods illustrated/compared for more advanced or
-customized tasks (pls see specific methods highlighted in the list
-below). I will continue to add examples or relevant methods to enrich
-this site, as it now serves as a reference source for myself.</p>
-<p>Hope you find it helpful too. Comments and suggestions are always
-appreciated. :)</p>
-<div id="please-click-each-method-below-for-details"
-class="section level3">
-<h3>Please click each method below for details</h3>
+on <a href="https://towardsdatascience.com/">TowardsDataScience</a>. But
+the discussions went beyond the original, with more related methods
+illustrated/compared for more advanced or customized tasks (pls see
+specific methods highlighted in the list below).</p>
 <p><a href="method1-read-a-csv.html">1. <span
 style="color:indianred"><em>read_csv()</em></span>: Reading a
 CSV</a></p>
@@ -1943,9 +1979,10 @@ style="color:indianred"><em>pivot_table &amp; melt</em></span>: Pivoting
 DataFrames</a></p>
 </div>
 <div id="bonus-content" class="section level3">
-<h3>Bonus content 💃</h3>
-<p>The below content is not limited to pandas or tidyverse. Mainly
-useful stuff I learned along the way. :)</p>
+<h3>Bonus Content 💃</h3>
+<p>The below content is not limited to pandas or tidyverse. Mainly fun
+and useful R/Python stuff that don’t naturally fall into any of the 30
+methods groups above. :)</p>
 <p><a href="bonus1-complete-all-combinations.html">1. <span
 style="color:indianred"><em>complete()</em></span>: Expand a
 dataframe</a></p>
@@ -1957,6 +1994,12 @@ style="color:indianred"><em>all, any</em></span>: Fun with lists</a></p>
 <p><a href="bonus4-cut-and-bin.html">4. <span
 style="color:indianred"><em>cut</em></span>: Cut and bin with
 Pandas</a></p>
+</div>
+<div id="sql-tips" class="section level3">
+<h3>SQL Tips 🏖️</h3>
+<p><a href="SQL1-split-part.html">1. <span
+style="color:indianred"><em>SPLIT_PART()</em></span>: Extract element
+from a field</a></p>
 </div>
 
 
